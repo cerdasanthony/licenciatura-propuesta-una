@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAEC — Propuesta de TFG · Anthony Cerdas · UNA 2025</title>
+  <title>SAEC — Propuesta TFG · Anthony Cerdas · UNA 2025</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap"
     rel="stylesheet">
   <style>
     :root {
@@ -54,22 +54,22 @@
     /* NAV */
     nav {
       background: var(--ink);
-      padding: .8rem 2rem;
+      padding: .8rem 2.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       position: sticky;
       top: 0;
       z-index: 100;
-      gap: 1rem;
-      flex-wrap: wrap
+      gap: 1rem
     }
 
     .nav-logo {
       font-family: 'Fraunces', serif;
       font-size: 17px;
       font-weight: 700;
-      color: #fff
+      color: #fff;
+      white-space: nowrap
     }
 
     .nav-logo span {
@@ -78,14 +78,14 @@
 
     .nav-links {
       display: flex;
-      gap: 1.2rem;
-      flex-wrap: wrap
+      gap: 1.25rem
     }
 
     .nav-links a {
       font-size: 12px;
       color: #a1a1aa;
       text-decoration: none;
+      white-space: nowrap;
       transition: color .15s
     }
 
@@ -106,7 +106,7 @@
     .hero {
       background: var(--ink);
       color: #fff;
-      padding: 4.5rem 2rem 4rem;
+      padding: 5rem 2.5rem 4rem;
       text-align: center
     }
 
@@ -120,10 +120,10 @@
 
     .hero-title {
       font-family: 'Fraunces', serif;
-      font-size: clamp(28px, 5vw, 58px);
+      font-size: clamp(30px, 5vw, 58px);
       font-weight: 700;
       line-height: 1.15;
-      margin-bottom: 1rem
+      margin-bottom: 1.25rem
     }
 
     .hero-title em {
@@ -139,20 +139,48 @@
       line-height: 1.75
     }
 
-    .hero-note {
-      display: inline-block;
+    .method-block {
+      display: inline-grid;
+      grid-template-columns: repeat(5, auto);
+      gap: .4rem .8rem;
+      background: rgba(255, 255, 255, .05);
+      border: 1px solid #3f3f46;
+      border-radius: 10px;
+      padding: .85rem 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: left
+    }
+
+    .method-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: #a1a1aa;
+      white-space: nowrap
+    }
+
+    .method-item .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #60a5fa;
+      flex-shrink: 0
+    }
+
+    .hero-disclaimer {
+      max-width: 580px;
+      margin: 0 auto;
       font-size: 12px;
       color: #71717a;
-      border: 1px solid #3f3f46;
-      padding: 6px 16px;
-      border-radius: 8px;
-      line-height: 1.5;
-      max-width: 560px
+      line-height: 1.6;
+      border-top: 1px solid #2d2d30;
+      padding-top: 1.25rem
     }
 
     /* SECTIONS */
     .section {
-      padding: 4rem 2rem
+      padding: 5rem 2.5rem
     }
 
     .section.alt {
@@ -165,7 +193,7 @@
     }
 
     .container {
-      max-width: 1060px;
+      max-width: 1080px;
       margin: 0 auto
     }
 
@@ -193,7 +221,7 @@
     .sec-lead {
       font-size: 15px;
       color: var(--ink2);
-      max-width: 640px;
+      max-width: 680px;
       line-height: 1.75;
       margin-bottom: 2.5rem
     }
@@ -202,44 +230,9 @@
       color: #a1a1aa
     }
 
-    /* PROBLEM CARDS */
-    .problem-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin-top: 2rem
-    }
-
-    .problem-card {
-      background: var(--white);
-      border: 1px solid var(--rule);
-      border-radius: 14px;
-      padding: 1.25rem
-    }
-
-    .problem-num {
-      font-family: 'Fraunces', serif;
-      font-size: 38px;
-      font-weight: 700;
-      line-height: 1;
-      margin-bottom: .4rem
-    }
-
-    .problem-lbl {
-      font-size: 13px;
-      font-weight: 500;
-      margin-bottom: .4rem
-    }
-
-    .problem-desc {
-      font-size: 12px;
-      color: var(--ink3);
-      line-height: 1.6
-    }
-
-    /* MODULE LAYOUT */
+    /* MODULE LAYOUT — text left, demo right, always consistent */
     .mod-wrap {
-      margin-bottom: 4.5rem
+      margin-bottom: 5rem
     }
 
     .mod-wrap:last-child {
@@ -248,17 +241,9 @@
 
     .mod-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 380px;
       gap: 2.5rem;
-      align-items: start
-    }
-
-    .mod-grid.flip {
-      direction: rtl
-    }
-
-    .mod-grid.flip>* {
-      direction: ltr
+      align-items: start;
     }
 
     .mod-tag {
@@ -276,7 +261,7 @@
 
     .mod-letter {
       font-family: 'Fraunces', serif;
-      font-size: 48px;
+      font-size: 52px;
       font-weight: 700;
       line-height: 1;
       margin-bottom: .4rem
@@ -287,7 +272,7 @@
       font-size: 21px;
       font-weight: 600;
       line-height: 1.3;
-      margin-bottom: .75rem
+      margin-bottom: .85rem
     }
 
     .mod-desc {
@@ -297,13 +282,40 @@
       margin-bottom: .85rem
     }
 
+    .formula-box {
+      background: var(--ink);
+      color: #e4e4e7;
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 11.5px;
+      line-height: 1.85;
+      margin-top: 1rem
+    }
+
+    .formula-box .cm {
+      color: #52525b
+    }
+
+    .formula-box .kw {
+      color: #60a5fa
+    }
+
+    .formula-box .vl {
+      color: #86efac
+    }
+
+    .formula-box .nm {
+      color: #fbbf24
+    }
+
     .callout {
       border-left: 3px solid;
       border-radius: 0 8px 8px 0;
       padding: .85rem 1rem;
       font-size: 13px;
       line-height: 1.65;
-      margin-top: 1rem
+      margin-top: .85rem
     }
 
     .callout strong {
@@ -315,18 +327,38 @@
       opacity: .6
     }
 
-    .note-box {
+    .warn-box {
       background: var(--amber-l);
       border: 1px solid #fcd34d;
       border-radius: 8px;
-      padding: .85rem 1rem;
-      font-size: 13px;
+      padding: .75rem 1rem;
+      font-size: 12px;
       color: var(--amber);
       line-height: 1.65;
-      margin-top: 1rem
+      margin-top: .85rem
     }
 
-    .note-box strong {
+    .warn-box strong {
+      display: block;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      margin-bottom: 3px;
+      opacity: .7
+    }
+
+    .obs-box {
+      background: #f4f4f5;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: .75rem 1rem;
+      font-size: 12px;
+      color: #52525b;
+      line-height: 1.65;
+      margin-top: .85rem
+    }
+
+    .obs-box strong {
       display: block;
       font-size: 9px;
       text-transform: uppercase;
@@ -339,8 +371,8 @@
     .tablet-frame {
       background: #1c1c1e;
       border-radius: 20px;
-      padding: 11px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, .16)
+      padding: 12px;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, .18)
     }
 
     .tablet-screen {
@@ -359,8 +391,7 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #e8e4df;
-      gap: 5px;
-      flex-wrap: wrap
+      gap: 5px
     }
 
     .d-cam {
@@ -393,7 +424,6 @@
       display: none
     }
 
-    /* PIC GRID */
     .pic-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -432,7 +462,7 @@
     .pic.pa {
       border-color: #ef4444;
       background: #fff8f8;
-      animation: blink 1s ease infinite
+      animation: bl 1s ease infinite
     }
 
     .pic.pf {
@@ -448,10 +478,10 @@
     .pic.pfr {
       border-color: #ef4444;
       background: #fff8f8;
-      animation: blink 1s ease infinite
+      animation: bl 1s ease infinite
     }
 
-    @keyframes blink {
+    @keyframes bl {
 
       0%,
       100% {
@@ -483,13 +513,12 @@
       color: #333
     }
 
-    /* RESULT */
     .result-scr {
       display: none;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 1rem .75rem;
+      padding: 1.1rem .75rem;
       gap: 6px;
       background: #f5f3ef;
       flex: 1
@@ -577,7 +606,6 @@
       font-family: 'DM Sans', sans-serif
     }
 
-    /* NAV BAR */
     .d-nav {
       background: #fff;
       padding: 5px 7px;
@@ -746,7 +774,7 @@
     }
 
     .pr-emo {
-      min-width: 78px;
+      min-width: 80px;
       font-weight: 500
     }
 
@@ -885,27 +913,14 @@
     }
 
     /* COMBINED DEMO */
-    .combined-layout {
+    .combined-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 380px 1fr 1fr;
       gap: 1.25rem;
       align-items: start;
-      margin-top: 2rem
+      margin-top: 1.75rem;
     }
 
-    .combined-tablet {
-      display: flex;
-      flex-direction: column;
-      gap: .75rem
-    }
-
-    .combined-side {
-      display: flex;
-      flex-direction: column;
-      gap: .75rem
-    }
-
-    /* CARD */
     .card {
       background: var(--white);
       border: 1px solid var(--rule);
@@ -929,6 +944,41 @@
 
     .card-body {
       padding: 10px 12px
+    }
+
+    /* INTRO METRICS */
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 2rem
+    }
+
+    .problem-card {
+      background: var(--white);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 1.25rem
+    }
+
+    .problem-num {
+      font-family: 'Fraunces', serif;
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: .4rem
+    }
+
+    .problem-lbl {
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: .4rem
+    }
+
+    .problem-desc {
+      font-size: 12px;
+      color: var(--ink3);
+      line-height: 1.6
     }
 
     /* SCOPE */
@@ -980,7 +1030,7 @@
       margin-top: 1px
     }
 
-    /* STACK */
+    /* TECH */
     .tech-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1033,51 +1083,63 @@
     }
 
     /* RESPONSIVE */
-    @media(max-width:900px) {
-      .problem-grid {
-        grid-template-columns: 1fr 1fr
+    @media(max-width:1000px) {
+      .mod-grid {
+        grid-template-columns: 1fr 340px;
+        gap: 2rem
       }
 
-      .mod-grid,
-      .mod-grid.flip {
+      .combined-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem
+      }
+
+      .combined-grid .combined-tablet {
+        grid-column: 1/-1
+      }
+    }
+
+    @media(max-width:820px) {
+      .mod-grid {
         grid-template-columns: 1fr;
-        direction: ltr
+        gap: 1.75rem
       }
 
-      .combined-layout {
+      .combined-grid {
         grid-template-columns: 1fr
       }
 
-      .tech-grid {
-        grid-template-columns: 1fr 1fr
-      }
-
+      .problem-grid,
+      .tech-grid,
       .scope-grid {
         grid-template-columns: 1fr
       }
 
-      nav {
-        padding: .7rem 1rem
+      .method-block {
+        grid-template-columns: 1fr 1fr;
+        gap: .4rem .8rem
       }
 
       .section {
-        padding: 3rem 1.25rem
+        padding: 3.5rem 1.25rem
+      }
+
+      nav {
+        padding: .75rem 1.25rem
+      }
+
+      .nav-links {
+        display: none
       }
     }
 
-    @media(max-width:600px) {
-
-      .problem-grid,
-      .tech-grid {
+    @media(max-width:480px) {
+      .method-block {
         grid-template-columns: 1fr
       }
 
       .hero {
         padding: 3rem 1.25rem 2.5rem
-      }
-
-      .nav-links {
-        display: none
       }
     }
   </style>
@@ -1085,10 +1147,11 @@
 
 <body>
 
+  <!-- NAV -->
   <nav>
     <div class="nav-logo">SAEC <span>·</span> TFG 2025</div>
     <div class="nav-links">
-      <a href="#propuesta">La propuesta</a>
+      <a href="#propuesta">Propuesta</a>
       <a href="#modA">Módulo A</a>
       <a href="#modB">Módulo B</a>
       <a href="#modC">Módulo C</a>
@@ -1100,52 +1163,58 @@
 
   <!-- HERO -->
   <header class="hero">
-    <div class="hero-pre">Universidad Nacional de Costa Rica · Escuela de Informática · Trabajo Final de Graduación
+    <div class="hero-pre">Universidad Nacional de Costa Rica · Escuela de Informática · TFG Licenciatura</div>
+    <h1 class="hero-title">¿<em>Cómo </em>se siente
+      mientras lo <em>pide</em>?</h1>
+    <p class="hero-sub">Propuesta de prototipo de Comunicación Alternativa y Aumentativa que combina selección táctil por pictogramas con
+      estimación facial de señales emocionales para enriquecer la información disponible al cuidador.</p>
+
+    <div class="method-block">
+      <div class="method-item"><span class="dot"></span>Estudio exploratorio</div>
+      <div class="method-item"><span class="dot"></span>Caso único · participante</div>
+      <div class="method-item"><span class="dot"></span>Niño TEA · 3 años</div>
+      <div class="method-item"><span class="dot"></span>Prueba piloto</div>
+      <div class="method-item"><span class="dot"></span>Sin validación clínica</div>
     </div>
-    <h1 class="hero-title">¿Cómo se siente<br>mientras lo <em>pide</em>?</h1>
-    <p class="hero-sub">Una propuesta de sistema para ayudar a niños que no pueden hablar a expresar lo que necesitan,
-      mientras la cámara intenta capturar cómo se sienten en ese momento.</p>
-    <div class="hero-note">
-      Esta es una <strong>propuesta de investigación</strong>. Las hipótesis que se plantean serán puestas a prueba
-      durante el desarrollo del proyecto. No se hacen afirmaciones sobre resultados clínicos sin evidencia.
+
+    <div class="hero-disclaimer">
+      Este sistema será evaluado mediante un estudio exploratorio de caso único con un niño de 3 años con TEA no verbal.
+      La estimación emocional es aproximada y los resultados serán utilizados únicamente con fines exploratorios. No se
+      realizarán afirmaciones diagnósticas ni clínicas sin evidencia experimental.
     </div>
   </header>
 
   <!-- PROPUESTA -->
   <section class="section" id="propuesta">
     <div class="container">
-      <div class="sec-eye">El punto de partida</div>
-      <h2 class="sec-title">Un niño que no puede hablar<br>siempre tiene algo que decir</h2>
-      <p class="sec-lead">Los niños con autismo, parálisis cerebral u otras condiciones del desarrollo que afectan el
-        habla no pueden expresar verbalmente lo que necesitan. Esto genera frustración para ellos y para las familias.
-        Esta propuesta explora si la tecnología puede ayudar.</p>
+      <div class="sec-eye">Punto de partida</div>
+      <h2 class="sec-title">Comunicación aumentativa<br>con contexto emocional</h2>
+      <p class="sec-lead">Algunos niños con autismo, parálisis cerebral u otras condiciones del neurodesarrollo
+        presentan ausencia funcional del habla. Esta propuesta explora, en un caso único, si la integración de
+        estimación emocional facial puede aportar información complementaria al proceso comunicativo.</p>
 
       <div class="problem-grid">
         <div class="problem-card">
-          <div class="problem-num" style="color:var(--blue)">~30%</div>
+          <div class="problem-num" style="color:var(--blue)">Aprox. ~30%</div>
           <div class="problem-lbl">de niños con TEA sin habla funcional</div>
-          <div class="problem-desc">
-            Un porcentaje significativo de niños con Trastorno del Espectro Autista no desarrolla lenguaje verbal
-            funcional. En su lugar, se comunican mediante gestos, conductas, miradas o sistemas alternativos como
-            pictogramas.
-          </div>
+          <div class="problem-desc">Estimación bibliográfica. No pueden expresar verbalmente necesidades básicas durante
+            la etapa preescolar.</div>
         </div>
-
+    
         <div class="problem-card">
-          <div class="problem-num" style="color:var(--green)">Muy limitado</div>
-          <div class="problem-lbl">acceso a soluciones en español</div>
-          <div class="problem-desc">
-            Existen pocas soluciones accesibles en español que integren comunicación por pictogramas con el estado
-            emocional del niño, a pesar de que muchos expresan sus necesidades a través de emociones y comportamiento.
-          </div>
+          <div class="problem-num" style="color:var(--green)">Limitados</div>
+          <div class="problem-lbl">sistemas equivalentes documentados en español</div>
+          <div class="problem-desc">Sin precedente documentado de solución accesible que integre pictogramas y
+            estimación emocional en español para este contexto.</div>
         </div>
       </div>
 
       <div class="callout"
         style="background:var(--blue-l);border-color:var(--blue-m);color:var(--blue);margin-top:2rem;max-width:680px">
-        <strong>Pregunta que guía el proyecto</strong>
-        ¿Es posible construir un sistema que le permita a un niño no verbal comunicar lo que necesita, y que al mismo
-        tiempo intente capturar información sobre su estado emocional para apoyar al cuidador y al terapeuta?
+        <strong>Pregunta de investigación</strong>
+        ¿Es posible implementar un sistema de selección de pictogramas que integre estimación de señales emocionales
+        mediante detección facial, operable sobre hardware de consumo convencional, y evaluar si dicha estimación aporta
+        información relevante al cuidador en un estudio exploratorio de caso único?
       </div>
     </div>
   </section>
@@ -1156,35 +1225,36 @@
       <div class="mod-wrap">
         <div class="mod-grid">
 
+          <!-- TEXTO -->
           <div>
             <div class="mod-tag" style="background:var(--purple-l);color:var(--purple)">Módulo A</div>
             <div class="mod-letter" style="color:var(--purple)">A</div>
-            <h3 class="mod-title">El niño elige. El sistema escucha y recuerda.</h3>
-            <p class="mod-desc">La función principal del sistema es simple: el niño se acerca a la pantalla, ve
-              pictogramas grandes y coloridos, y toca el que representa lo que quiere. La pantalla le muestra al
-              cuidador la necesidad de forma clara e inmediata.</p>
-            <p class="mod-desc">Cada vez que el niño hace una selección, el sistema guarda un registro: qué eligió, a
-              qué hora, y cuál era la emoción detectada por la cámara en ese momento. A lo largo de una sesión, esto
-              construye un historial que podría ser útil para el terapeuta.</p>
-            <p class="mod-desc">Una exploración que surge de este módulo es si ciertos pictogramas aparecen
-              consistentemente asociados a emociones negativas. Si "Baño" aparece siempre con angustia y "Jugar" siempre
-              con alegría, esa información podría tener valor clínico — aunque esto deberá validarse durante la
-              investigación.</p>
+            <h3 class="mod-title">Registro y análisis de asociaciones emoción-necesidad</h3>
+            <p class="mod-desc">Cada selección táctil queda registrada en un log estructurado con timestamp, pictograma
+              elegido y señal emocional estimada por la cámara en los segundos previos. A lo largo de una sesión, este
+              registro construye un conjunto de observaciones que podría sugerir patrones exploratorios.</p>
+            <p class="mod-desc">La hipótesis exploratoria es que algunos pictogramas podrían aparecer consistentemente
+              asociados a señales emocionales negativas. Si "Baño" aparece reiteradamente con indicadores de angustia y
+              "Jugar" con indicadores positivos, esta asociación podría sugerir patrones exploratorios de valor para el
+              terapeuta — aunque esto deberá verificarse con datos reales del participante.</p>
 
             <div class="callout" style="background:var(--purple-l);border-color:#8b5cf6;color:var(--purple)">
-              <strong>Lo que se propone investigar</strong>
-              Si el registro estructurado de selecciones con información emocional asociada puede ayudar a terapeutas y
-              cuidadores a identificar patrones que de otro modo pasarían desapercibidos.
+              <strong>Contribución propuesta</strong>
+              Módulo de registro estructurado (JSON con timestamps e indicador emocional) y visualización de
+              asociaciones observacionales emoción-necesidad. El índice de coherencia por pictograma es una métrica
+              original. Publicable como artículo exploratorio en CLEI 2025.
             </div>
 
-            <div class="note-box">
-              <strong>Nota importante</strong>
-              Los patrones que muestra el sistema son exploratorios. No reemplazan la evaluación clínica de un terapeuta
-              del lenguaje ni constituyen diagnóstico. Son una herramienta de observación complementaria.
+            <div class="obs-box">
+              <strong>Nota metodológica</strong>
+              Este módulo registra asociaciones observacionales entre pictogramas y señales emocionales estimadas por
+              detección facial. Estas asociaciones no implican interpretación psicológica ni tienen valor diagnóstico.
+              La precisión de la estimación emocional en niños con TEA es una limitación reconocida y declarada del
+              estudio.
             </div>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
-              <div class="ctrl-lbl">Probá el módulo A — elegí una emoción y tocá pictogramas</div>
+              <div class="ctrl-lbl">Simulación — elegí una emoción estimada y tocá un pictograma</div>
               <div class="emo-btns" id="bA-ebg">
                 <button class="emo-btn" onclick="bA_setEmo('feliz')"><span class="ef">😊</span><span
                     style="font-size:11px">Feliz</span></button>
@@ -1195,33 +1265,32 @@
                 <button class="emo-btn" onclick="bA_setEmo('angustia')"><span class="ef">😣</span><span
                     style="font-size:11px">Angustia</span></button>
               </div>
-
               <div style="margin-top:1rem">
-                <div class="ctrl-lbl">Historial de la sesión</div>
+                <div class="ctrl-lbl">Historial de sesión + indicador emocional</div>
                 <div class="hist-list" id="bA-hist">
                   <div style="font-size:12px;color:#aaa;text-align:center;padding:8px">Tocá pictogramas para construir
                     el historial</div>
                 </div>
               </div>
-
-              <div style="margin-top:1rem">
-                <div class="ctrl-lbl">¿Qué emoción acompaña a cada necesidad? (aparece con 3+ selecciones)</div>
+              <div style="margin-top:.85rem">
+                <div class="ctrl-lbl">Índice de coherencia emoción-necesidad (requiere 3+ selecciones distintas)</div>
                 <div class="coh-rows" id="bA-coh">
-                  <div style="font-size:11px;color:#aaa;padding:4px 0">Hacé varias selecciones para ver el patrón</div>
+                  <div style="font-size:11px;color:#aaa;padding:4px 0">Disponible con 3+ selecciones distintas</div>
                 </div>
               </div>
             </div>
           </div>
 
+          <!-- DEMO -->
           <div>
             <div class="tablet-frame">
               <div class="tablet-screen">
                 <div class="d-topbar">
                   <div class="d-cam">
-                    <div class="d-dot"></div><span>cámara activa</span>
+                    <div class="d-dot"></div><span>estimación facial activa</span>
                   </div>
                   <div class="d-emo-badge" id="bA-badge" style="background:#f4f4f5;color:#52525b">😐 neutro</div>
-                  <span id="bA-count" style="font-size:10px;color:#aaa">0 selecciones</span>
+                  <span id="bA-count" style="font-size:10px;color:#aaa">0 registros</span>
                 </div>
                 <div class="pic-grid" id="bA-grid">
                   <div class="pic" onclick="bA_select('💧','Quiere agua','agua')">
@@ -1244,14 +1313,14 @@
                 <div class="result-scr" id="bA-result">
                   <div class="res-e" id="bA-re">💧</div>
                   <div class="res-need" id="bA-rn">Quiere agua</div>
-                  <div class="res-lbl" id="bA-rl">emoción detectada: neutro 😐</div>
+                  <div class="res-lbl" id="bA-rl">señal emocional estimada: neutro 😐</div>
                   <div class="val-bar-wrap" style="margin-top:5px">
                     <div class="val-bar-track">
-                      <span style="font-size:9px;color:#aaa">−</span>
+                      <span style="font-size:9px;color:#aaa">−1</span>
                       <div class="val-bar">
                         <div class="val-fill" id="bA-vf"></div>
                       </div>
-                      <span style="font-size:9px;color:#aaa">+</span>
+                      <span style="font-size:9px;color:#aaa">+1</span>
                       <div class="val-num" id="bA-vn">0.0</div>
                     </div>
                     <div class="val-lbl-row"><span>negativo</span><span>neutro</span><span>positivo</span></div>
@@ -1275,37 +1344,39 @@
   <section class="section" id="modB">
     <div class="container">
       <div class="mod-wrap">
-        <div class="mod-grid flip">
+        <div class="mod-grid">
 
+          <!-- TEXTO -->
           <div>
             <div class="mod-tag" style="background:var(--blue-l);color:var(--blue)">Módulo B</div>
             <div class="mod-letter" style="color:var(--blue)">B</div>
-            <h3 class="mod-title">¿Cómo estaba el niño en los segundos antes de pedir?</h3>
-            <p class="mod-desc">Cuando el niño toca un pictograma, la cámara no solo registra la emoción de ese instante
-              exacto. Considera los últimos 8 segundos de detección facial para calcular si el niño venía de un estado
-              más positivo o más negativo antes de comunicarse.</p>
-            <p class="mod-desc">Esto es relevante porque una expresión puntual puede ser un gesto accidental. Lo que
-              ocurrió en los segundos anteriores da más contexto. El sistema lo resume en un valor sencillo: positivo si
-              el niño parecía tranquilo o contento, negativo si parecía angustiado o triste.</p>
-            <p class="mod-desc">Este valor acompaña cada selección en el historial, permitiendo que el cuidador o el
-              terapeuta vean si hay diferencias. Se propone explorar si existe relación entre este indicador y la
-              necesidad comunicada — algo que deberá estudiarse con datos reales.</p>
+            <h3 class="mod-title">¿Qué señales emocionales detectó el sistema antes de la selección?</h3>
+            <p class="mod-desc">Cuando el participante toca un pictograma, el sistema no registra únicamente la señal
+              emocional del instante exacto. Calcula el <strong>indicador emocional promedio de los últimos
+                segundos</strong> de estimación facial continua. El resultado es un valor de valencia entre −1 y +1 que
+              acompaña cada registro de sesión.</p>
+            <p class="mod-desc">Esto reduce el ruido de una expresión facial puntual y aproxima el estado emocional
+              sostenido previo al acto comunicativo. Si el sistema detectó señales más negativas antes de la selección,
+              el indicador lo refleja — aunque siempre como una estimación, no como una certeza sobre el estado
+              emocional real del niño.</p>
+
 
             <div class="callout" style="background:var(--blue-l);border-color:var(--blue-m);color:var(--blue)">
-              <strong>Lo que se propone investigar</strong>
-              Si incorporar la "carga emocional previa" a cada selección enriquece la información disponible para el
-              terapeuta, comparado con registrar solo el pictograma elegido.
+              <strong>Contribución propuesta</strong>
+              Diseño e implementación del mecanismo de captura de indicador emocional sincronizada con el evento de
+              selección táctil, utilizando ventana temporal de segundos. El indicador se registra en el log
+              estructurado. Evaluación: correlación entre indicador y observación directa del observador externo.
             </div>
 
-            <div class="note-box">
-              <strong>Limitación conocida y declarada</strong>
-              Los modelos de detección emocional tienen menor precisión en niños que en adultos. El sistema informará
-              esta incertidumbre visualmente y el dato emocional siempre se presentará como una observación, no como una
-              certeza.
+            <div class="warn-box">
+              <strong>Limitación declarada</strong>
+              La estimación emocional en niños pequeños puede ser imprecisa. Los modelos preentrenados (DeepFace / FER+)
+              presentan degradación documentada en menores de 5 años y en poblaciones con desarrollo atípico. Este valor
+              debe interpretarse como un indicador aproximado, no como medición del estado emocional real.
             </div>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
-              <div class="ctrl-lbl">Elegí una emoción — esperá unos segundos — luego tocá un pictograma</div>
+              <div class="ctrl-lbl">Simulación de emoción estimada — esperá unos segundos antes de tocar</div>
               <div class="emo-btns" id="bB-ebg">
                 <button class="emo-btn" onclick="bB_setEmo('feliz')"><span class="ef">😊</span><span
                     class="ev">+1.0</span><span style="font-size:11px">Feliz</span></button>
@@ -1319,15 +1390,15 @@
                     class="ev">−1.0</span><span style="font-size:11px">Angustia / Dolor</span></button>
               </div>
               <div class="live-val" style="margin-top:.85rem">
-                <div class="ctrl-lbl">Estado emocional promedio — últimos 8 segundos</div>
+                <div class="ctrl-lbl">Indicador emocional en tiempo real — promedio últimos segundos</div>
                 <div class="lv-track">
-                  <span style="font-size:9px;color:#aaa">−</span>
+                  <span style="font-size:9px;color:#aaa">−1</span>
                   <div class="lv-bar">
                     <div class="lv-center"></div>
                     <div class="lv-neg" id="bB-ln" style="width:0%"></div>
                     <div class="lv-pos" id="bB-lp" style="width:0%"></div>
                   </div>
-                  <span style="font-size:9px;color:#aaa">+</span>
+                  <span style="font-size:9px;color:#aaa">+1</span>
                   <div class="lv-num" id="bB-lv" style="color:#71717a">0.00</div>
                 </div>
                 <div class="lv-labs"><span>negativo</span><span>neutro</span><span>positivo</span></div>
@@ -1335,12 +1406,13 @@
             </div>
           </div>
 
+          <!-- DEMO -->
           <div>
             <div class="tablet-frame">
               <div class="tablet-screen">
                 <div class="d-topbar">
                   <div class="d-cam">
-                    <div class="d-dot"></div><span>cámara activa · 3fps</span>
+                    <div class="d-dot"></div><span>estimación · 3fps</span>
                   </div>
                   <div class="d-emo-badge" id="bB-badge" style="background:#f4f4f5;color:#52525b">😐 neutro</div>
                 </div>
@@ -1365,20 +1437,19 @@
                 <div class="result-scr" id="bB-result">
                   <div class="res-e" id="bB-re">💧</div>
                   <div class="res-need" id="bB-rn">Quiere agua</div>
-                  <div class="res-lbl" id="bB-rl">estado emocional previo (8s): <strong id="bB-rs">neutro 😐</strong>
-                  </div>
+                  <div class="res-lbl">indicador emocional previo (8s): <strong id="bB-rs">neutro 😐</strong></div>
                   <div class="val-bar-wrap" style="margin-top:6px">
                     <div class="val-bar-track">
-                      <span style="font-size:9px;color:#aaa">−</span>
+                      <span style="font-size:9px;color:#aaa">−1</span>
                       <div class="val-bar">
                         <div class="val-fill" id="bB-vf"></div>
                       </div>
-                      <span style="font-size:9px;color:#aaa">+</span>
+                      <span style="font-size:9px;color:#aaa">+1</span>
                       <div class="val-num" id="bB-vn">0.0</div>
                     </div>
                     <div class="val-lbl-row"><span>negativo</span><span>neutro</span><span>positivo</span></div>
                   </div>
-                  <div class="val-interp" id="bB-vi">estado neutro al comunicar</div>
+                  <div class="val-interp" id="bB-vi">indicador neutro al comunicar</div>
                   <button class="res-btn" onclick="bB_reset()">Nueva selección</button>
                 </div>
                 <div class="d-nav">
@@ -1400,34 +1471,37 @@
       <div class="mod-wrap">
         <div class="mod-grid">
 
+          <!-- TEXTO -->
           <div>
             <div class="mod-tag" style="background:var(--red-l);color:var(--red)">Módulo C</div>
             <div class="mod-letter" style="color:var(--red)">C</div>
-            <h3 class="mod-title">Cuando el niño parece angustiado, la pantalla se adapta</h3>
-            <p class="mod-desc">Si la cámara detecta que el niño lleva varios segundos con una expresión de angustia o
-              frustración, el sistema mueve automáticamente el pictograma "Dolor" al frente. La hipótesis es que podría
-              ser lo que el niño quiere comunicar — pero siempre puede tocar otro.</p>
-            <p class="mod-desc">Esta misma lógica funciona para otras emociones: si el niño parece triste, "Ayuda" sube
-              al frente. Si parece feliz, "Jugar" aparece primero. El sistema no decide por el niño — solo intenta
-              reducir el esfuerzo de búsqueda en el momento más difícil.</p>
-            <p class="mod-desc">El umbral son 3 segundos de emoción sostenida. Si la emoción cambia antes de eso, la
-              grilla no se modifica. Si el niño elige otro pictograma diferente al sugerido, eso también queda
-              registrado — y puede ser información valiosa para el terapeuta.</p>
+            <h3 class="mod-title">Reordenamiento adaptativo experimental por señal emocional sostenida</h3>
+            <p class="mod-desc">Si el sistema detecta señales compatibles con angustia o frustración de forma sostenida
+              por más de 3 segundos, la interfaz puede reordenarse automáticamente para ubicar el pictograma "Dolor" en
+              la primera posición. La hipótesis exploratoria es que este reordenamiento podría reducir el esfuerzo de
+              búsqueda en el momento de mayor carga emocional.</p>
+            <p class="mod-desc">Esta lógica exploratoria también se aplica a otras señales emocionales detectadas:
+              "Triste" sugiere "Ayuda", "Feliz" sugiere "Jugar". El participante siempre mantiene el control completo —
+              el reordenamiento es una sugerencia de la interfaz, no una restricción. Si elige otro pictograma, eso
+              también se registra.</p>
 
             <div class="callout" style="background:var(--red-l);border-color:var(--red-m);color:var(--red)">
-              <strong>Lo que se propone investigar</strong>
-              Si el reordenamiento adaptativo reduce el tiempo que el niño tarda en encontrar y seleccionar el
-              pictograma que necesita, especialmente en momentos de alta carga emocional.
+              <strong>Contribución propuesta</strong>
+              Algoritmo de reordenamiento dinámico de pictogramas basado en umbral temporal de señal emocional
+              sostenida, con decay gradual al cambiar de señal. Evaluación propuesta: comparación del tiempo de
+              selección con cuadricula estática vs. cuadricula adaptativa en escenarios de señal emocional negativa sostenida.
             </div>
 
-            <div class="note-box">
-              <strong>Importante para el terapeuta</strong>
-              El sistema nunca obliga al niño a elegir el pictograma sugerido. La grilla se reordena, pero todas las
-              opciones siguen disponibles. El niño mantiene el control completo de la selección.
+            <div class="warn-box">
+              <strong>Limitación declarada — módulo experimental</strong>
+              El reordenamiento adaptativo es experimental. Puede no coincidir con la intención real del participante.
+              El objetivo es evaluar si reduce el tiempo de selección en el caso único estudiado, no generalizar el
+              resultado. Si la estimación emocional es imprecisa, la cuadricula puede reordenarse de forma incorrecta — esto
+              se documentará como parte del análisis.
             </div>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
-              <div class="ctrl-lbl">Mantené presionada una emoción unos segundos para ver el reordenamiento</div>
+              <div class="ctrl-lbl">Simulación — mantené una emoción para ver el reordenamiento (umbral: 3s)</div>
               <div class="emo-btns" id="bC-ebg">
                 <button class="emo-btn" onclick="bC_setEmo('feliz')"><span class="ef">😊</span><span
                     style="font-size:11px">Feliz → Jugar</span></button>
@@ -1441,18 +1515,19 @@
                     style="font-size:11px">Angustia → Dolor (urgente)</span></button>
               </div>
               <div style="margin-top:.85rem">
-                <div class="ctrl-lbl">Tiempo detectado por emoción (umbral: 3 segundos)</div>
+                <div class="ctrl-lbl">Progreso del umbral por señal emocional estimada</div>
                 <div class="promo-rows" id="bC-promo"></div>
               </div>
             </div>
           </div>
 
+          <!-- DEMO -->
           <div>
             <div class="tablet-frame">
               <div class="tablet-screen">
                 <div class="d-topbar">
                   <div class="d-cam">
-                    <div class="d-dot"></div><span>cámara activa</span>
+                    <div class="d-dot"></div><span>estimación activa</span>
                   </div>
                   <div class="d-emo-badge" id="bC-badge" style="background:#f4f4f5;color:#52525b">😐 neutro</div>
                   <div class="d-promo-tag" id="bC-ptag"></div>
@@ -1461,7 +1536,7 @@
                 <div class="result-scr" id="bC-result">
                   <div class="res-e" id="bC-re">💧</div>
                   <div class="res-need" id="bC-rn">Quiere agua</div>
-                  <div class="res-lbl" id="bC-rl">emoción detectada: neutro 😐</div>
+                  <div class="res-lbl" id="bC-rl">señal estimada: neutro 😐</div>
                   <button class="res-btn" onclick="bC_reset()">Nueva selección</button>
                 </div>
                 <div class="d-nav">
@@ -1480,20 +1555,28 @@
   <!-- DEMO INTEGRADA -->
   <section class="section" id="demo">
     <div class="container">
-      <div class="sec-eye">Los tres módulos juntos</div>
-      <h2 class="sec-title">Así funciona el sistema completo</h2>
-      <p class="sec-lead">En el uso real, los tres módulos operan simultáneamente. Aquí podés interactuar con todo
-        integrado: la pantalla del niño, la emoción en tiempo real, el reordenamiento adaptativo y el historial que ve
-        el terapeuta.</p>
+      <div class="sec-eye">Integración de los tres módulos</div>
+      <h2 class="sec-title">Los módulos A, B y C operan simultáneamente</h2>
+      <p class="sec-lead">En el uso real, los tres módulos corren en paralelo. El sistema funciona como comunicador
+        táctil por pictogramas aun cuando la estimación emocional no esté disponible o sea imprecisa — la funcionalidad
+        principal no depende de ella.</p>
 
-      <div class="combined-layout">
+      <div class="obs-box" style="max-width:680px;margin-bottom:1.5rem">
+        <strong>Nota de diseño</strong>
+        Los tres módulos operan de forma independiente. Si la detección emocional falla o es imprecisa, el sistema
+        continúa funcionando como comunicador por pictogramas. La estimación emocional es una capa adicional de
+        información, no un requisito de funcionamiento.
+      </div>
 
-        <div class="combined-tablet">
+      <div class="combined-grid">
+
+        <!-- TABLET -->
+        <div class="combined-tablet" style="display:flex;flex-direction:column;gap:.75rem">
           <div class="tablet-frame">
             <div class="tablet-screen">
               <div class="d-topbar">
                 <div class="d-cam">
-                  <div class="d-dot"></div><span>cámara activa</span>
+                  <div class="d-dot"></div><span>estimación activa</span>
                 </div>
                 <div class="d-emo-badge" id="comb-badge" style="background:#f4f4f5;color:#52525b">😐 neutro</div>
                 <div class="d-promo-tag" id="comb-ptag"></div>
@@ -1502,19 +1585,19 @@
               <div class="result-scr" id="comb-result">
                 <div class="res-e" id="comb-re">💧</div>
                 <div class="res-need" id="comb-rn">Quiere agua</div>
-                <div class="res-lbl" id="comb-rl">estado emocional previo: neutro 😐</div>
+                <div class="res-lbl" id="comb-rl">indicador emocional previo: neutro 😐</div>
                 <div class="val-bar-wrap" style="margin-top:5px">
                   <div class="val-bar-track">
-                    <span style="font-size:9px;color:#aaa">−</span>
+                    <span style="font-size:9px;color:#aaa">−1</span>
                     <div class="val-bar">
                       <div class="val-fill" id="comb-vf"></div>
                     </div>
-                    <span style="font-size:9px;color:#aaa">+</span>
+                    <span style="font-size:9px;color:#aaa">+1</span>
                     <div class="val-num" id="comb-vn">0.0</div>
                   </div>
                   <div class="val-lbl-row"><span>negativo</span><span>neutro</span><span>positivo</span></div>
                 </div>
-                <div class="val-interp" id="comb-vi">estado neutro al comunicar</div>
+                <div class="val-interp" id="comb-vi">indicador neutro al comunicar</div>
                 <button class="res-btn" onclick="comb_reset()">Nueva selección</button>
               </div>
               <div class="d-nav">
@@ -1525,7 +1608,7 @@
           </div>
 
           <div class="card">
-            <div class="card-hdr"><span>Elegí la emoción simulada</span></div>
+            <div class="card-hdr">Simulación de emoción estimada</div>
             <div class="card-body">
               <div class="emo-btns" id="comb-ebg">
                 <button class="emo-btn" onclick="comb_setEmo('feliz')"><span class="ef">😊</span><span
@@ -1540,15 +1623,15 @@
                     style="font-size:11px">Angustia / Dolor</span></button>
               </div>
               <div class="live-val" style="margin-top:.75rem">
-                <div class="ctrl-lbl">Estado emocional promedio — últimos 8s</div>
+                <div class="ctrl-lbl">Indicador emocional promedio — últimos 8s</div>
                 <div class="lv-track">
-                  <span style="font-size:9px;color:#aaa">−</span>
+                  <span style="font-size:9px;color:#aaa">−1</span>
                   <div class="lv-bar">
                     <div class="lv-center"></div>
                     <div class="lv-neg" id="comb-ln" style="width:0%"></div>
                     <div class="lv-pos" id="comb-lp" style="width:0%"></div>
                   </div>
-                  <span style="font-size:9px;color:#aaa">+</span>
+                  <span style="font-size:9px;color:#aaa">+1</span>
                   <div class="lv-num" id="comb-lv" style="color:#71717a">0.00</div>
                 </div>
                 <div class="lv-labs"><span>negativo</span><span>neutro</span><span>positivo</span></div>
@@ -1557,19 +1640,19 @@
           </div>
         </div>
 
-        <div class="combined-side">
+        <!-- COL 2 -->
+        <div style="display:flex;flex-direction:column;gap:.75rem">
           <div class="card">
-            <div class="card-hdr"><span>Módulo C — Reordenamiento</span></div>
+            <div class="card-hdr"><span>Módulo C — Reordenamiento adaptativo</span></div>
             <div class="card-body">
               <div class="promo-rows" id="comb-promo"></div>
-              <div style="font-size:11px;color:#aaa;margin-top:6px;line-height:1.5">Mantené una emoción unos segundos
-                para ver el pictograma sugerido subir al frente de la grilla.</div>
+              <div style="font-size:11px;color:#aaa;margin-top:6px;line-height:1.5">Mantené una señal emocional unos
+                segundos para ver el reordenamiento experimental.</div>
             </div>
           </div>
-
           <div class="card">
-            <div class="card-hdr"><span>Historial de la sesión</span><span id="comb-count"
-                style="color:var(--ink3)">0</span></div>
+            <div class="card-hdr"><span>Módulo A — Historial de sesión</span><span id="comb-count"
+                style="color:var(--ink3)">0 registros</span></div>
             <div class="card-body">
               <div class="hist-list" id="comb-hist">
                 <div style="font-size:11px;color:#aaa;text-align:center;padding:6px">Tocá pictogramas para ver el
@@ -1579,24 +1662,23 @@
           </div>
         </div>
 
-        <div class="combined-side">
+        <!-- COL 3 -->
+        <div style="display:flex;flex-direction:column;gap:.75rem">
           <div class="card">
-            <div class="card-hdr"><span>Módulo A — Patrón emocional</span></div>
+            <div class="card-hdr"><span>Módulo A — Índice de coherencia</span></div>
             <div class="card-body">
               <div class="coh-rows" id="comb-coh">
-                <div style="font-size:11px;color:#aaa;padding:4px 0">Hacé 3+ selecciones distintas para ver el patrón
-                </div>
+                <div style="font-size:11px;color:#aaa;padding:4px 0">Disponible con 3+ selecciones distintas</div>
               </div>
-              <div style="font-size:11px;color:#aaa;margin-top:6px;line-height:1.5">Color = emoción que más acompaña esa
-                necesidad. Largo = qué tan intensa fue.</div>
+              <div style="font-size:11px;color:#aaa;margin-top:6px;line-height:1.5">Color = señal emocional dominante
+                estimada. Largo = intensidad promedio del indicador.</div>
             </div>
           </div>
-
-          <div class="note-box" style="font-size:12px">
-            <strong>Para tener en cuenta</strong>
-            Lo que muestra el sistema son observaciones exploratorias basadas en lo que la cámara detecta. La
-            interpretación siempre debe hacerla un profesional. El objetivo de este proyecto es evaluar si este tipo de
-            información es útil y confiable — no asumir que lo es.
+          <div class="warn-box" style="font-size:12px">
+            <strong>Para interpretar correctamente</strong>
+            Lo que muestra el sistema son observaciones exploratorias basadas en detección facial aproximada. Estas
+            observaciones no representan el estado emocional real del participante. La interpretación final siempre debe
+            realizarla un profesional.
           </div>
         </div>
 
@@ -1607,46 +1689,54 @@
   <!-- ALCANCE -->
   <section class="section alt" id="alcance">
     <div class="container">
-      <div class="sec-eye">Límites del proyecto</div>
-      <h2 class="sec-title">Qué se propone desarrollar.<br>Qué queda para el futuro.</h2>
-      <p class="sec-lead">Un proyecto de licenciatura tiene límites reales. Ser explícito sobre ellos es parte de una
-        propuesta honesta y rigurosa.</p>
+      <div class="sec-eye">Alcance y limitaciones del proyecto</div>
+      <h2 class="sec-title">Definición explícita del alcance.<br>Honestidad metodológica.</h2>
+      <p class="sec-lead">Prototipo funcional de laboratorio evaluado mediante un estudio exploratorio de caso único. No
+        es un dispositivo clínico ni un producto comercial.</p>
       <div class="scope-grid">
         <div class="scope-col">
           <div class="scope-hdr inc">Incluye esta propuesta</div>
           <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>8 pictogramas en 2
             páginas: agua, comer, baño, ayuda · dolor, jugar, dormir...</div>
           <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Selección táctil directa —
-            el niño toca la imagen</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Detección de 4 emociones
-            por cámara: feliz, triste, frustrado, angustia</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Módulo A: registro y
-            análisis de patrón emoción-necesidad</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Módulo B: estado emocional
-            promedio de los 8 segundos previos</div>
+            modalidad principal e independiente</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Estimación de 4 señales
+            emocionales: feliz, triste, frustrado, angustia</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Módulo A: registro
+            estructurado e índice de coherencia emoción-necesidad</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Módulo B: indicador
+            emocional promedio en ventana de 8 segundos</div>
           <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Módulo C: reordenamiento
-            de pictogramas por emoción sostenida</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Funciona sin internet ·
-            sin hardware adicional · tablet o PC estándar</div>
-      
+            adaptativo experimental por señal sostenida ≥3s</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Estudio exploratorio de
+            caso único · participante: niño TEA de 3 años</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Estimación emocional
+            aproximada · incertidumbre declarada en la interfaz</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Interfaz adaptativa
+            experimental · funcionamiento offline · sin hardware adicional</div>
         </div>
         <div class="scope-col">
-          <div class="scope-hdr exc">No incluye (trabajo futuro)</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Síntesis de voz</div>
+          <div class="scope-hdr exc">Excluye explícitamente</div>
           <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Validación clínica formal
-            con pacientes diagnosticados</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Panel en un segundo
-            dispositivo del cuidador</div>
+          </div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Precisión emocional
+            garantizada — la estimación es aproximada</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Generalización de resultados
+            a otras poblaciones</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Interpretación psicológica
+            de las asociaciones detectadas</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Síntesis de voz o salida de
+            audio compleja</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Panel en dispositivo
+            secundario del cuidador</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Eye-tracking con hardware
+            dedicado</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Entrenamiento de modelos de
+            CV desde cero</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Perfiles múltiples
+            persistentes</div>
           <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Más de dos páginas de
             vocabulario</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Perfiles guardados por
-            usuario</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Reconocimiento de gestos o
-            lenguaje de señas</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Entrenamiento de modelos de
-            inteligencia artificial propios</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Afirmaciones sobre precisión
-            clínica sin evidencia experimental</div>
         </div>
       </div>
     </div>
@@ -1655,47 +1745,46 @@
   <!-- STACK -->
   <section class="section dark">
     <div class="container">
-      <div class="sec-eye">Tecnología utilizada</div>
-      <h2 class="sec-title" style="color:#fff">Herramientas de código abierto,<br>gratuitas y sin conexión a internet
-      </h2>
-      <p class="sec-lead">Todo funciona localmente. No se envían datos a ningún servidor externo. No requiere
-        suscripción ni equipos costosos.</p>
+      <div class="sec-eye">Stack tecnológico</div>
+      <h2 class="sec-title" style="color:#fff">Herramientas de código abierto.<br>Sin GPU. Sin conexión a internet.</h2>
+      <p class="sec-lead">Todo el sistema opera localmente. Sin envío de datos a servidores externos. Sin costo
+        adicional de infraestructura.</p>
       <div class="tech-grid">
         <div class="tech-card">
-          <div class="tech-cat">Detección de rostro</div>
+          <div class="tech-cat">Detección facial</div>
           <div class="tech-name">MediaPipe Face Mesh</div>
-          <div class="tech-why">Detecta el rostro del niño en tiempo real usando la cámara frontal estándar, sin
-            necesidad de GPU.</div>
+          <div class="tech-why">468 landmarks faciales en tiempo real sobre CPU. Base para activación de interfaz y
+            estimación de orientación.</div>
         </div>
         <div class="tech-card">
-          <div class="tech-cat">Detección emocional</div>
+          <div class="tech-cat">Estimación emocional</div>
           <div class="tech-name">DeepFace / FER+</div>
-          <div class="tech-why">Modelos ya entrenados que clasifican la expresión facial. Funcionan a baja velocidad en
-            segundo plano, sin interferir con la pantalla del niño.</div>
+          <div class="tech-why">Modelos preentrenados que estiman expresiones faciales con precisión variable.
+            Degradación conocida en menores de 5 años y poblaciones con desarrollo atípico.</div>
         </div>
         <div class="tech-card">
-          <div class="tech-cat">Lógica del sistema</div>
-          <div class="tech-name">Python 3.11</div>
-          <div class="tech-why">Maneja los tres módulos, el registro de sesión y la comunicación con la interfaz visual.
-          </div>
+          <div class="tech-cat">Backend</div>
+          <div class="tech-name">Python 3.11 + FastAPI</div>
+          <div class="tech-why">Lógica de los tres módulos, registro de sesión y comunicación con interfaz vía WebSocket
+            asíncrono.</div>
         </div>
         <div class="tech-card">
-          <div class="tech-cat">Interfaz visual</div>
+          <div class="tech-cat">Interfaz</div>
           <div class="tech-name">React + Electron</div>
-          <div class="tech-why">La pantalla que ve el niño. Funciona en tablet o PC como cualquier aplicación, sin
-            necesidad de navegador.</div>
+          <div class="tech-why">Interfaz multiplataforma empaquetada como ejecutable nativo. Funciona offline, sin
+            dependencia de navegador.</div>
         </div>
         <div class="tech-card">
-          <div class="tech-cat">Imágenes de pictogramas</div>
+          <div class="tech-cat">Pictogramas</div>
           <div class="tech-name">ARASAAC</div>
-          <div class="tech-why">Banco de imágenes CAA en español con licencia libre. Es el estándar de referencia en
-            habla hispana.</div>
+          <div class="tech-why">Banco de pictogramas CAA en español bajo licencia Creative Commons. Estándar de
+            referencia en habla hispana.</div>
         </div>
         <div class="tech-card">
-          <div class="tech-cat">Requisitos mínimos</div>
-          <div class="tech-name">Tablet o PC común</div>
-          <div class="tech-why">Procesador estándar, 8 GB de memoria, cámara frontal. Sin GPU, sin internet, sin costo
-            adicional de hardware.</div>
+          <div class="tech-cat">Hardware mínimo</div>
+          <div class="tech-name">Tablet o PC estándar</div>
+          <div class="tech-why">CPU 4 núcleos · 8 GB RAM · Cámara frontal 720p · Sin GPU · Windows 10+ o Ubuntu 22.04+.
+          </div>
         </div>
       </div>
     </div>
@@ -1705,7 +1794,10 @@
     <strong>Anthony Steven Cerdas Chacón · 4-0241-0478</strong>
     Licenciatura en Informática · Énfasis en Desarrollo Web · Universidad Nacional de Costa Rica<br>
     Tutor: Johnny Villalobos Murillo · Asesor: Johnny Flores Araya<br>
-    SAEC — Sistema Adaptativo con Emoción Contextual · Propuesta de Anteproyecto · 2025
+    SAEC — Sistema Adaptativo con Emoción Contextual · Propuesta de Anteproyecto · 2025<br><br>
+    <em style="font-size:11px">Este proyecto evalúa la viabilidad de integrar estimación emocional facial aproximada en
+      un sistema de comunicación aumentativa. Los resultados se interpretarán como observaciones exploratorias dentro de
+      un estudio de caso único.</em>
   </footer>
 
   <script>
@@ -1715,7 +1807,7 @@
     const PAGES = [[{ e: '💧', l: 'Agua', k: 'agua', m: 'Quiere agua' }, { e: '🍎', l: 'Comer', k: 'comer', m: 'Quiere comer' }, { e: '🚽', l: 'Baño', k: 'baño', m: 'Necesita el baño' }, { e: '🤝', l: 'Ayuda', k: 'ayuda', m: 'Necesita ayuda' }], [{ e: '😣', l: 'Dolor', k: 'dolor', m: 'Siente dolor' }, { e: '🎮', l: 'Jugar', k: 'jugar', m: 'Quiere jugar' }, { e: '😴', l: 'Dormir', k: 'dormir', m: 'Quiere dormir' }, { e: '🚫', l: 'No', k: 'no', m: 'No quiere' }]];
     const THRESH = 3000;
 
-    function interpVal(v) { if (v <= -0.7) return { txt: 'parece angustiado al comunicar', bg: '#fee2e2', c: '#991b1b' }; if (v <= -0.3) return { txt: 'parece incómodo al comunicar', bg: '#fee2e2', c: '#991b1b' }; if (v < 0.1) return { txt: 'parece tranquilo al comunicar', bg: '#f4f4f5', c: '#52525b' }; if (v < 0.6) return { txt: 'parece calmado al comunicar', bg: '#dcfce7', c: '#15803d' }; return { txt: 'parece contento al comunicar', bg: '#dcfce7', c: '#15803d' }; }
+    function interpVal(v) { if (v <= -0.7) return { txt: 'señal negativa alta al comunicar', bg: '#fee2e2', c: '#991b1b' }; if (v <= -0.3) return { txt: 'señal negativa moderada al comunicar', bg: '#fee2e2', c: '#991b1b' }; if (v < 0.1) return { txt: 'indicador neutro al comunicar', bg: '#f4f4f5', c: '#52525b' }; if (v < 0.6) return { txt: 'señal positiva leve al comunicar', bg: '#dcfce7', c: '#15803d' }; return { txt: 'señal positiva alta al comunicar', bg: '#dcfce7', c: '#15803d' }; }
 
     function setValBar(fId, nId, v, iId) {
       const pct = Math.abs(v) * 50, f = document.getElementById(fId);
@@ -1737,34 +1829,29 @@
     function domEmo(log) { const s = log.slice(-Math.ceil(8 * 30)); const c = {}; s.forEach(e => c[e] = (c[e] || 0) + 1); return Object.entries(c).sort((a, b) => b[1] - a[1])[0]?.[0] || 'neutro'; }
     function ts() { const n = new Date(); return n.getHours().toString().padStart(2, '0') + ':' + n.getMinutes().toString().padStart(2, '0') + ':' + n.getSeconds().toString().padStart(2, '0'); }
 
-    function buildGrid(gridId, page, active, onSelect) {
-      const g = document.getElementById(gridId); g.innerHTML = '';
+    function buildGrid(gId, page, active, onSel) {
+      const g = document.getElementById(gId); g.innerHTML = '';
       let items = [...PAGES[page]];
       const rule = active ? PROMO_RULES.find(r => r.emo === active) : null;
-      if (rule) {
-        const p = rule.pic; const promoItem = { ...p, __promo: true, __cls: rule.cls, __dot: rule.col };
-        if (p.pg === page) { const idx = items.findIndex(x => x.k === p.k); if (idx > 0) { items.splice(idx, 1); items.unshift(promoItem); } else { items[0] = { ...items[0], __promo: true, __cls: rule.cls, __dot: rule.col }; } }
-        else { items = [promoItem, ...items.slice(0, 3)]; }
-      }
+      if (rule) { const p = rule.pic; const pi = { ...p, __promo: true, __cls: rule.cls, __dot: rule.col }; if (p.pg === page) { const idx = items.findIndex(x => x.k === p.k); if (idx > 0) { items.splice(idx, 1); items.unshift(pi); } else { items[0] = { ...items[0], __promo: true, __cls: rule.cls, __dot: rule.col }; } } else { items = [pi, ...items.slice(0, 3)]; } }
       items.forEach(item => {
         const d = document.createElement('div'); d.className = 'pic' + (item.__promo ? ' ' + item.__cls : '');
         if (item.__promo) { const dot = document.createElement('div'); dot.className = 'pic-dot'; dot.style.background = item.__dot; d.appendChild(dot); }
         const eD = document.createElement('div'); eD.className = 'pic-e'; eD.textContent = item.e;
         const lD = document.createElement('div'); lD.className = 'pic-l'; lD.textContent = item.l;
-        d.appendChild(eD); d.appendChild(lD);
-        d.addEventListener('click', () => onSelect(item)); g.appendChild(d);
+        d.appendChild(eD); d.appendChild(lD); d.addEventListener('click', () => onSel(item)); g.appendChild(d);
       });
     }
-    function updateLiveVal(negId, posId, numId, v) {
+    function updateLiveVal(nId, pId, numId, v) {
       const pct = Math.abs(v) * 50;
-      if (v < 0) { document.getElementById(negId).style.width = pct + '%'; document.getElementById(posId).style.width = '0%'; }
-      else { document.getElementById(posId).style.width = pct + '%'; document.getElementById(negId).style.width = '0%'; }
+      if (v < 0) { document.getElementById(nId).style.width = pct + '%'; document.getElementById(pId).style.width = '0%'; }
+      else { document.getElementById(pId).style.width = pct + '%'; document.getElementById(nId).style.width = '0%'; }
       const s = v > 0 ? '+' : ''; document.getElementById(numId).textContent = s + v.toFixed(2);
       document.getElementById(numId).style.color = v < 0 ? '#ef4444' : v > 0 ? '#15803d' : '#71717a';
     }
-    function renderCoh(cohId, pattern) {
-      const keys = Object.keys(pattern); const el = document.getElementById(cohId);
-      if (keys.length < 2) { el.innerHTML = '<div style="font-size:11px;color:#aaa;padding:4px 0">Hacé varias selecciones distintas para ver el patrón</div>'; return; }
+    function renderCoh(cId, pattern) {
+      const keys = Object.keys(pattern); const el = document.getElementById(cId);
+      if (keys.length < 2) { el.innerHTML = '<div style="font-size:11px;color:#aaa;padding:4px 0">Disponible con 3+ selecciones distintas</div>'; return; }
       el.innerHTML = '';
       keys.forEach(k => {
         const d = pattern[k]; const avg = Math.round((d.vSum / d.total) * 100) / 100;
@@ -1776,75 +1863,7 @@
         el.appendChild(row);
       });
     }
-
-    /* ── MÓDULO A ── */
-    let bA_emo = 'neutro', bA_log = [], bA_hist = [], bA_pattern = {}, bA_locked = false;
-    function bA_setEmo(e) { bA_emo = e; setBadge('bA-badge', e); setEmoBtn('bA-ebg', e); }
-    function bA_select(emoji, msg, key) {
-      if (bA_locked) return; bA_locked = true;
-      const v = computeVal(bA_log); const dom = domEmo(bA_log); const m = EMO[dom]; const t = ts();
-      bA_hist.unshift({ emoji, msg, key, emo: dom, v, t });
-      if (!bA_pattern[key]) bA_pattern[key] = { total: 0, vSum: 0, emos: {} };
-      bA_pattern[key].total++; bA_pattern[key].vSum += v;
-      bA_pattern[key].emos[dom] = (bA_pattern[key].emos[dom] || 0) + 1;
-      document.getElementById('bA-count').textContent = bA_hist.length + ' selecciones';
-      document.getElementById('bA-grid').style.display = 'none';
-      document.getElementById('bA-result').style.display = 'flex';
-      document.getElementById('bA-re').textContent = emoji;
-      document.getElementById('bA-rn').textContent = msg;
-      document.getElementById('bA-rl').textContent = 'emoción detectada: ' + dom + ' ' + m.face;
-      setValBar('bA-vf', 'bA-vn', v, null);
-      bA_renderHist(); renderCoh('bA-coh', bA_pattern);
-    }
-    function bA_reset() { bA_locked = false; document.getElementById('bA-grid').style.display = 'grid'; document.getElementById('bA-result').style.display = 'none'; }
-    function bA_renderHist() {
-      const el = document.getElementById('bA-hist'); if (!bA_hist.length) return; el.innerHTML = '';
-      bA_hist.slice(0, 6).forEach(h => {
-        const m = EMO[h.emo]; const pct = Math.round(Math.abs(h.v) * 50); const left = h.v < 0 ? (50 - pct) : 50; const sign = h.v > 0 ? '+' : '';
-        const d = document.createElement('div'); d.className = 'hist-item';
-        d.innerHTML = `<span class="hi-e">${h.emoji}</span><span class="hi-need">${h.msg.replace('Quiere ', '').replace('Siente ', '').replace('Necesita ', '')}</span><span class="hi-emo" style="background:${m.bg};color:${m.c}">${m.face}</span><div class="hi-vbar"><div class="hi-vfill" style="left:${left}%;width:${pct}%;background:${h.v < 0 ? '#ef4444' : '#22c55e'}"></div></div><span class="hi-vnum" style="color:${h.v < 0 ? '#ef4444' : h.v > 0 ? '#15803d' : '#71717a'}">${sign}${h.v.toFixed(1)}</span>`;
-        el.appendChild(d);
-      });
-    }
-    function bA_loop() { bA_log.push(bA_emo); if (bA_log.length > 8 * 30 * 2) bA_log.shift(); requestAnimationFrame(bA_loop); }
-    bA_setEmo('neutro'); requestAnimationFrame(bA_loop);
-
-    /* ── MÓDULO B ── */
-    let bB_emo = 'neutro', bB_log = [], bB_locked = false, bB_last = null;
-    function bB_setEmo(e) { bB_emo = e; setBadge('bB-badge', e); setEmoBtn('bB-ebg', e); }
-    function bB_select(emoji, msg) {
-      if (bB_locked) return; bB_locked = true;
-      const v = computeVal(bB_log); const dom = domEmo(bB_log); const m = EMO[dom];
-      document.getElementById('bB-grid').style.display = 'none';
-      document.getElementById('bB-result').style.display = 'flex';
-      document.getElementById('bB-re').textContent = emoji; document.getElementById('bB-rn').textContent = msg;
-      document.getElementById('bB-rs').textContent = dom + ' ' + m.face;
-      setValBar('bB-vf', 'bB-vn', v, 'bB-vi');
-    }
-    function bB_reset() { bB_locked = false; document.getElementById('bB-grid').style.display = 'grid'; document.getElementById('bB-result').style.display = 'none'; }
-    function bB_loop(now) {
-      if (!bB_last) bB_last = now; bB_last = now;
-      bB_log.push(bB_emo); if (bB_log.length > 8 * 30 * 2) bB_log.shift();
-      if (!bB_locked) { const v = computeVal(bB_log); updateLiveVal('bB-ln', 'bB-lp', 'bB-lv', v); }
-      requestAnimationFrame(bB_loop);
-    }
-    bB_setEmo('neutro'); requestAnimationFrame(bB_loop);
-
-    /* ── MÓDULO C ── */
-    let bC_emo = 'neutro', bC_timers = {}, bC_active = null, bC_locked = false, bC_last = null;
-    Object.keys(EMO).forEach(k => bC_timers[k] = 0);
-    function bC_setEmo(e) { bC_emo = e; setBadge('bC-badge', e); setEmoBtn('bC-ebg', e); }
-    function bC_buildGrid() {
-      buildGrid('bC-grid', 0, bC_active, (item) => {
-        if (bC_locked) return; bC_locked = true; const m = EMO[bC_emo];
-        document.getElementById('bC-grid').style.display = 'none';
-        document.getElementById('bC-result').style.display = 'flex';
-        document.getElementById('bC-re').textContent = item.e; document.getElementById('bC-rn').textContent = item.m;
-        document.getElementById('bC-rl').textContent = 'emoción detectada: ' + bC_emo + ' ' + m.face;
-      });
-    }
-    function bC_reset() { bC_locked = false; document.getElementById('bC-grid').style.display = 'grid'; document.getElementById('bC-result').style.display = 'none'; bC_buildGrid(); }
-    function bC_renderPromo(pId, timers, active) {
+    function renderPromo(pId, timers, active) {
       const el = document.getElementById(pId); el.innerHTML = '';
       PROMO_RULES.forEach(r => {
         const t = timers[r.emo] || 0; const pct = Math.min(100, Math.round(t / THRESH * 100)); const isA = active === r.emo;
@@ -1853,76 +1872,105 @@
         el.appendChild(row);
       });
     }
-    function bC_loop(now) {
-      if (!bC_last) bC_last = now; const dt = now - bC_last; bC_last = now;
-      Object.keys(bC_timers).forEach(k => { if (k === bC_emo && !bC_locked) bC_timers[k] = Math.min(THRESH, bC_timers[k] + dt); else bC_timers[k] = Math.max(0, bC_timers[k] - dt * 1.5); });
-      const newA = Object.entries(bC_timers).find(([k, v]) => v >= THRESH && k !== 'neutro')?.[0] || null;
-      if (newA !== bC_active) {
-        bC_active = newA;
-        const rule = newA ? PROMO_RULES.find(r => r.emo === newA) : null;
-        const tag = document.getElementById('bC-ptag');
-        if (rule) { tag.textContent = rule.tag; tag.style.display = 'inline'; tag.style.background = rule.col + '22'; tag.style.color = rule.col; }
-        else tag.style.display = 'none';
-        if (!bC_locked) bC_buildGrid();
-      }
-      bC_renderPromo('bC-promo', bC_timers, bC_active);
-      requestAnimationFrame(bC_loop);
-    }
-    bC_setEmo('neutro'); bC_buildGrid(); requestAnimationFrame(bC_loop);
-
-    /* ── DEMO COMBINADA ── */
-    let comb_emo = 'neutro', comb_log = [], comb_timers = {}, comb_active = null, comb_locked = false, comb_last = null, comb_page = 0, comb_hist = [], comb_pattern = {};
-    Object.keys(EMO).forEach(k => comb_timers[k] = 0);
-    function comb_setEmo(e) { comb_emo = e; setBadge('comb-badge', e); setEmoBtn('comb-ebg', e); }
-    function comb_setPage(p) {
-      comb_page = p;
-      document.getElementById('comb-p0').className = 'd-nav-b' + (p === 0 ? ' cur' : '');
-      document.getElementById('comb-p1').className = 'd-nav-b' + (p === 1 ? ' cur' : '');
-      comb_buildGrid();
-    }
-    function comb_buildGrid() {
-      buildGrid('comb-grid', comb_page, comb_active, (item) => {
-        if (comb_locked) return; comb_locked = true;
-        const v = computeVal(comb_log); const dom = domEmo(comb_log); const m = EMO[dom]; const t = ts();
-        comb_hist.unshift({ emoji: item.e, msg: item.m, key: item.k, emo: dom, v, t });
-        if (!comb_pattern[item.k]) comb_pattern[item.k] = { total: 0, vSum: 0, emos: {} };
-        comb_pattern[item.k].total++; comb_pattern[item.k].vSum += v;
-        comb_pattern[item.k].emos[dom] = (comb_pattern[item.k].emos[dom] || 0) + 1;
-        document.getElementById('comb-count').textContent = comb_hist.length;
-        document.getElementById('comb-grid').style.display = 'none';
-        document.getElementById('comb-result').style.display = 'flex';
-        document.getElementById('comb-re').textContent = item.e; document.getElementById('comb-rn').textContent = item.m;
-        document.getElementById('comb-rl').textContent = 'estado emocional previo: ' + dom + ' ' + m.face;
-        setValBar('comb-vf', 'comb-vn', v, 'comb-vi');
-        comb_renderHist(); renderCoh('comb-coh', comb_pattern);
-      });
-    }
-    function comb_reset() { comb_locked = false; document.getElementById('comb-grid').style.display = 'grid'; document.getElementById('comb-result').style.display = 'none'; comb_buildGrid(); }
-    function comb_renderHist() {
-      const el = document.getElementById('comb-hist'); if (!comb_hist.length) return; el.innerHTML = '';
-      comb_hist.slice(0, 5).forEach(h => {
+    function renderHist(hId, hist) {
+      const el = document.getElementById(hId); if (!hist.length) return; el.innerHTML = '';
+      hist.slice(0, 6).forEach(h => {
         const m = EMO[h.emo]; const pct = Math.round(Math.abs(h.v) * 50); const left = h.v < 0 ? (50 - pct) : 50; const sign = h.v > 0 ? '+' : '';
         const d = document.createElement('div'); d.className = 'hist-item';
         d.innerHTML = `<span class="hi-e">${h.emoji}</span><span class="hi-need">${h.msg.replace('Quiere ', '').replace('Siente ', '').replace('Necesita ', '')}</span><span class="hi-emo" style="background:${m.bg};color:${m.c}">${m.face}</span><div class="hi-vbar"><div class="hi-vfill" style="left:${left}%;width:${pct}%;background:${h.v < 0 ? '#ef4444' : '#22c55e'}"></div></div><span class="hi-vnum" style="color:${h.v < 0 ? '#ef4444' : h.v > 0 ? '#15803d' : '#71717a'}">${sign}${h.v.toFixed(1)}</span>`;
         el.appendChild(d);
       });
     }
+
+    /* ── MÓDULO A ── */
+    let bA_emo = 'neutro', bA_log = [], bA_hist = [], bA_pat = {}, bA_lk = false;
+    function bA_setEmo(e) { bA_emo = e; setBadge('bA-badge', e); setEmoBtn('bA-ebg', e); }
+    function bA_select(emoji, msg, key) {
+      if (bA_lk) return; bA_lk = true;
+      const v = computeVal(bA_log); const dom = domEmo(bA_log); const m = EMO[dom];
+      bA_hist.unshift({ emoji, msg, key, emo: dom, v, t: ts() });
+      if (!bA_pat[key]) bA_pat[key] = { total: 0, vSum: 0, emos: {} };
+      bA_pat[key].total++; bA_pat[key].vSum += v; bA_pat[key].emos[dom] = (bA_pat[key].emos[dom] || 0) + 1;
+      document.getElementById('bA-count').textContent = bA_hist.length + ' registros';
+      document.getElementById('bA-grid').style.display = 'none';
+      document.getElementById('bA-result').style.display = 'flex';
+      document.getElementById('bA-re').textContent = emoji; document.getElementById('bA-rn').textContent = msg;
+      document.getElementById('bA-rl').textContent = 'señal emocional estimada: ' + dom + ' ' + m.face;
+      setValBar('bA-vf', 'bA-vn', v, null); renderHist('bA-hist', bA_hist); renderCoh('bA-coh', bA_pat);
+    }
+    function bA_reset() { bA_lk = false; document.getElementById('bA-grid').style.display = 'grid'; document.getElementById('bA-result').style.display = 'none'; }
+    function bA_loop() { bA_log.push(bA_emo); if (bA_log.length > 8 * 30 * 2) bA_log.shift(); requestAnimationFrame(bA_loop); }
+    bA_setEmo('neutro'); requestAnimationFrame(bA_loop);
+
+    /* ── MÓDULO B ── */
+    let bB_emo = 'neutro', bB_log = [], bB_lk = false, bB_last = null;
+    function bB_setEmo(e) { bB_emo = e; setBadge('bB-badge', e); setEmoBtn('bB-ebg', e); }
+    function bB_select(emoji, msg) {
+      if (bB_lk) return; bB_lk = true;
+      const v = computeVal(bB_log); const dom = domEmo(bB_log); const m = EMO[dom];
+      document.getElementById('bB-grid').style.display = 'none'; document.getElementById('bB-result').style.display = 'flex';
+      document.getElementById('bB-re').textContent = emoji; document.getElementById('bB-rn').textContent = msg;
+      document.getElementById('bB-rs').textContent = dom + ' ' + m.face; setValBar('bB-vf', 'bB-vn', v, 'bB-vi');
+    }
+    function bB_reset() { bB_lk = false; document.getElementById('bB-grid').style.display = 'grid'; document.getElementById('bB-result').style.display = 'none'; }
+    function bB_loop(now) {
+      if (!bB_last) bB_last = now; bB_last = now;
+      bB_log.push(bB_emo); if (bB_log.length > 8 * 30 * 2) bB_log.shift();
+      if (!bB_lk) { updateLiveVal('bB-ln', 'bB-lp', 'bB-lv', computeVal(bB_log)); }
+      requestAnimationFrame(bB_loop);
+    }
+    bB_setEmo('neutro'); requestAnimationFrame(bB_loop);
+
+    /* ── MÓDULO C ── */
+    let bC_emo = 'neutro', bC_timers = {}, bC_active = null, bC_lk = false, bC_last = null;
+    Object.keys(EMO).forEach(k => bC_timers[k] = 0);
+    function bC_setEmo(e) { bC_emo = e; setBadge('bC-badge', e); setEmoBtn('bC-ebg', e); }
+    function bC_buildGrid() {
+      buildGrid('bC-grid', 0, bC_active, (item) => {
+        if (bC_lk) return; bC_lk = true; const m = EMO[bC_emo];
+        document.getElementById('bC-grid').style.display = 'none'; document.getElementById('bC-result').style.display = 'flex';
+        document.getElementById('bC-re').textContent = item.e; document.getElementById('bC-rn').textContent = item.m;
+        document.getElementById('bC-rl').textContent = 'señal estimada: ' + bC_emo + ' ' + m.face;
+      });
+    }
+    function bC_reset() { bC_lk = false; document.getElementById('bC-grid').style.display = 'grid'; document.getElementById('bC-result').style.display = 'none'; bC_buildGrid(); }
+    function bC_loop(now) {
+      if (!bC_last) bC_last = now; const dt = now - bC_last; bC_last = now;
+      Object.keys(bC_timers).forEach(k => { if (k === bC_emo && !bC_lk) bC_timers[k] = Math.min(THRESH, bC_timers[k] + dt); else bC_timers[k] = Math.max(0, bC_timers[k] - dt * 1.5); });
+      const newA = Object.entries(bC_timers).find(([k, v]) => v >= THRESH && k !== 'neutro')?.[0] || null;
+      if (newA !== bC_active) { bC_active = newA; const rule = newA ? PROMO_RULES.find(r => r.emo === newA) : null; const tag = document.getElementById('bC-ptag'); if (rule) { tag.textContent = rule.tag; tag.style.display = 'inline'; tag.style.background = rule.col + '22'; tag.style.color = rule.col; } else tag.style.display = 'none'; if (!bC_lk) bC_buildGrid(); }
+      renderPromo('bC-promo', bC_timers, bC_active); requestAnimationFrame(bC_loop);
+    }
+    bC_setEmo('neutro'); bC_buildGrid(); requestAnimationFrame(bC_loop);
+
+    /* ── DEMO COMBINADA ── */
+    let comb_emo = 'neutro', comb_log = [], comb_timers = {}, comb_active = null, comb_lk = false, comb_last = null, comb_page = 0, comb_hist = [], comb_pat = {};
+    Object.keys(EMO).forEach(k => comb_timers[k] = 0);
+    function comb_setEmo(e) { comb_emo = e; setBadge('comb-badge', e); setEmoBtn('comb-ebg', e); }
+    function comb_setPage(p) { comb_page = p; document.getElementById('comb-p0').className = 'd-nav-b' + (p === 0 ? ' cur' : ''); document.getElementById('comb-p1').className = 'd-nav-b' + (p === 1 ? ' cur' : ''); comb_buildGrid(); }
+    function comb_buildGrid() {
+      buildGrid('comb-grid', comb_page, comb_active, (item) => {
+        if (comb_lk) return; comb_lk = true;
+        const v = computeVal(comb_log); const dom = domEmo(comb_log); const m = EMO[dom]; const t = ts();
+        comb_hist.unshift({ emoji: item.e, msg: item.m, key: item.k, emo: dom, v, t });
+        if (!comb_pat[item.k]) comb_pat[item.k] = { total: 0, vSum: 0, emos: {} };
+        comb_pat[item.k].total++; comb_pat[item.k].vSum += v; comb_pat[item.k].emos[dom] = (comb_pat[item.k].emos[dom] || 0) + 1;
+        document.getElementById('comb-count').textContent = comb_hist.length + ' registros';
+        document.getElementById('comb-grid').style.display = 'none'; document.getElementById('comb-result').style.display = 'flex';
+        document.getElementById('comb-re').textContent = item.e; document.getElementById('comb-rn').textContent = item.m;
+        document.getElementById('comb-rl').textContent = 'indicador emocional previo: ' + dom + ' ' + m.face;
+        setValBar('comb-vf', 'comb-vn', v, 'comb-vi'); renderHist('comb-hist', comb_hist); renderCoh('comb-coh', comb_pat);
+      });
+    }
+    function comb_reset() { comb_lk = false; document.getElementById('comb-grid').style.display = 'grid'; document.getElementById('comb-result').style.display = 'none'; comb_buildGrid(); }
     function comb_loop(now) {
       if (!comb_last) comb_last = now; const dt = now - comb_last; comb_last = now;
       comb_log.push(comb_emo); if (comb_log.length > 8 * 30 * 2) comb_log.shift();
-      Object.keys(comb_timers).forEach(k => { if (k === comb_emo && !comb_locked) comb_timers[k] = Math.min(THRESH, comb_timers[k] + dt); else comb_timers[k] = Math.max(0, comb_timers[k] - dt * 1.5); });
+      Object.keys(comb_timers).forEach(k => { if (k === comb_emo && !comb_lk) comb_timers[k] = Math.min(THRESH, comb_timers[k] + dt); else comb_timers[k] = Math.max(0, comb_timers[k] - dt * 1.5); });
       const newA = Object.entries(comb_timers).find(([k, v]) => v >= THRESH && k !== 'neutro')?.[0] || null;
-      if (newA !== comb_active) {
-        comb_active = newA;
-        const rule = newA ? PROMO_RULES.find(r => r.emo === newA) : null;
-        const tag = document.getElementById('comb-ptag');
-        if (rule) { tag.textContent = rule.tag; tag.style.display = 'inline'; tag.style.background = rule.col + '22'; tag.style.color = rule.col; }
-        else tag.style.display = 'none';
-        if (!comb_locked) comb_buildGrid();
-      }
-      if (!comb_locked) { const v = computeVal(comb_log); updateLiveVal('comb-ln', 'comb-lp', 'comb-lv', v); }
-      bC_renderPromo('comb-promo', comb_timers, comb_active);
-      requestAnimationFrame(comb_loop);
+      if (newA !== comb_active) { comb_active = newA; const rule = newA ? PROMO_RULES.find(r => r.emo === newA) : null; const tag = document.getElementById('comb-ptag'); if (rule) { tag.textContent = rule.tag; tag.style.display = 'inline'; tag.style.background = rule.col + '22'; tag.style.color = rule.col; } else tag.style.display = 'none'; if (!comb_lk) comb_buildGrid(); }
+      if (!comb_lk) { updateLiveVal('comb-ln', 'comb-lp', 'comb-lv', computeVal(comb_log)); }
+      renderPromo('comb-promo', comb_timers, comb_active); requestAnimationFrame(comb_loop);
     }
     comb_setEmo('neutro'); comb_buildGrid(); requestAnimationFrame(comb_loop);
   </script>
