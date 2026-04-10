@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAEC — Propuesta TFG · Anthony Cerdas · UNA 2025</title>
+  <title>SAEC — Propuesta TFG · Anthony Cerdas · UNA 2026</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap"
     rel="stylesheet">
@@ -1356,10 +1356,10 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">SAEC <span>·</span> TFG 2025</div>
+    <div class="nav-logo">SAEC <span>·</span> TFG 2026</div>
     <div class="nav-links">
       <a href="#propuesta">Propuesta</a>
-      <a href="#hipotesis">Hipótesis</a>
+      <a href="#hipotesis">Pregunta</a>
       <a href="#modA">Módulo A</a>
       <a href="#modB">Módulo B</a>
       <a href="#modC">Módulo C</a>
@@ -1372,12 +1372,12 @@
 
   <!-- HERO -->
   <header class="hero">
-    <div class="hero-pre">Universidad Nacional de Costa Rica · Escuela de Informática · TFG Licenciatura</div>
-    <h1 class="hero-title">Sistema <em>Adaptativo</em><br>con Clasificación Facial Contextual - ¿Cómo se siente
-      mientras lo <em>pide</em>?</h1>
-    <p class="hero-sub">Propuesta de prototipo funcional de Comunicación Aumentativa y Alternativa que combina selección
-      táctil por pictogramas con señales visuales y estimaciones de expresión facial, con el fin de apoyar al cuidador
-      en la interpretación de lo que el usuario desea comunicar.</p>
+    <div class="hero-pre">Universidad Nacional de Costa Rica · Escuela de Informática · TFG Licenciatura 2026</div>
+    <h1 class="hero-title">Sistema <em>Adaptativo</em><br>de Expresión y Comunicación — ¿Qué se observa<br>mientras lo
+      <em>pide</em>?</h1>
+    <p class="hero-sub">Propuesta de prototipo funcional de Comunicación Aumentativa y Alternativa que integra selección
+      táctil por pictogramas con señales de contexto observable y características faciales geométricas, con el fin de
+      reducir la incertidumbre del cuidador en la interpretación de lo que el usuario desea comunicar.</p>
 
     <div class="method-block">
       <div class="method-item"><span class="dot"></span>Estudio exploratorio</div>
@@ -1387,10 +1387,10 @@
     </div>
 
     <div class="hero-disclaimer">
-      El sistema clasifica <strong>expresiones faciales visibles</strong>, no estados emocionales internos. La etiqueta
-      asignada por el modelo (ej. "frustrado") describe una configuración facial detectada, no implica que el niño
-      experimente esa emoción. Este sistema será evaluado mediante un estudio exploratorio de caso único. Los resultados
-      no son generalizables.
+      El sistema detecta <strong>características faciales observables mediante métricas geométricas sobre
+        landmarks</strong>, no estados emocionales internos. Las señales producidas (ej. "perfil de malestar") describen
+      configuraciones geométricas observadas en el rostro — patrones visuales auxiliares, sin implicar que el niño
+      experimente esa emoción. Evaluado mediante estudio exploratorio de caso único. Resultados no generalizables.
     </div>
   </header>
 
@@ -1405,10 +1405,12 @@
       <div style="margin-bottom:2.5rem">
         <div class="sec-eye" style="margin-top:2rem">Planteamiento del problema</div>
         <p class="sec-lead" style="margin-bottom:1rem">
-          En usuarios no verbales, la interpretación de lo que desean comunicar depende del cuidador, quien se basa en señales como conducta, contexto y expresiones, las cuales pueden ser ambiguas.
+          En usuarios no verbales, la interpretación de lo que desean comunicar depende del cuidador, quien se basa en
+          señales como conducta, contexto y expresiones, las cuales pueden ser ambiguas.
         </p>
         <p class="sec-lead" style="margin-bottom:1rem">
-          Los sistemas de Comunicación Aumentativa y Alternativa (CAA) permiten seleccionar pictogramas, pero no ayudan activamente al cuidador a interpretar la intención comunicativa en tiempo real.
+          Los sistemas de Comunicación Aumentativa y Alternativa (CAA) permiten seleccionar pictogramas, pero no ayudan
+          activamente al cuidador a interpretar la intención comunicativa en tiempo real.
         </p>
         <p class="sec-lead" style="margin-bottom:0">
           Esto puede generar confusión, errores de interpretación y frustración durante la interacción.
@@ -1417,49 +1419,86 @@
 
       <!-- PREGUNTA DE INVESTIGACIÓN -->
       <div class="hypothesis-block" style="margin-top:0;margin-bottom:2rem">
-        <div class="hyp-label">Pregunta de investigación</div>
-        <div class="hyp-text">¿En qué medida un sistema de Comunicación Alternativa y Aumentativa que utiliza señales visuales y estimaciones emocionales puede ayudar al cuidador a aproximarse mejor a lo que el usuario desea comunicar?</div>
+        <div class="hyp-label">Pregunta de investigación — marco exploratorio descriptivo</div>
+        <div class="hyp-text">¿Qué patrones se observan en el uso de un sistema adaptativo de comunicación aumentativa y
+          alternativa, basado en contexto y características observables del usuario, durante la interacción entre un
+          usuario no verbal y su cuidador?</div>
+        <div style="margin-top:.85rem;font-size:12px;color:var(--blue);opacity:.75;line-height:1.6">
+          <strong
+            style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:3px;opacity:.7">Alineación
+            metodológica</strong>
+          La pregunta es consistente con el objetivo descriptivo y el diseño de caso único. No pregunta "cuánto mejora"
+          (escala causal), sino "qué se observa" (descripción de patrones). Esto elimina la exigencia de inferencia
+          estadística sin perder valor académico.
+        </div>
       </div>
 
       <!-- OBJETIVO GENERAL -->
       <div style="margin-bottom:2rem">
         <div class="sec-eye">Objetivo general</div>
         <p class="sec-lead" style="margin-bottom:0">
-          Desarrollar un sistema de Comunicación Alternativa y Aumentativa asistido por visión por computadora que utilice señales visuales y estimaciones emocionales, y analizar cómo este apoya al cuidador en la interpretación de lo que el usuario desea comunicar.
+          Describir y analizar el comportamiento del sistema y su interacción con el cuidador en un entorno controlado,
+          identificando patrones de uso y posibles aportes al proceso de comunicación.
         </p>
       </div>
 
-      <!-- HIPÓTESIS -->
+      <!-- PREGUNTA EXPLORATORIA -->
       <div id="hipotesis" class="hypothesis-block" style="margin-top:0;margin-bottom:2.5rem">
-        <div class="hyp-label">Hipótesis</div>
-        <div class="hyp-text">El uso de un sistema que sugiere pictogramas a partir de señales visuales y estimaciones emocionales permite al cuidador interpretar con mayor precisión lo que el usuario desea comunicar.</div>
+        <div class="hyp-label">Pregunta exploratoria</div>
+        <div class="hyp-text">¿Qué patrones observables emergen en las asociaciones entre características faciales
+          observables y selecciones de pictogramas durante las sesiones, y de qué manera el cuidador utiliza esa
+          información para orientar su interpretación?</div>
         <div class="hyp-vars">
           <div class="hyp-var">
-            <div class="hyp-var-label">Variable independiente</div>
-            <div class="hyp-var-val">Sistema de Comunicación Alternativa y Aumentativa con señales visuales y estimaciones emocionales</div>
+            <div class="hyp-var-label">Enfoque metodológico</div>
+            <div class="hyp-var-val">Estudio exploratorio descriptivo · caso único · sin inferencia causal</div>
           </div>
           <div class="hyp-var">
-            <div class="hyp-var-label">Variable dependiente</div>
-            <div class="hyp-var-val">Precisión del cuidador al interpretar la intención comunicativa del usuario</div>
+            <div class="hyp-var-label">Resultado esperado</div>
+            <div class="hyp-var-val">Observaciones preliminares sobre patrones de uso y valoración cualitativa del
+              cuidador · no generalizables</div>
           </div>
         </div>
+        <div style="margin-top:.85rem;font-size:12px;color:var(--blue);opacity:.75;line-height:1.6">
+          <strong
+            style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:3px;opacity:.7">Tabla
+            de alineación completa</strong>
+          Pregunta → exploratoria · Objetivo → descriptivo · Resultados → observacionales · Métricas → no inferenciales.
+          La consistencia entre estos cuatro niveles es la condición mínima para una defensa sólida ante comité.
+        </div>
+      </div>
+
+      <!-- INSIGHT CLAVE -->
+      <div class="callout"
+        style="background:#fdf4ff;border-color:#a855f7;color:#6b21a8;max-width:700px;margin-bottom:2rem">
+        <strong>Principio rector del sistema</strong>
+        El sistema no busca interpretar estados internos del usuario. Su objetivo es reducir la incertidumbre del
+        cuidador mediante la integración de múltiples señales observables: contexto del entorno, comportamiento del
+        usuario y características faciales visibles. La interpretación final siempre recae en el cuidador.
       </div>
 
       <!-- DEFINICIÓN DEL SISTEMA -->
       <div class="obs-box" style="max-width:700px;margin-bottom:2rem">
         <strong>Definición del sistema</strong>
-        El sistema no determina automáticamente lo que el usuario quiere comunicar, sino que actúa como una herramienta de apoyo que sugiere opciones probables para facilitar la interpretación del cuidador.
+        El sistema no determina automáticamente lo que el usuario quiere comunicar. Actúa como una herramienta de apoyo
+        que integra tres tipos de señales observables — contexto, comportamiento y características faciales — para
+        sugerir opciones probables y facilitar la interpretación del cuidador.
       </div>
 
-      <!-- ESTIMACIONES EMOCIONALES -->
       <div style="margin-bottom:2rem">
-        <div class="sec-eye">Sobre las estimaciones emocionales</div>
+        <div class="sec-eye">Sobre las características faciales observables</div>
         <p class="sec-lead" style="margin-bottom:1rem">
-          El sistema utiliza estimaciones emocionales basadas en patrones visuales observables, como expresiones faciales o nivel de activación.
+          El sistema incorpora el análisis de características faciales observables como señal auxiliar dentro del estado
+          del usuario: apertura de boca, tensión facial estimada por distancia entre cejas, y dirección de mirada. Estas
+          características no se interpretan como emociones — son patrones visuales que aportan contexto para la
+          priorización de opciones de comunicación.
         </p>
         <div class="warn-box" style="max-width:700px">
-          <strong>Aclaración importante</strong>
-          Estas estimaciones no representan emociones reales ni deben interpretarse como diagnósticos, sino que funcionan como una señal adicional para priorizar sugerencias de pictogramas al cuidador.
+          <strong>Aclaración crítica — no detección de emociones</strong>
+          Los perfiles derivados no representan estados emocionales internos ni tienen valor diagnóstico. Son
+          descriptores geométricos observables. Al usar heurísticas explícitas sobre landmarks (distancia entre cejas,
+          apertura de boca, posición de comisuras) en lugar de modelos entrenados con adultos, se evita el sesgo
+          sistemático documentado en la literatura para niños con TEA.
         </div>
       </div>
 
@@ -1467,17 +1506,42 @@
       <div>
         <div class="sec-eye">Cómo se evaluará el sistema</div>
         <p class="sec-lead" style="margin-bottom:1rem">
-          Para evaluar el sistema, se observará qué tan acertadas son las interpretaciones del cuidador al utilizar las sugerencias generadas. Se considerará un acierto cuando la interpretación coincida con lo que el usuario finalmente comunica (por selección de pictograma o respuesta a una acción).
+          La evaluación es descriptiva, no estadística. Se documentará cualitativamente cómo el cuidador utiliza las
+          sugerencias del sistema para orientar su interpretación. Las dos condiciones tienen propósitos analíticos
+          distintos.
         </p>
-        <div class="formula-box" style="max-width:500px">
-          <span class="cm">// Métrica principal</span><br>
-          <span class="kw">Aciertos</span> (%) = (<span class="vl">Coincidencias</span> / <span class="nm">Intentos</span>) × 100<br><br>
-          <span class="cm">// Un "acierto" se registra cuando la</span><br>
-          <span class="cm">// interpretación del cuidador coincide con</span><br>
-          <span class="cm">// lo que el usuario finalmente selecciona.</span>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:700px;margin-bottom:1.25rem">
+          <div class="obs-box" style="margin-top:0">
+            <strong>Condición A — Sin adaptación</strong>
+            Cuadrícula fija, sin heurística activa. Permite registrar la interpretación del cuidador sin influencia del
+            sistema. La métrica de coincidencia se aplica <em>exclusivamente aquí</em> para obtener una medición más
+            limpia.
+          </div>
+          <div class="obs-box" style="margin-top:0">
+            <strong>Condición B — Con adaptación</strong>
+            Cuadrícula dinámica con Módulo C activo. Se observa el comportamiento del sistema y cómo el cuidador
+            interactúa con las sugerencias. No se usa para validar "precisión" — sería circular.
+          </div>
         </div>
 
-        <div class="study-grid" style="margin-top:1.5rem">
+        <div class="formula-box" style="max-width:560px">
+          <span class="cm">// Métrica descriptiva secundaria — solo Condición A</span><br>
+          <span class="kw">Coincidencia</span> (%) = (<span class="vl">Aciertos cuidador</span> / <span
+            class="nm">Intentos</span>) × 100<br><br>
+          <span class="cm">// Esta métrica es una aproximación exploratoria.</span><br>
+          <span class="cm">// En Condición B la selección del niño puede estar</span><br>
+          <span class="cm">// influenciada por el reordenamiento → circularidad.</span><br>
+          <span class="cm">// No se interpreta como medida objetiva de precisión.</span>
+        </div>
+
+        <div class="study-grid" style="margin-top:1.5rem;grid-template-columns:repeat(5,1fr)">
+          <div class="study-card" style="border-color:#fbbf24;background:#fffbeb">
+            <div class="study-num" style="color:#92400e;font-size:22px">S0</div>
+            <div class="study-lbl">Calibración</div>
+            <div class="study-desc">Observador externo etiqueta manualmente vs. salida del sistema para cuantificar
+              discrepancia en <em>este participante</em> antes de interpretar cualquier señal</div>
+          </div>
           <div class="study-card">
             <div class="study-num" style="color:var(--blue)">1</div>
             <div class="study-lbl">Participante</div>
@@ -1486,25 +1550,30 @@
           <div class="study-card">
             <div class="study-num" style="color:var(--blue)">3</div>
             <div class="study-lbl">Sesiones</div>
-            <div class="study-desc">Estudio exploratorio de caso único · ~10 minutos cada una</div>
+            <div class="study-desc">Exploratorio de caso único · ~10 min c/u · posteriores a la sesión de calibración
+            </div>
           </div>
           <div class="study-card">
             <div class="study-num" style="color:var(--blue)">2</div>
             <div class="study-lbl">Condiciones</div>
-            <div class="study-desc">Condición A: cuadricula estática · Condición B: cuadricula con sugerencias del sistema</div>
+            <div class="study-desc">Condición A: grilla fija · Condición B: grilla adaptativa — con propósitos
+              analíticos distintos</div>
           </div>
           <div class="study-card">
             <div class="study-num" style="color:var(--ink3)">∅</div>
             <div class="study-lbl">Generalización</div>
-            <div class="study-desc">Los resultados no son generalizables a otras poblaciones</div>
+            <div class="study-desc">Los resultados no son generalizables a otras poblaciones ni participantes</div>
           </div>
         </div>
       </div>
 
       <!-- VALOR DEL PROYECTO -->
-      <div class="callout" style="background:var(--green-l);border-color:var(--green-m);color:var(--green);max-width:700px;margin-top:2rem">
+      <div class="callout"
+        style="background:var(--green-l);border-color:var(--green-m);color:var(--green);max-width:700px;margin-top:2rem">
         <strong>Valor del proyecto</strong>
-        El sistema se propone reducir la incertidumbre en la interpretación de lo que el usuario desea comunicar, mediante la integración de señales visuales observables como apoyo al cuidador. No se busca reemplazar el criterio del cuidador, sino enriquecer la información disponible para su toma de decisiones.
+        El sistema se propone reducir la incertidumbre en la interpretación de lo que el usuario desea comunicar,
+        mediante la integración de señales visuales observables como apoyo al cuidador. No se busca reemplazar el
+        criterio del cuidador, sino enriquecer la información disponible para su toma de decisiones.
       </div>
     </div>
   </section>
@@ -1517,35 +1586,45 @@
           <div>
             <div class="mod-tag" style="background:var(--purple-l);color:var(--purple)">Módulo A</div>
             <div class="mod-letter" style="color:var(--purple)">A</div>
-            <h3 class="mod-title">Registro de asociaciones entre pictogramas y señales visuales observadas</h3>
+            <h3 class="mod-title">Registro de asociaciones entre pictogramas y características faciales observables</h3>
             <p class="mod-desc">Cada selección táctil queda registrada en un log estructurado con timestamp, pictograma
-              elegido y la etiqueta facial clasificada por el modelo en los segundos previos. A lo largo de una sesión,
-              este registro construye un conjunto de observaciones que podría sugerir asociaciones exploratorias entre
-              necesidades comunicativas y configuraciones faciales.</p>
-            <p class="mod-desc">La hipótesis exploratoria es que algunos pictogramas podrían aparecer consistentemente
-              asociados a etiquetas faciales negativas. Si "Baño" aparece reiteradamente con etiqueta "frustrado" y
-              "Jugar" con "feliz", esta asociación podría sugerir patrones exploratorios de valor para el terapeuta —
-              aunque deberá verificarse con datos reales del participante y no implica interpretación del estado
+              elegido y el perfil de características faciales observables derivado de los landmarks en los segundos
+              previos. A lo largo de una sesión, este registro construye un conjunto de observaciones que puede sugerir
+              asociaciones exploratorias entre necesidades comunicativas y configuraciones geométricas faciales.</p>
+            <p class="mod-desc">La observación exploratoria es que algunos pictogramas podrían aparecer asociados
+              consistentemente a ciertos perfiles faciales. Si "Baño" aparece reiteradamente con perfil negativo y
+              "Jugar" con perfil positivo, esta asociación puede ser de valor orientativo para el cuidador — aunque su
+              interpretación siempre requiere validación observacional directa y no implica inferencia sobre el estado
               emocional interno.</p>
 
-            
+            <div class="warn-box">
+              <strong>Límite inferencial del índice de asociación</strong>
+              Con ~10 minutos de sesión y 4 pictogramas, el número de selecciones por pictograma puede ser tan pequeño
+              (3–8) que cualquier asociación observada tiene valor puramente ilustrativo. <strong>El índice de
+                asociación solo se reporta para pictogramas con un mínimo de 5 selecciones registradas.</strong> Por
+              debajo de ese umbral, los datos se presentan como descriptivos sin ningún valor inferencial. Esto debe
+              declararse explícitamente en el análisis.
+            </div>
+
             <div class="callout" style="background:var(--purple-l);border-color:#8b5cf6;color:var(--purple)">
               <strong>Contribución propuesta</strong>
-              Módulo de registro estructurado (JSON con timestamps y distribución de etiquetas faciales) y visualización
-              de asociaciones observacionales pictograma-etiqueta facial. El índice de asociación por pictograma es una
-              métrica original. Publicable como artículo exploratorio en CLEI 2025.
+              Módulo de registro estructurado (JSON con timestamps y distribución de características faciales
+              observables por pictograma) y visualización de asociaciones observacionales. El índice de asociación es
+              una métrica original presentada como aproximación ilustrativa, no como medida inferencial. Publicable como
+              artículo exploratorio en CLEI 2026.
             </div>
 
             <div class="obs-box">
               <strong>Clarificación metodológica</strong>
-              Este módulo registra asociaciones entre pictogramas y <em>etiquetas de expresión facial clasificadas por
-                un modelo automático</em>. Estas asociaciones no implican interpretación psicológica, no tienen valor
-              diagnóstico y no permiten inferir el estado emocional interno del participante. El modelo puede clasificar
-              incorrectamente — especialmente ante expresiones atípicas frecuentes en TEA.
+              Este módulo registra asociaciones entre pictogramas y <em>características faciales observables derivadas
+                de métricas geométricas sobre landmarks de MediaPipe</em>. Estas asociaciones no implican interpretación
+              psicológica, no tienen valor diagnóstico y no permiten inferir el estado emocional interno del
+              participante. Al usar heurísticas geométricas explícitas (distancia entre cejas, apertura de boca,
+              posición de comisuras) en lugar de un modelo de clasificación, el sistema es transparente y replicable.
             </div>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
-              <div class="ctrl-lbl">Simulación — elegí una etiqueta facial y tocá un pictograma</div>
+              <div class="ctrl-lbl">Simulación — elegí un perfil facial y tocá un pictograma</div>
               <div class="emo-btns" id="bA-ebg">
                 <button class="emo-btn" onclick="bA_setEmo('feliz')"><span class="ef">😊</span><span
                     style="font-size:11px">Feliz</span></button>
@@ -1557,14 +1636,14 @@
                     style="font-size:11px">Angustia</span></button>
               </div>
               <div style="margin-top:1rem">
-                <div class="ctrl-lbl">Historial de sesión + etiqueta facial registrada</div>
+                <div class="ctrl-lbl">Historial de sesión + perfil facial registrado</div>
                 <div class="hist-list" id="bA-hist">
                   <div style="font-size:12px;color:#aaa;text-align:center;padding:8px">Tocá pictogramas para construir
                     el historial</div>
                 </div>
               </div>
               <div style="margin-top:.85rem">
-                <div class="ctrl-lbl">Índice de asociación pictograma–etiqueta facial (requiere 3+ selecciones
+                <div class="ctrl-lbl">Índice de asociación pictograma–perfil facial (requiere 3+ selecciones
                   distintas)</div>
                 <div class="coh-rows" id="bA-coh">
                   <div style="font-size:11px;color:#aaa;padding:4px 0">Disponible con 3+ selecciones distintas</div>
@@ -1578,7 +1657,7 @@
               <div class="tablet-screen">
                 <div class="d-topbar">
                   <div class="d-cam">
-                    <div class="d-dot"></div><span>clasificación facial</span>
+                    <div class="d-dot"></div><span>landmarks activos</span>
                   </div>
                   <div class="d-emo-badge" id="bA-badge" style="background:#f4f4f5;color:#52525b">😐 neutro</div>
                   <span id="bA-count" style="font-size:10px;color:#aaa">0 registros</span>
@@ -1604,7 +1683,7 @@
                 <div class="result-scr" id="bA-result">
                   <div class="res-e" id="bA-re">💧</div>
                   <div class="res-need" id="bA-rn">Quiere agua</div>
-                  <div class="res-lbl" id="bA-rl">etiqueta facial previa: neutro 😐</div>
+                  <div class="res-lbl" id="bA-rl">perfil facial previo: neutro 😐</div>
                   <div class="val-bar-wrap" style="margin-top:5px">
                     <div class="val-bar-track">
                       <span style="font-size:9px;color:#aaa">−1</span>
@@ -1614,7 +1693,7 @@
                       <span style="font-size:9px;color:#aaa">+1</span>
                       <div class="val-num" id="bA-vn">0.0</div>
                     </div>
-                    <div class="val-lbl-row"><span>etiquetas neg.</span><span>neutro</span><span>etiquetas pos.</span>
+                    <div class="val-lbl-row"><span>perfil neg.</span><span>neutro</span><span>perfil pos.</span>
                     </div>
                   </div>
                   <button class="res-btn" onclick="bA_reset()">Nueva selección</button>
@@ -1639,36 +1718,37 @@
           <div>
             <div class="mod-tag" style="background:var(--blue-l);color:var(--blue)">Módulo B</div>
             <div class="mod-letter" style="color:var(--blue)">B</div>
-            <h3 class="mod-title">Distribución de señales visuales previas a la selección táctil</h3>
-            <p class="mod-desc">Cuando el participante toca un pictograma, el sistema no registra únicamente la etiqueta
-              del instante exacto. Calcula la <strong>distribución de etiquetas faciales clasificadas en los últimos
-                segundos</strong> — qué proporción de frames fueron clasificados como "feliz", "neutro", "triste", etc.
-              — y la adjunta al registro de sesión.</p>
+            <h3 class="mod-title">Distribución de características faciales observables previas a la selección táctil
+            </h3>
+            <p class="mod-desc">Cuando el participante toca un pictograma, el sistema no registra únicamente el perfil
+              del instante exacto. Calcula la <strong>distribución de características faciales observables en los
+                últimos segundos</strong> — qué proporción de frames presentaron perfil negativo, neutro o positivo — y
+              la adjunta al registro de sesión.</p>
             <p class="mod-desc">Este enfoque es metodológicamente más sólido que promediar emociones: describe una
-              distribución observable de etiquetas clasificadas, no infiere un "estado emocional promedio". Si el 70% de
-              los frames previos fueron clasificados como "frustrado", eso es un dato descriptivo del clasificador, no
-              una afirmación sobre el estado interno del niño.</p>
-
-           
+              distribución observable de métricas geométricas, no infiere un "estado emocional promedio". Si el 70% de
+              los frames previos mostraron perfil negativo (cejas fruncidas, comisuras hacia abajo), eso es un dato
+              descriptivo del clasificador geométrico, no una afirmación sobre el estado interno del niño.</p>
 
             <div class="callout" style="background:var(--blue-l);border-color:var(--blue-m);color:var(--blue)">
               <strong>Contribución propuesta</strong>
-              Mecanismo de captura de distribución de etiquetas faciales sincronizado con el evento de selección táctil,
-              usando ventana temporal de segundos. El score escalar es un resumen compacto de la distribución, no un
-              "estado emocional promedio". Evaluación: correlación entre score y observación directa de observador
-              externo.
+              Mecanismo de captura de distribución de características faciales observables (landmarks MediaPipe)
+              sincronizado con el evento de selección táctil, usando ventana temporal de segundos. El score escalar es
+              un resumen compacto de la distribución geométrica. Evaluación propuesta: comparación con etiquetas
+              manuales del observador externo en la sesión de calibración (S0).
             </div>
 
             <div class="error-box">
-              <strong>Limitación declarada — punto crítico</strong>
-              El sistema puede clasificar incorrectamente la expresión facial. En niños con TEA: las expresiones pueden
-              ser atípicas, la expresividad facial puede ser menor, y los movimientos pueden degradar la clasificación.
-              Los modelos preentrenados (DeepFace / FER+) no fueron validados en esta población. El score resultante
-              debe tratarse como un descriptor del clasificador, nunca como medición del estado emocional real.
+              <strong>Limitación crítica — validación observacional previa obligatoria</strong>
+              Las heurísticas geométricas pueden no capturar correctamente la expresividad en niños con TEA, cuya
+              expresividad puede ser reducida o atípica. <strong>Por eso se incluye la Sesión 0 de calibración:</strong>
+              un observador externo etiqueta manualmente las características faciales observables del participante en
+              paralelo con la salida del sistema, para cuantificar el nivel de discrepancia en <em>este caso
+                específico</em> antes de interpretar cualquier score como señal orientativa. Esto no valida el modelo,
+              pero contextualiza su margen de error real.
             </div>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
-              <div class="ctrl-lbl">Simulación de etiqueta facial — esperá unos segundos antes de tocar</div>
+              <div class="ctrl-lbl">Simulación de perfil facial — esperá unos segundos antes de tocar</div>
               <div class="emo-btns" id="bB-ebg">
                 <button class="emo-btn" onclick="bB_setEmo('feliz')"><span class="ef">😊</span><span
                     class="ev">+1.0</span><span style="font-size:11px">Feliz</span></button>
@@ -1693,7 +1773,7 @@
                   <span style="font-size:9px;color:#aaa">+1</span>
                   <div class="lv-num" id="bB-lv" style="color:#71717a">0.00</div>
                 </div>
-                <div class="lv-labs"><span>etiquetas negativas</span><span>neutro</span><span>etiquetas positivas</span>
+                <div class="lv-labs"><span>perfil negativo</span><span>neutro</span><span>perfil positivo</span>
                 </div>
               </div>
             </div>
@@ -1704,7 +1784,7 @@
               <div class="tablet-screen">
                 <div class="d-topbar">
                   <div class="d-cam">
-                    <div class="d-dot"></div><span>clasificación · 3fps</span>
+                    <div class="d-dot"></div><span>landmarks · 3fps</span>
                   </div>
                   <div class="d-emo-badge" id="bB-badge" style="background:#f4f4f5;color:#52525b">😐 neutro</div>
                 </div>
@@ -1739,10 +1819,10 @@
                       <span style="font-size:9px;color:#aaa">+1</span>
                       <div class="val-num" id="bB-vn">0.0</div>
                     </div>
-                    <div class="val-lbl-row"><span>etiq. negativas</span><span>neutro</span><span>etiq. positivas</span>
+                    <div class="val-lbl-row"><span>perfil neg.</span><span>neutro</span><span>perfil pos.</span>
                     </div>
                   </div>
-                  <div class="val-interp" id="bB-vi">distribución predominantemente neutra</div>
+                  <div class="val-interp" id="bB-vi">perfil predominantemente neutro</div>
                   <button class="res-btn" onclick="bB_reset()">Nueva selección</button>
                 </div>
                 <div class="d-nav">
@@ -1765,35 +1845,35 @@
           <div>
             <div class="mod-tag" style="background:var(--red-l);color:var(--red)">Módulo C</div>
             <div class="mod-letter" style="color:var(--red)">C</div>
-            <h3 class="mod-title">Reordenamiento heurístico experimental por señal visual sostenida</h3>
-            <p class="mod-desc">Si el clasificador asigna la misma etiqueta facial de forma sostenida por más de 3
-              segundos, la interfaz puede reordenarse heurísticamente para ubicar un pictograma asociado en la primera
-              posición. Este reordenamiento es experimental y basado en una heurística — no en una inferencia emocional.
-            </p>
-            <p class="mod-desc">La hipótesis es que este reordenamiento heurístico podría reducir el tiempo de selección
-              en el participante. El participante siempre mantiene el control completo — el reordenamiento es una
-              sugerencia de la interfaz. Si elige otro pictograma, ese dato se registra y puede ser más informativo que
-              la sugerencia aceptada.</p>
-
-           
+            <h3 class="mod-title">Reordenamiento heurístico experimental por característica facial sostenida</h3>
+            <p class="mod-desc">Si las características faciales observables derivadas de los landmarks se mantienen en
+              rango negativo de forma sostenida por más de 3 segundos, la interfaz puede reordenarse heurísticamente
+              para ubicar un pictograma asociado en la primera posición. Este reordenamiento es experimental y basado en
+              una heurística geométrica — no en una inferencia emocional.</p>
+            <p class="mod-desc">La observación a documentar es si este reordenamiento heurístico podría reducir el
+              tiempo de selección en el participante. El participante siempre mantiene el control completo — el
+              reordenamiento es una sugerencia de la interfaz. Si elige otro pictograma, ese dato se registra y puede
+              ser más informativo que la sugerencia aceptada.</p>
 
             <div class="callout" style="background:var(--red-l);border-color:var(--red-m);color:var(--red)">
               <strong>Contribución propuesta</strong>
-              Algoritmo de reordenamiento heurístico experimental con umbral temporal de etiqueta facial sostenida y
-              decay gradual. Evaluación propuesta: comparación del tiempo de selección en condición A (cuadricula estática)
-              vs. B (cuadricula adaptativa) durante las sesiones del estudio de caso único.
+              Algoritmo de reordenamiento heurístico experimental con umbral temporal de característica facial sostenida
+              y decay gradual. Evaluación propuesta: comparación descriptiva del tiempo de selección en Condición A
+              (grilla fija) vs. Condición B (grilla adaptativa). La Condición B no mide "precisión del cuidador" — eso
+              sería circular — sino el comportamiento de la interacción con las sugerencias.
             </div>
 
             <div class="warn-box">
               <strong>Limitación declarada — módulo heurístico experimental</strong>
               Este reordenamiento es una heurística, no una inferencia emocional. Puede no coincidir con la intención
-              real del participante. Si la clasificación facial es incorrecta, la cuadricula puede reordenarse de forma
-              inadecuada. Esto no se considera un fallo del sistema — es una limitación documentada que se analizará
-              como parte del estudio. El objetivo es evaluar si la heurística es útil, no asumir que lo es.
+              real del participante. Si la clasificación facial es incorrecta, la grilla puede reordenarse de forma
+              inadecuada. Esto no es un fallo del sistema — es una limitación documentada que se analizará como parte
+              del estudio. La Condición B no se usa para medir acierto del cuidador precisamente para evitar
+              circularidad metodológica.
             </div>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
-              <div class="ctrl-lbl">Simulación — mantené una etiqueta facial para activar la heurística (umbral: 3s)
+              <div class="ctrl-lbl">Simulación — mantené un perfil facial para activar la heurística (umbral: 3s)
               </div>
               <div class="emo-btns" id="bC-ebg">
                 <button class="emo-btn" onclick="bC_setEmo('feliz')"><span class="ef">😊</span><span
@@ -1819,7 +1899,7 @@
               <div class="tablet-screen">
                 <div class="d-topbar">
                   <div class="d-cam">
-                    <div class="d-dot"></div><span>clasificación activa</span>
+                    <div class="d-dot"></div><span>landmarks activos</span>
                   </div>
                   <div class="d-emo-badge" id="bC-badge" style="background:#f4f4f5;color:#52525b">😐 neutro</div>
                   <div class="d-promo-tag" id="bC-ptag"></div>
@@ -1828,7 +1908,7 @@
                 <div class="result-scr" id="bC-result">
                   <div class="res-e" id="bC-re">💧</div>
                   <div class="res-need" id="bC-rn">Quiere agua</div>
-                  <div class="res-lbl" id="bC-rl">etiqueta facial al seleccionar: neutro 😐</div>
+                  <div class="res-lbl" id="bC-rl">perfil facial al seleccionar: neutro 😐</div>
                   <button class="res-btn" onclick="bC_reset()">Nueva selección</button>
                 </div>
                 <div class="d-nav">
@@ -1852,6 +1932,15 @@
         táctil por pictogramas aun cuando la clasificación facial sea imprecisa o no esté disponible — la funcionalidad
         principal es independiente de ella.</p>
 
+      <div class="error-box" style="max-width:700px;margin-bottom:1rem">
+        <strong>Aviso — simulación de interfaz, no demo técnica funcional</strong>
+        La demo a continuación simula la interfaz del sistema mediante botones manuales para seleccionar perfiles
+        faciales. <strong>No representa la ejecución en tiempo real de los módulos de visión por computadora.</strong>
+        En el prototipo real, los perfiles son derivados automáticamente de características faciales observables vía
+        landmarks MediaPipe. Esta simulación existe exclusivamente para ilustrar el comportamiento de la interfaz ante
+        distintas señales de entrada.
+      </div>
+
       <div class="obs-box" style="max-width:700px;margin-bottom:1.5rem">
         <strong>Diseño de independencia funcional</strong>
         Los tres módulos son capas adicionales sobre el comunicador táctil base. Si la clasificación facial falla, el
@@ -1865,7 +1954,7 @@
             <div class="tablet-screen">
               <div class="d-topbar">
                 <div class="d-cam">
-                  <div class="d-dot"></div><span>clasificación facial activa</span>
+                  <div class="d-dot"></div><span>landmarks activos</span>
                 </div>
                 <div class="d-emo-badge" id="comb-badge" style="background:#f4f4f5;color:#52525b">😐 neutro</div>
                 <div class="d-promo-tag" id="comb-ptag"></div>
@@ -1884,10 +1973,10 @@
                     <span style="font-size:9px;color:#aaa">+1</span>
                     <div class="val-num" id="comb-vn">0.0</div>
                   </div>
-                  <div class="val-lbl-row"><span>etiq. negativas</span><span>neutro</span><span>etiq. positivas</span>
+                  <div class="val-lbl-row"><span>perfil neg.</span><span>neutro</span><span>perfil pos.</span>
                   </div>
                 </div>
-                <div class="val-interp" id="comb-vi">distribución predominantemente neutra</div>
+                <div class="val-interp" id="comb-vi">perfil predominantemente neutro</div>
                 <button class="res-btn" onclick="comb_reset()">Nueva selección</button>
               </div>
               <div class="d-nav">
@@ -1897,7 +1986,7 @@
             </div>
           </div>
           <div class="card">
-            <div class="card-hdr">Simulación de etiqueta facial</div>
+            <div class="card-hdr">Simulación de perfil facial</div>
             <div class="card-body">
               <div class="emo-btns" id="comb-ebg">
                 <button class="emo-btn" onclick="comb_setEmo('feliz')"><span class="ef">😊</span><span
@@ -1923,7 +2012,7 @@
                   <span style="font-size:9px;color:#aaa">+1</span>
                   <div class="lv-num" id="comb-lv" style="color:#71717a">0.00</div>
                 </div>
-                <div class="lv-labs"><span>etiq. negativas</span><span>neutro</span><span>etiq. positivas</span></div>
+                <div class="lv-labs"><span>perfil negativo</span><span>neutro</span><span>perfil positivo</span></div>
               </div>
             </div>
           </div>
@@ -1934,7 +2023,7 @@
             <div class="card-hdr"><span>Módulo C — Heurística de reordenamiento</span></div>
             <div class="card-body">
               <div class="promo-rows" id="comb-promo"></div>
-              <div style="font-size:11px;color:#aaa;margin-top:6px;line-height:1.5">Mantené una etiqueta facial unos
+              <div style="font-size:11px;color:#aaa;margin-top:6px;line-height:1.5">Mantené un perfil facial unos
                 segundos para activar la heurística experimental.</div>
             </div>
           </div>
@@ -1957,16 +2046,16 @@
               <div class="coh-rows" id="comb-coh">
                 <div style="font-size:11px;color:#aaa;padding:4px 0">Disponible con 3+ selecciones distintas</div>
               </div>
-              <div style="font-size:11px;color:#aaa;margin-top:6px;line-height:1.5">Color = etiqueta facial más
-                frecuente. Largo = intensidad del score de distribución.</div>
+              <div style="font-size:11px;color:#aaa;margin-top:6px;line-height:1.5">Color = perfil facial más
+                frecuente. Largo = intensidad del score de activación.</div>
             </div>
           </div>
           <div class="error-box" style="font-size:12px">
             <strong>Para interpretar correctamente</strong>
-            Lo que muestra el sistema son asociaciones observacionales entre pictogramas y etiquetas faciales
-            clasificadas automáticamente. Estas etiquetas no representan el estado emocional real del participante. El
-            sistema puede clasificar incorrectamente, especialmente ante expresiones atípicas. La interpretación final
-            siempre debe realizarla un profesional.
+            Lo que muestra el sistema son asociaciones observacionales entre pictogramas y perfiles de activación facial
+            derivados de landmarks geométricos (MediaPipe). Estos perfiles no representan el estado emocional real del
+            participante. Las heurísticas geométricas pueden no capturar expresiones atípicas de TEA correctamente. La
+            interpretación final siempre debe realizarla un profesional.
           </div>
         </div>
       </div>
@@ -1978,7 +2067,7 @@
     <div class="container">
       <div class="sec-eye">Consideraciones éticas</div>
       <h2 class="sec-title">Protocolo ético del estudio piloto</h2>
-      <p class="sec-lead">El uso de tecnología de clasificación facial con un menor de edad requiere un
+      <p class="sec-lead">El uso de tecnología de detección facial con un menor de edad con TEA requiere un
         protocolo ético explícito. Estos son los compromisos declarados del proyecto.</p>
       <div class="ethics-grid">
         <div class="ethics-item">
@@ -1990,8 +2079,8 @@
         <div class="ethics-item">
           <div class="ethics-icon">🔒</div>
           <div class="ethics-text"><strong>Sin grabación permanente de video</strong>La cámara procesa los frames en
-            tiempo real. No se almacena ningún video del participante. Solo se guardan las etiquetas clasificadas y los
-            datos de sesión.</div>
+            tiempo real para extraer landmarks geométricos. No se almacena ningún video ni imagen del participante. Solo
+            se guardan los perfiles de activación derivados y los datos de sesión.</div>
         </div>
         <div class="ethics-item">
           <div class="ethics-icon">💻</div>
@@ -2011,7 +2100,12 @@
             cualquier sesión en cualquier momento sin consecuencias. No se forzará al participante a completar ninguna
             interacción.</div>
         </div>
-     
+        <div class="ethics-item">
+          <div class="ethics-icon">🏛</div>
+          <div class="ethics-text"><strong>Revisión por comité de ética</strong>El protocolo del estudio será sometido a
+            revisión del comité de ética institucional de la UNA antes de iniciar las sesiones con el participante.
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -2029,14 +2123,15 @@
           <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Comunicador táctil por
             pictogramas funcional e independiente</div>
 
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Clasificación de 4
-            etiquetas faciales: feliz, triste, frustrado, angustia</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Detección de perfil de
+            activación facial mediante heurísticas geométricas sobre landmarks MediaPipe (sin modelo de clasificación
+            emocional)</div>
           <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Módulo A: registro y
-            distribución de etiquetas faciales por pictograma</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Módulo B: score de
-            distribución facial en ventana de segundos</div>
+            distribución de perfiles de activación por pictograma</div>
+          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Módulo B: score escalar de
+            distribución geométrica en ventana temporal de segundos</div>
           <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Módulo C: reordenamiento
-            heurístico experimental por etiqueta sostenida ≥3s</div>
+            heurístico experimental por perfil negativo sostenido ≥3s</div>
           <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Estudio exploratorio ·
             caso único · 3 sesiones · 10 min c/u · 1 participante TEA</div>
           <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Protocolo ético con
@@ -2064,7 +2159,7 @@
             visión por computadora desde cero</div>
           <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Perfiles múltiples
             persistentes</div>
-     
+
         </div>
       </div>
     </div>
@@ -2082,13 +2177,14 @@
           <div class="tech-cat">Detección facial</div>
           <div class="tech-name">MediaPipe Face Mesh</div>
           <div class="tech-why">468 landmarks faciales en tiempo real sobre CPU. Base para detección de presencia y
-            activación de la interfaz.</div>
+            cálculo de métricas geométricas (distancia entre cejas, apertura de boca, posición de comisuras).</div>
         </div>
         <div class="tech-card">
-          <div class="tech-cat">Clasificación de expresión facial</div>
-          <div class="tech-name">DeepFace / FER+</div>
-          <div class="tech-why">Modelos preentrenados que estiman etiquetas de expresión facial con precisión variable.
-            Degradación documentada en menores de 5 años y en expresiones atípicas.</div>
+          <div class="tech-cat">Perfil de activación facial</div>
+          <div class="tech-name">Heurísticas geométricas propias</div>
+          <div class="tech-why">Reglas sobre landmarks MediaPipe: sin modelo de clasificación emocional externo.
+            Transparente, replicable y sin sesgo de entrenamiento con adultos. Score escalar derivado de métricas
+            geométricas observables.</div>
         </div>
         <div class="tech-card">
           <div class="tech-cat">Backend</div>
@@ -2105,7 +2201,7 @@
         <div class="tech-card">
           <div class="tech-cat">Pictogramas</div>
           <div class="tech-name">ARASAAC</div>
-          <div class="tech-why">Banco comunicación alternativa y aumentativa en español, licencia Creative Commons. Estándar de referencia en habla
+          <div class="tech-why">Banco CAA en español, licencia Creative Commons. Estándar de referencia en habla
             hispana.</div>
         </div>
         <div class="tech-card">
@@ -2122,10 +2218,11 @@
     <strong>Anthony Steven Cerdas Chacón · 4-0241-0478</strong>
     Licenciatura en Informática · Énfasis en Desarrollo Web · Universidad Nacional de Costa Rica<br>
     Tutor: Johnny Villalobos Murillo · Asesor: Johnny Flores Araya<br>
-    SAEC — Sistema Adaptativo con Clasificación Facial Contextual · Propuesta de Anteproyecto · 2025<br><br>
-    <em style="font-size:11px">Este proyecto evalúa la viabilidad de integrar clasificación de expresiones faciales en
-      un sistema de comunicación aumentativa, mediante un estudio exploratorio de caso único. Los resultados serán
-      tratados como observaciones preliminares no generalizables.</em>
+    SAEC — <em>Sistema Adaptativo de Expresión y Comunicación</em> · Propuesta de Anteproyecto · 2026<br><br>
+    <em style="font-size:11px">Este proyecto evalúa la viabilidad de integrar características faciales observables
+      derivadas de landmarks geométricos en un sistema de comunicación aumentativa, mediante un estudio exploratorio de
+      caso único. Los resultados serán tratados como observaciones preliminares no generalizables. Pregunta exploratoria
+      · Objetivo descriptivo · Resultados observacionales · Métricas no inferenciales.</em>
   </footer>
 
   <script>
@@ -2136,11 +2233,11 @@
     const THRESH = 3000;
 
     function interpVal(v) {
-      if (v <= -0.7) return { txt: 'distribución predominantemente negativa', bg: '#fee2e2', c: '#991b1b' };
-      if (v <= -0.3) return { txt: 'distribución sesgada hacia negativo', bg: '#fee2e2', c: '#991b1b' };
-      if (v < 0.1) return { txt: 'distribución predominantemente neutra', bg: '#f4f4f5', c: '#52525b' };
-      if (v < 0.6) return { txt: 'distribución sesgada hacia positivo', bg: '#dcfce7', c: '#15803d' };
-      return { txt: 'distribución predominantemente positiva', bg: '#dcfce7', c: '#15803d' };
+      if (v <= -0.7) return { txt: 'perfil predominantemente negativo', bg: '#fee2e2', c: '#991b1b' };
+      if (v <= -0.3) return { txt: 'perfil sesgado hacia negativo', bg: '#fee2e2', c: '#991b1b' };
+      if (v < 0.1) return { txt: 'perfil predominantemente neutro', bg: '#f4f4f5', c: '#52525b' };
+      if (v < 0.6) return { txt: 'perfil sesgado hacia positivo', bg: '#dcfce7', c: '#15803d' };
+      return { txt: 'perfil predominantemente positivo', bg: '#dcfce7', c: '#15803d' };
     }
     function setValBar(fId, nId, v, iId) {
       const pct = Math.abs(v) * 50, f = document.getElementById(fId);
@@ -2228,7 +2325,7 @@
       document.getElementById('bA-grid').style.display = 'none';
       document.getElementById('bA-result').style.display = 'flex';
       document.getElementById('bA-re').textContent = emoji; document.getElementById('bA-rn').textContent = msg;
-      document.getElementById('bA-rl').textContent = 'etiqueta facial previa: ' + dom + ' ' + m.face;
+      document.getElementById('bA-rl').textContent = 'perfil facial previo: ' + dom + ' ' + m.face;
       setValBar('bA-vf', 'bA-vn', v, null); renderHist('bA-hist', bA_hist); renderCoh('bA-coh', bA_pat);
     }
     function bA_reset() { bA_lk = false; document.getElementById('bA-grid').style.display = 'grid'; document.getElementById('bA-result').style.display = 'none'; }
@@ -2263,7 +2360,7 @@
         if (bC_lk) return; bC_lk = true; const m = EMO[bC_emo];
         document.getElementById('bC-grid').style.display = 'none'; document.getElementById('bC-result').style.display = 'flex';
         document.getElementById('bC-re').textContent = item.e; document.getElementById('bC-rn').textContent = item.m;
-        document.getElementById('bC-rl').textContent = 'etiqueta facial al seleccionar: ' + bC_emo + ' ' + m.face;
+        document.getElementById('bC-rl').textContent = 'perfil facial al seleccionar: ' + bC_emo + ' ' + m.face;
       });
     }
     function bC_reset() { bC_lk = false; document.getElementById('bC-grid').style.display = 'grid'; document.getElementById('bC-result').style.display = 'none'; bC_buildGrid(); }
