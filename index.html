@@ -1375,9 +1375,9 @@
     <div class="hero-pre">Universidad Nacional de Costa Rica · Escuela de Informática · TFG Licenciatura</div>
     <h1 class="hero-title">Sistema <em>Adaptativo</em><br>con Clasificación Facial Contextual - ¿Cómo se siente
       mientras lo <em>pide</em>?</h1>
-    <p class="hero-sub">Propuesta de prototipo funcional de Comunicación Alternativa y Aumentativa que combina selección
-      táctil por pictogramas con clasificación de expresiones faciales — no de emociones internas — para enriquecer la
-      información disponible al cuidador.</p>
+    <p class="hero-sub">Propuesta de prototipo funcional de Comunicación Aumentativa y Alternativa que combina selección
+      táctil por pictogramas con señales visuales y estimaciones de expresión facial, con el fin de apoyar al cuidador
+      en la interpretación de lo que el usuario desea comunicar.</p>
 
     <div class="method-block">
       <div class="method-item"><span class="dot"></span>Estudio exploratorio</div>
@@ -1395,6 +1395,120 @@
   </header>
 
 
+  <!-- PROPUESTA ACADÉMICA -->
+  <section class="section alt" id="propuesta">
+    <div class="container">
+      <div class="sec-eye">Anteproyecto de Licenciatura · UNA 2025</div>
+      <h2 class="sec-title">Propuesta del proyecto</h2>
+
+      <!-- PROBLEMA -->
+      <div style="margin-bottom:2.5rem">
+        <div class="sec-eye" style="margin-top:2rem">Planteamiento del problema</div>
+        <p class="sec-lead" style="margin-bottom:1rem">
+          En usuarios no verbales, la interpretación de lo que desean comunicar depende del cuidador, quien se basa en señales como conducta, contexto y expresiones, las cuales pueden ser ambiguas.
+        </p>
+        <p class="sec-lead" style="margin-bottom:1rem">
+          Los sistemas de Comunicación Aumentativa y Alternativa (CAA) permiten seleccionar pictogramas, pero no ayudan activamente al cuidador a interpretar la intención comunicativa en tiempo real.
+        </p>
+        <p class="sec-lead" style="margin-bottom:0">
+          Esto puede generar confusión, errores de interpretación y frustración durante la interacción.
+        </p>
+      </div>
+
+      <!-- PREGUNTA DE INVESTIGACIÓN -->
+      <div class="hypothesis-block" style="margin-top:0;margin-bottom:2rem">
+        <div class="hyp-label">Pregunta de investigación</div>
+        <div class="hyp-text">¿En qué medida un sistema de Comunicación Alternativa y Aumentativa que utiliza señales visuales y estimaciones emocionales puede ayudar al cuidador a aproximarse mejor a lo que el usuario desea comunicar?</div>
+      </div>
+
+      <!-- OBJETIVO GENERAL -->
+      <div style="margin-bottom:2rem">
+        <div class="sec-eye">Objetivo general</div>
+        <p class="sec-lead" style="margin-bottom:0">
+          Desarrollar un sistema de Comunicación Alternativa y Aumentativa asistido por visión por computadora que utilice señales visuales y estimaciones emocionales, y analizar cómo este apoya al cuidador en la interpretación de lo que el usuario desea comunicar.
+        </p>
+      </div>
+
+      <!-- HIPÓTESIS -->
+      <div id="hipotesis" class="hypothesis-block" style="margin-top:0;margin-bottom:2.5rem">
+        <div class="hyp-label">Hipótesis</div>
+        <div class="hyp-text">El uso de un sistema que sugiere pictogramas a partir de señales visuales y estimaciones emocionales permite al cuidador interpretar con mayor precisión lo que el usuario desea comunicar.</div>
+        <div class="hyp-vars">
+          <div class="hyp-var">
+            <div class="hyp-var-label">Variable independiente</div>
+            <div class="hyp-var-val">Sistema de Comunicación Alternativa y Aumentativa con señales visuales y estimaciones emocionales</div>
+          </div>
+          <div class="hyp-var">
+            <div class="hyp-var-label">Variable dependiente</div>
+            <div class="hyp-var-val">Precisión del cuidador al interpretar la intención comunicativa del usuario</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEFINICIÓN DEL SISTEMA -->
+      <div class="obs-box" style="max-width:700px;margin-bottom:2rem">
+        <strong>Definición del sistema</strong>
+        El sistema no determina automáticamente lo que el usuario quiere comunicar, sino que actúa como una herramienta de apoyo que sugiere opciones probables para facilitar la interpretación del cuidador.
+      </div>
+
+      <!-- ESTIMACIONES EMOCIONALES -->
+      <div style="margin-bottom:2rem">
+        <div class="sec-eye">Sobre las estimaciones emocionales</div>
+        <p class="sec-lead" style="margin-bottom:1rem">
+          El sistema utiliza estimaciones emocionales basadas en patrones visuales observables, como expresiones faciales o nivel de activación.
+        </p>
+        <div class="warn-box" style="max-width:700px">
+          <strong>Aclaración importante</strong>
+          Estas estimaciones no representan emociones reales ni deben interpretarse como diagnósticos, sino que funcionan como una señal adicional para priorizar sugerencias de pictogramas al cuidador.
+        </div>
+      </div>
+
+      <!-- CÓMO SE EVALUARÁ -->
+      <div>
+        <div class="sec-eye">Cómo se evaluará el sistema</div>
+        <p class="sec-lead" style="margin-bottom:1rem">
+          Para evaluar el sistema, se observará qué tan acertadas son las interpretaciones del cuidador al utilizar las sugerencias generadas. Se considerará un acierto cuando la interpretación coincida con lo que el usuario finalmente comunica (por selección de pictograma o respuesta a una acción).
+        </p>
+        <div class="formula-box" style="max-width:500px">
+          <span class="cm">// Métrica principal</span><br>
+          <span class="kw">Aciertos</span> (%) = (<span class="vl">Coincidencias</span> / <span class="nm">Intentos</span>) × 100<br><br>
+          <span class="cm">// Un "acierto" se registra cuando la</span><br>
+          <span class="cm">// interpretación del cuidador coincide con</span><br>
+          <span class="cm">// lo que el usuario finalmente selecciona.</span>
+        </div>
+
+        <div class="study-grid" style="margin-top:1.5rem">
+          <div class="study-card">
+            <div class="study-num" style="color:var(--blue)">1</div>
+            <div class="study-lbl">Participante</div>
+            <div class="study-desc">Niño preescolar no verbal · 3 años · diagnóstico TEA</div>
+          </div>
+          <div class="study-card">
+            <div class="study-num" style="color:var(--blue)">3</div>
+            <div class="study-lbl">Sesiones</div>
+            <div class="study-desc">Estudio exploratorio de caso único · ~10 minutos cada una</div>
+          </div>
+          <div class="study-card">
+            <div class="study-num" style="color:var(--blue)">2</div>
+            <div class="study-lbl">Condiciones</div>
+            <div class="study-desc">Condición A: cuadricula estática · Condición B: cuadricula con sugerencias del sistema</div>
+          </div>
+          <div class="study-card">
+            <div class="study-num" style="color:var(--ink3)">∅</div>
+            <div class="study-lbl">Generalización</div>
+            <div class="study-desc">Los resultados no son generalizables a otras poblaciones</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VALOR DEL PROYECTO -->
+      <div class="callout" style="background:var(--green-l);border-color:var(--green-m);color:var(--green);max-width:700px;margin-top:2rem">
+        <strong>Valor del proyecto</strong>
+        El sistema se propone reducir la incertidumbre en la interpretación de lo que el usuario desea comunicar, mediante la integración de señales visuales observables como apoyo al cuidador. No se busca reemplazar el criterio del cuidador, sino enriquecer la información disponible para su toma de decisiones.
+      </div>
+    </div>
+  </section>
+
   <!-- MÓDULO A -->
   <section class="section" id="modA">
     <div class="container">
@@ -1403,7 +1517,7 @@
           <div>
             <div class="mod-tag" style="background:var(--purple-l);color:var(--purple)">Módulo A</div>
             <div class="mod-letter" style="color:var(--purple)">A</div>
-            <h3 class="mod-title">Registro de asociaciones entre pictogramas y etiquetas faciales</h3>
+            <h3 class="mod-title">Registro de asociaciones entre pictogramas y señales visuales observadas</h3>
             <p class="mod-desc">Cada selección táctil queda registrada en un log estructurado con timestamp, pictograma
               elegido y la etiqueta facial clasificada por el modelo en los segundos previos. A lo largo de una sesión,
               este registro construye un conjunto de observaciones que podría sugerir asociaciones exploratorias entre
@@ -1525,7 +1639,7 @@
           <div>
             <div class="mod-tag" style="background:var(--blue-l);color:var(--blue)">Módulo B</div>
             <div class="mod-letter" style="color:var(--blue)">B</div>
-            <h3 class="mod-title">Distribución de etiquetas faciales previas a la selección</h3>
+            <h3 class="mod-title">Distribución de señales visuales previas a la selección táctil</h3>
             <p class="mod-desc">Cuando el participante toca un pictograma, el sistema no registra únicamente la etiqueta
               del instante exacto. Calcula la <strong>distribución de etiquetas faciales clasificadas en los últimos
                 segundos</strong> — qué proporción de frames fueron clasificados como "feliz", "neutro", "triste", etc.
@@ -1651,7 +1765,7 @@
           <div>
             <div class="mod-tag" style="background:var(--red-l);color:var(--red)">Módulo C</div>
             <div class="mod-letter" style="color:var(--red)">C</div>
-            <h3 class="mod-title">Reordenamiento heurístico experimental por etiqueta facial sostenida</h3>
+            <h3 class="mod-title">Reordenamiento heurístico experimental por señal visual sostenida</h3>
             <p class="mod-desc">Si el clasificador asigna la misma etiqueta facial de forma sostenida por más de 3
               segundos, la interfaz puede reordenarse heurísticamente para ubicar un pictograma asociado en la primera
               posición. Este reordenamiento es experimental y basado en una heurística — no en una inferencia emocional.
@@ -1666,14 +1780,14 @@
             <div class="callout" style="background:var(--red-l);border-color:var(--red-m);color:var(--red)">
               <strong>Contribución propuesta</strong>
               Algoritmo de reordenamiento heurístico experimental con umbral temporal de etiqueta facial sostenida y
-              decay gradual. Evaluación propuesta: comparación del tiempo de selección en condición A (grilla estática)
-              vs. B (grilla adaptativa) durante las sesiones del estudio de caso único.
+              decay gradual. Evaluación propuesta: comparación del tiempo de selección en condición A (cuadricula estática)
+              vs. B (cuadricula adaptativa) durante las sesiones del estudio de caso único.
             </div>
 
             <div class="warn-box">
               <strong>Limitación declarada — módulo heurístico experimental</strong>
               Este reordenamiento es una heurística, no una inferencia emocional. Puede no coincidir con la intención
-              real del participante. Si la clasificación facial es incorrecta, la grilla puede reordenarse de forma
+              real del participante. Si la clasificación facial es incorrecta, la cuadricula puede reordenarse de forma
               inadecuada. Esto no se considera un fallo del sistema — es una limitación documentada que se analizará
               como parte del estudio. El objetivo es evaluar si la heurística es útil, no asumir que lo es.
             </div>
@@ -1864,7 +1978,7 @@
     <div class="container">
       <div class="sec-eye">Consideraciones éticas</div>
       <h2 class="sec-title">Protocolo ético del estudio piloto</h2>
-      <p class="sec-lead">El uso de tecnología de clasificación facial con un menor de edad con TEA requiere un
+      <p class="sec-lead">El uso de tecnología de clasificación facial con un menor de edad requiere un
         protocolo ético explícito. Estos son los compromisos declarados del proyecto.</p>
       <div class="ethics-grid">
         <div class="ethics-item">
@@ -1897,12 +2011,7 @@
             cualquier sesión en cualquier momento sin consecuencias. No se forzará al participante a completar ninguna
             interacción.</div>
         </div>
-        <div class="ethics-item">
-          <div class="ethics-icon">🏛</div>
-          <div class="ethics-text"><strong>Revisión por comité de ética</strong>El protocolo del estudio será sometido a
-            revisión del comité de ética institucional de la UNA antes de iniciar las sesiones con el participante.
-          </div>
-        </div>
+     
       </div>
     </div>
   </section>
@@ -1996,7 +2105,7 @@
         <div class="tech-card">
           <div class="tech-cat">Pictogramas</div>
           <div class="tech-name">ARASAAC</div>
-          <div class="tech-why">Banco CAA en español, licencia Creative Commons. Estándar de referencia en habla
+          <div class="tech-why">Banco comunicación alternativa y aumentativa en español, licencia Creative Commons. Estándar de referencia en habla
             hispana.</div>
         </div>
         <div class="tech-card">
