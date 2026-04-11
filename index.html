@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAEC — Propuesta TFG · Anthony Cerdas · UNA 2026</title>
+  <title>Propuesta TFG · Anthony Cerdas · UNA 2026</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap"
     rel="stylesheet">
@@ -1355,7 +1355,7 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">SAEC <span>·</span> TFG 2026</div>
+    <div class="nav-logo">TFG 2026</div>
     <div class="nav-links">
       <a href="#propuesta">Propuesta</a>
       <a href="#hipotesis">Pregunta</a>
@@ -1363,8 +1363,6 @@
       <a href="#modB">Módulo B</a>
       <a href="#modC">Módulo C</a>
       <a href="#demo">Demo</a>
-      <a href="#etica">Ética</a>
-      <a href="#alcance">Alcance</a>
     </div>
     <div class="nav-badge">Anteproyecto · UNA</div>
   </nav>
@@ -1375,12 +1373,11 @@
     <h1 class="hero-title">
       Sistema de Comunicación Aumentativa y Alternativa para el registro y análisis de características faciales
       observables en la interacción comunicativa de usuarios no verbales
-      <br><br>
-      ¿Qué <em>muestra</em> mientras lo <em>pide</em>?
     </h1>
-    <p class="hero-sub">Propuesta de prototipo funcional de Comunicación Aumentativa y Alternativa que integra selección
-      táctil por pictogramas con el registro de características faciales observables, con el propósito de explorar
-      su uso como apoyo en la interpretación de la interacción comunicativa.</p>
+    <p class="hero-sub">Propuesta de prototipo funcional de Comunicación Aumentativa y Alternativa que integra la
+      selección táctil por pictogramas con el registro de características faciales observables durante la interacción,
+      con el fin de explorar cómo esta información puede ser utilizada por el cuidador en su proceso de interpretación.
+    </p>
 
     <div class="method-block">
       <div class="method-item"><span class="dot"></span>Estudio exploratorio</div>
@@ -1395,41 +1392,114 @@
   <!-- PROPUESTA ACADÉMICA -->
   <section class="section alt" id="propuesta">
     <div class="container">
-      <div class="sec-eye">Anteproyecto de Licenciatura · UNA 2025</div>
+      <div class="sec-eye">Anteproyecto de Licenciatura · UNA 2026</div>
       <h2 class="sec-title">Propuesta del proyecto</h2>
 
-      <!-- PROBLEMA -->
+      <!-- ALCANCE / DESCRIPCIÓN (del CTFG) -->
       <div style="margin-bottom:2.5rem">
-        <div class="sec-eye" style="margin-top:2rem">Planteamiento del problema</div>
+        <div class="sec-eye" style="margin-top:2rem">Descripción y alcance</div>
         <p class="sec-lead" style="margin-bottom:1rem">
-          En usuarios no verbales, la interpretación de lo que desean comunicar recae sobre el cuidador, quien se basa
-          principalmente en características faciales observables y expresiones que pueden ser ambiguas o de difícil
-          lectura. Los sistemas de Comunicación
-          Aumentativa y Alternativa (CAA) permiten seleccionar pictogramas, pero no orientan
-          activamente al cuidador en la interpretación de la interacción comunicativa en tiempo real. Esto puede generar
-          confusión,
-          errores de lectura y frustración durante la interacción.
+          El presente Trabajo Final de Graduación se orienta al desarrollo de un prototipo de Sistema de Comunicación
+          Aumentativa y Alternativa (CAA) dirigido a usuarios no verbales en edad preescolar. El sistema se basa en la
+          selección táctil de pictogramas como medio de interacción y contempla el registro de <strong>características
+            faciales observables</strong> durante su uso, entendidas como cambios visibles en el rostro asociados a la
+          interacción comunicativa.
+        </p>
+        <p class="sec-lead" style="margin-bottom:1rem">
+          A partir de estas características, se plantea la generación de registros estructurados de cada interacción,
+          la observación de su comportamiento en los instantes previos a la selección y la exploración de su posible
+          uso en la organización de la interfaz. Esta información se presenta como apoyo al cuidador en su proceso de
+          interpretación de lo que observa durante la interacción comunicativa.
+        </p>
+        <p class="sec-lead" style="margin-bottom:0">
+          El estudio se desarrollará bajo un enfoque exploratorio descriptivo de caso único en un entorno controlado,
+          centrado en la observación de patrones de uso y en la descripción del comportamiento del sistema, así como
+          en la forma en que el cuidador interpreta la información generada durante la interacción.
         </p>
       </div>
 
+      <!-- DEFINICIÓN DEL SISTEMA -->
+      <div class="obs-box" style="margin-bottom:2.5rem">
+        <strong>Definición del sistema</strong>
+        El sistema no determina automáticamente lo que el usuario quiere comunicar. Actúa como una herramienta que
+        registra y presenta características faciales observables asociadas a la interacción, con el propósito de
+        aportar información que el cuidador puede considerar durante su proceso de interpretación.
+        <br><br>
+        <strong style="font-size:11px;display:inline-block;margin-top:.25rem">⚠ Principio rector —</strong>
+        La interpretación de la información generada por el sistema recae exclusivamente en el cuidador.
+      </div>
+
+      <!-- PROBLEMA -->
+      <div style="margin-bottom:2.5rem">
+        <div class="sec-eye" style="margin-top:0">Planteamiento del problema</div>
+        <p class="sec-lead" style="margin-bottom:1rem">
+          En usuarios no verbales, la interpretación de lo que desean comunicar depende del cuidador, quien se basa
+          en distintas señales observables durante la interacción, las cuales pueden resultar ambiguas. Los sistemas
+          de Comunicación Aumentativa y Alternativa (CAA) permiten seleccionar pictogramas, pero no orientan
+          activamente al cuidador en la interpretación de la interacción comunicativa en tiempo real. Esto puede
+          generar confusión, errores de lectura y frustración durante la interacción.
+        </p>
+      </div>
 
       <!-- PREGUNTA EXPLORATORIA -->
       <div id="hipotesis" class="hypothesis-block" style="margin-top:0;margin-bottom:2.5rem">
         <div class="hyp-label">Pregunta exploratoria</div>
         <div class="hyp-text">¿Qué patrones observables emergen en las asociaciones entre características faciales
-          observables y selecciones de pictogramas durante las sesiones, y de qué manera el cuidador utiliza esa
-          información para orientar su interpretación?</div>
-
+          observables y selecciones de pictogramas durante las sesiones, y cómo es utilizada esta información por el
+          cuidador en su proceso de interpretación durante la interacción comunicativa?</div>
       </div>
 
       <!-- OBJETIVO GENERAL -->
-      <div class="warn-box">
+      <div class="warn-box" style="margin-bottom:2rem">
         <div class="sec-eye">Objetivo general</div>
         <p class="sec-lead" style="margin-bottom:0">
           Desarrollar un prototipo de Sistema de Comunicación Aumentativa y Alternativa que integre la selección de
           pictogramas y el registro de características faciales observables, con el fin de describir y analizar el
           comportamiento del sistema y la interpretación del cuidador durante la interacción en un entorno controlado.
         </p>
+      </div>
+
+      <!-- OBJETIVOS ESPECÍFICOS -->
+      <div>
+        <div class="sec-eye" style="margin-bottom:.75rem">Objetivos específicos</div>
+        <div style="display:flex;flex-direction:column;gap:.5rem">
+          <div
+            style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
+            <span
+              style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">1</span>
+            <span>Analizar el estado del arte de los sistemas de Comunicación Aumentativa y Alternativa y el uso de
+              características faciales observables en contextos de interacción con usuarios no verbales.</span>
+          </div>
+          <div
+            style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
+            <span
+              style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">2</span>
+            <span>Definir el conjunto de pictogramas y las características faciales observables a considerar en el
+              sistema.</span>
+          </div>
+          <div
+            style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
+            <span
+              style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">3</span>
+            <span>Diseñar la estructura del sistema, incluyendo la interfaz de selección de pictogramas y los mecanismos
+              de registro de características faciales observables durante la interacción.</span>
+          </div>
+          <div
+            style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
+            <span
+              style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">4</span>
+            <span>Implementar un prototipo funcional que permita la selección de pictogramas y el registro de
+              características faciales observables durante su uso.</span>
+          </div>
+          <div
+            style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
+            <span
+              style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">5</span>
+            <span>Describir los patrones de interacción entre las características faciales observables y la selección de
+              pictogramas, y analizar cómo el cuidador interpreta la información generada durante la interacción en un
+              entorno controlado.</span>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -1444,16 +1514,16 @@
             <div class="mod-tag" style="background:var(--purple-l);color:var(--purple)">Módulo A</div>
             <div class="mod-letter" style="color:var(--purple)">A</div>
             <h3 class="mod-title">Registro de asociaciones entre pictogramas y características faciales observables</h3>
-            <p class="mod-desc">Cada selección táctil queda registrada en un log estructurado con timestamp, pictograma
-              elegido y el perfil de características faciales observables derivado de los landmarks en los segundos
-              previos. A lo largo de una sesión, este registro construye un conjunto de observaciones que se analiza
-              para describir
-              asociaciones exploratorias entre necesidades comunicativas y configuraciones geométricas faciales.</p>
-            <p class="mod-desc">La observación exploratoria es que algunos pictogramas podrían aparecer asociados
-              consistentemente a ciertos perfiles faciales. Si "Baño" aparece reiteradamente con perfil negativo y
-              "Jugar" con perfil positivo, esta asociación se plantea como apoyo orientativo para el cuidador — su
-              interpretación siempre requiere validación observacional directa y no implica inferencia sobre el estado
-              emocional interno.</p>
+            <p class="mod-desc">Cada selección táctil queda registrada en un log estructurado con timestamp,
+              pictograma elegido y el perfil de características faciales observables registrado en los
+              segundos previos — entendidas como cambios visibles en el rostro asociados a la interacción comunicativa.
+              A lo largo de una sesión, este registro construye un conjunto de observaciones descriptivas.</p>
+            <p class="mod-desc">A lo largo de una sesión, este registro construye un conjunto de observaciones que
+              puede sugerir asociaciones observacionales entre pictogramas y configuraciones faciales, las cuales son
+              presentadas como información descriptiva para su interpretación por parte del cuidador. Si "Baño"
+              aparece reiteradamente con perfil negativo y "Jugar" con perfil positivo, esa asociación no implica
+              inferencia sobre el estado emocional interno — es un dato descriptivo que el cuidador puede considerar.
+            </p>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
               <div class="ctrl-lbl">Simulación — elegí un perfil facial y tocá un pictograma</div>
@@ -1489,7 +1559,7 @@
               <div class="tablet-screen">
                 <div class="d-topbar">
                   <div class="d-cam">
-                    <div class="d-dot"></div><span>landmarks activos</span>
+                    <div class="d-dot"></div><span>análisis facial activo</span>
                   </div>
                   <div class="d-emo-badge" id="bA-badge" style="background:#f4f4f5;color:#52525b">😐 neutro</div>
                   <span id="bA-count" style="font-size:10px;color:#aaa">0 registros</span>
@@ -1556,11 +1626,10 @@
               del instante exacto. Calcula la <strong>distribución de características faciales observables en los
                 últimos segundos</strong> — qué proporción de frames presentaron perfil negativo, neutro o positivo — y
               la adjunta al registro de sesión.</p>
-            <p class="mod-desc">Este enfoque es metodológicamente más sólido que promediar valores de activación:
-              describe una
-              distribución observable de métricas geométricas, no infiere un "estado emocional promedio". Si el 70% de
-              los frames previos mostraron perfil negativo (cejas fruncidas, comisuras hacia abajo), eso es un dato
-              descriptivo del clasificador geométrico, no una afirmación sobre el estado interno del niño.</p>
+            <p class="mod-desc">Este enfoque describe la distribución de características faciales observables en los
+              instantes previos a la selección, sin implicar la existencia de un estado emocional interno. Si el 70%
+              de los frames previos mostraron perfil negativo (cejas fruncidas, comisuras hacia abajo), eso es un dato
+              descriptivo del clasificador geométrico — no una afirmación sobre el estado interno del niño.</p>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
               <div class="ctrl-lbl">Simulación de perfil facial — esperá unos segundos antes de tocar</div>
@@ -1599,7 +1668,7 @@
               <div class="tablet-screen">
                 <div class="d-topbar">
                   <div class="d-cam">
-                    <div class="d-dot"></div><span>landmarks · 3fps</span>
+                    <div class="d-dot"></div><span>análisis facial · 3fps</span>
                   </div>
                   <div class="d-emo-badge" id="bB-badge" style="background:#f4f4f5;color:#52525b">😐 neutro</div>
                 </div>
@@ -1661,16 +1730,15 @@
             <div class="mod-tag" style="background:var(--red-l);color:var(--red)">Módulo C</div>
             <div class="mod-letter" style="color:var(--red)">C</div>
             <h3 class="mod-title">Reordenamiento heurístico experimental por característica facial sostenida</h3>
-            <p class="mod-desc">Si las características faciales observables derivadas de los landmarks se mantienen en
-              rango negativo de forma sostenida por más de 3 segundos, la interfaz puede reordenarse heurísticamente
-              para <strong>reordenar la interfaz de forma heurística según patrones observados</strong>. Este
-              reordenamiento es experimental y basado en
-              una heurística geométrica — no en una inferencia emocional.</p>
-            <p class="mod-desc">Lo que se documentará es el comportamiento del sistema y la interacción del cuidador
-              ante el reordenamiento heurístico durante las sesiones. El participante siempre mantiene el control
-              completo — el
-              reordenamiento es una sugerencia de la interfaz. Si elige otro pictograma, ese dato se registra y puede
-              ser más informativo que la sugerencia aceptada.</p>
+            <p class="mod-desc">Si las características faciales observables registradas se mantienen
+              en rango negativo de forma sostenida por más de 3 segundos, la interfaz puede reordenarse heurísticamente
+              según patrones observados, colocando en primer plano un pictograma asociado al patrón detectado. Este
+              reordenamiento es experimental y se basa en una heurística geométrica — no en una inferencia emocional.
+            </p>
+            <p class="mod-desc">Se plantea observar cómo este reordenamiento influye en la interacción del usuario y
+              en la forma en que el cuidador interpreta las sugerencias del sistema. El participante siempre mantiene
+              el control completo — el reordenamiento es una sugerencia de la interfaz. Si elige otro pictograma, ese
+              dato se registra y puede ser más informativo que la sugerencia aceptada.</p>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
               <div class="ctrl-lbl">Simulación — mantené un perfil facial para activar la heurística (umbral: 3s)
@@ -1699,7 +1767,7 @@
               <div class="tablet-screen">
                 <div class="d-topbar">
                   <div class="d-cam">
-                    <div class="d-dot"></div><span>landmarks activos</span>
+                    <div class="d-dot"></div><span>análisis facial activo</span>
                   </div>
                   <div class="d-emo-badge" id="bC-badge" style="background:#f4f4f5;color:#52525b">😐 neutro</div>
                   <div class="d-promo-tag" id="bC-ptag"></div>
@@ -1729,15 +1797,15 @@
       <div class="sec-eye">Integración de los tres módulos</div>
       <h2 class="sec-title">Los módulos A, B y C<br>operan en paralelo</h2>
       <p class="sec-lead">En el uso real, los tres módulos corren simultáneamente. El sistema funciona como comunicador
-        táctil por pictogramas aun cuando la clasificación facial sea imprecisa o no esté disponible — la funcionalidad
-        principal es independiente de ella.</p>
+        táctil por pictogramas aun cuando la clasificación facial sea imprecisa o no esté disponible.</p>
 
       <div class="error-box" style="max-width:700px;margin-bottom:1rem">
         <strong>Aviso — simulación de interfaz, no demo técnica funcional</strong>
         La demo a continuación simula la interfaz del sistema mediante botones manuales para seleccionar perfiles
         faciales. <strong>No representa la ejecución en tiempo real de los módulos de visión por computadora.</strong>
         En el prototipo real, los perfiles son derivados automáticamente de características faciales observables vía
-        landmarks MediaPipe. Esta simulación existe exclusivamente para ilustrar el comportamiento de la interfaz ante
+        análisis de imagen facial. Esta simulación existe exclusivamente para ilustrar el comportamiento de la interfaz
+        ante
         distintos perfiles de características faciales observables.
       </div>
 
@@ -1754,7 +1822,7 @@
             <div class="tablet-screen">
               <div class="d-topbar">
                 <div class="d-cam">
-                  <div class="d-dot"></div><span>landmarks activos</span>
+                  <div class="d-dot"></div><span>análisis facial activo</span>
                 </div>
                 <div class="d-emo-badge" id="comb-badge" style="background:#f4f4f5;color:#52525b">😐 neutro</div>
                 <div class="d-promo-tag" id="comb-ptag"></div>
@@ -1853,11 +1921,9 @@
           <div class="error-box" style="font-size:12px">
             <strong>Para interpretar correctamente</strong>
             Lo que muestra el sistema son asociaciones observacionales entre pictogramas y perfiles de activación facial
-            derivados de landmarks geométricos (MediaPipe). <strong>Las características registradas corresponden a
+            registrados durante la interacción. <strong>Las características registradas corresponden a
               configuraciones visibles del rostro y no representan estados emocionales internos ni tienen valor
-              diagnóstico.</strong> Las heurísticas geométricas pueden no capturar expresiones atípicas de TEA
-            correctamente. La
-            interpretación final siempre debe realizarla un profesional.
+              diagnóstico.</strong>
           </div>
         </div>
       </div>
@@ -1865,13 +1931,9 @@
   </section>
 
   <footer>
-    <strong>Anthony Steven Cerdas Chacón · 4-0241-0478</strong>
     Licenciatura en Informática · Énfasis en Desarrollo Web · Universidad Nacional de Costa Rica<br>
     Tutor: Johnny Villalobos Murillo · Asesor: Johnny Flores Araya<br>
-    SAEC — <em>Sistema Adaptativo de Expresión y Comunicación</em> · Propuesta de Anteproyecto · 2026<br><br>
-    <em style="font-size:11px">Este proyecto explora la integración de características faciales observables
-      derivadas de landmarks geométricos en un sistema de comunicación aumentativa, mediante un estudio exploratorio de
-      caso único.
+    <em style="font-size:11px">
   </footer>
 
   <script>
