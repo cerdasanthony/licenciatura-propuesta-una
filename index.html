@@ -1376,11 +1376,11 @@
       Sistema de Comunicación Aumentativa y Alternativa para el registro y análisis de características faciales
       observables en la interacción comunicativa de usuarios no verbales
       <br><br>
-      ¿Qué <em>siente</em> mientras lo <em>pide</em>?
+      ¿Qué <em>muestra</em> mientras lo <em>pide</em>?
     </h1>
     <p class="hero-sub">Propuesta de prototipo funcional de Comunicación Aumentativa y Alternativa que integra selección
-      táctil por pictogramas con características faciales observables, con el fin de reducir la incertidumbre del
-      cuidador en la interpretación de lo que el usuario desea comunicar.</p>
+      táctil por pictogramas con el registro de características faciales observables, con el propósito de explorar
+      su uso como apoyo en la interpretación de la interacción comunicativa.</p>
 
     <div class="method-block">
       <div class="method-item"><span class="dot"></span>Estudio exploratorio</div>
@@ -1402,11 +1402,13 @@
       <div style="margin-bottom:2.5rem">
         <div class="sec-eye" style="margin-top:2rem">Planteamiento del problema</div>
         <p class="sec-lead" style="margin-bottom:1rem">
-          En usuarios no verbales, la interpretación de lo que desean comunicar depende del cuidador, quien se basa en
-          señales como conducta, contexto y expresiones, las cuales pueden ser ambiguas. Los sistemas de Comunicación
-          Aumentativa y Alternativa (CAA) permiten seleccionar pictogramas, pero no ayudan
-          activamente al cuidador a interpretar la intención comunicativa en tiempo real. Esto puede generar confusión,
-          errores de interpretación y frustración durante la interacción.
+          En usuarios no verbales, la interpretación de lo que desean comunicar recae sobre el cuidador, quien se basa
+          principalmente en características faciales observables y expresiones que pueden ser ambiguas o de difícil
+          lectura. Los sistemas de Comunicación
+          Aumentativa y Alternativa (CAA) permiten seleccionar pictogramas, pero no orientan
+          activamente al cuidador en la interpretación de la interacción comunicativa en tiempo real. Esto puede generar
+          confusión,
+          errores de lectura y frustración durante la interacción.
         </p>
       </div>
 
@@ -1444,11 +1446,12 @@
             <h3 class="mod-title">Registro de asociaciones entre pictogramas y características faciales observables</h3>
             <p class="mod-desc">Cada selección táctil queda registrada en un log estructurado con timestamp, pictograma
               elegido y el perfil de características faciales observables derivado de los landmarks en los segundos
-              previos. A lo largo de una sesión, este registro construye un conjunto de observaciones que puede sugerir
+              previos. A lo largo de una sesión, este registro construye un conjunto de observaciones que se analiza
+              para describir
               asociaciones exploratorias entre necesidades comunicativas y configuraciones geométricas faciales.</p>
             <p class="mod-desc">La observación exploratoria es que algunos pictogramas podrían aparecer asociados
               consistentemente a ciertos perfiles faciales. Si "Baño" aparece reiteradamente con perfil negativo y
-              "Jugar" con perfil positivo, esta asociación puede ser de valor orientativo para el cuidador — aunque su
+              "Jugar" con perfil positivo, esta asociación se plantea como apoyo orientativo para el cuidador — su
               interpretación siempre requiere validación observacional directa y no implica inferencia sobre el estado
               emocional interno.</p>
 
@@ -1553,7 +1556,8 @@
               del instante exacto. Calcula la <strong>distribución de características faciales observables en los
                 últimos segundos</strong> — qué proporción de frames presentaron perfil negativo, neutro o positivo — y
               la adjunta al registro de sesión.</p>
-            <p class="mod-desc">Este enfoque es metodológicamente más sólido que promediar emociones: describe una
+            <p class="mod-desc">Este enfoque es metodológicamente más sólido que promediar valores de activación:
+              describe una
               distribución observable de métricas geométricas, no infiere un "estado emocional promedio". Si el 70% de
               los frames previos mostraron perfil negativo (cejas fruncidas, comisuras hacia abajo), eso es un dato
               descriptivo del clasificador geométrico, no una afirmación sobre el estado interno del niño.</p>
@@ -1659,10 +1663,12 @@
             <h3 class="mod-title">Reordenamiento heurístico experimental por característica facial sostenida</h3>
             <p class="mod-desc">Si las características faciales observables derivadas de los landmarks se mantienen en
               rango negativo de forma sostenida por más de 3 segundos, la interfaz puede reordenarse heurísticamente
-              para ubicar un pictograma asociado en la primera posición. Este reordenamiento es experimental y basado en
+              para <strong>reordenar la interfaz de forma heurística según patrones observados</strong>. Este
+              reordenamiento es experimental y basado en
               una heurística geométrica — no en una inferencia emocional.</p>
-            <p class="mod-desc">La observación a documentar es si este reordenamiento heurístico podría reducir el
-              tiempo de selección en el participante. El participante siempre mantiene el control completo — el
+            <p class="mod-desc">Lo que se documentará es el comportamiento del sistema y la interacción del cuidador
+              ante el reordenamiento heurístico durante las sesiones. El participante siempre mantiene el control
+              completo — el
               reordenamiento es una sugerencia de la interfaz. Si elige otro pictograma, ese dato se registra y puede
               ser más informativo que la sugerencia aceptada.</p>
 
@@ -1732,7 +1738,7 @@
         faciales. <strong>No representa la ejecución en tiempo real de los módulos de visión por computadora.</strong>
         En el prototipo real, los perfiles son derivados automáticamente de características faciales observables vía
         landmarks MediaPipe. Esta simulación existe exclusivamente para ilustrar el comportamiento de la interfaz ante
-        distintas señales de entrada.
+        distintos perfiles de características faciales observables.
       </div>
 
       <div class="obs-box" style="max-width:700px;margin-bottom:1.5rem">
@@ -1847,8 +1853,10 @@
           <div class="error-box" style="font-size:12px">
             <strong>Para interpretar correctamente</strong>
             Lo que muestra el sistema son asociaciones observacionales entre pictogramas y perfiles de activación facial
-            derivados de landmarks geométricos (MediaPipe). Estos perfiles no representan el estado emocional real del
-            participante. Las heurísticas geométricas pueden no capturar expresiones atípicas de TEA correctamente. La
+            derivados de landmarks geométricos (MediaPipe). <strong>Las características registradas corresponden a
+              configuraciones visibles del rostro y no representan estados emocionales internos ni tienen valor
+              diagnóstico.</strong> Las heurísticas geométricas pueden no capturar expresiones atípicas de TEA
+            correctamente. La
             interpretación final siempre debe realizarla un profesional.
           </div>
         </div>
@@ -1861,7 +1869,7 @@
     Licenciatura en Informática · Énfasis en Desarrollo Web · Universidad Nacional de Costa Rica<br>
     Tutor: Johnny Villalobos Murillo · Asesor: Johnny Flores Araya<br>
     SAEC — <em>Sistema Adaptativo de Expresión y Comunicación</em> · Propuesta de Anteproyecto · 2026<br><br>
-    <em style="font-size:11px">Este proyecto evalúa la viabilidad de integrar características faciales observables
+    <em style="font-size:11px">Este proyecto explora la integración de características faciales observables
       derivadas de landmarks geométricos en un sistema de comunicación aumentativa, mediante un estudio exploratorio de
       caso único.
   </footer>
