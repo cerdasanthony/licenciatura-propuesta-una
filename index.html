@@ -184,7 +184,8 @@
     }
 
     .section.alt {
-      background: #f1efe9
+      background: #f1efe9;
+      width: "100";
     }
 
     .section.dark {
@@ -221,7 +222,6 @@
     .sec-lead {
       font-size: 15px;
       color: var(--ink2);
-      max-width: 700px;
       line-height: 1.75;
       margin-bottom: 2.5rem
     }
@@ -982,7 +982,6 @@
       border-radius: 12px;
       padding: 1.5rem;
       margin-top: 2rem;
-      max-width: 700px
     }
 
     .hyp-label {
@@ -1387,12 +1386,6 @@
       <div class="method-item"><span class="dot"></span>Sin validación clínica</div>
     </div>
 
-    <div class="hero-disclaimer">
-      El sistema detecta <strong>características faciales observables mediante métricas geométricas sobre
-        landmarks</strong>, no estados emocionales internos. Las señales producidas (ej. "perfil de malestar") describen
-      configuraciones geométricas observadas en el rostro — patrones visuales auxiliares, sin implicar que el niño
-      experimente esa emoción. Evaluado mediante estudio exploratorio de caso único. Resultados no generalizables.
-    </div>
   </header>
 
 
@@ -1407,41 +1400,13 @@
         <div class="sec-eye" style="margin-top:2rem">Planteamiento del problema</div>
         <p class="sec-lead" style="margin-bottom:1rem">
           En usuarios no verbales, la interpretación de lo que desean comunicar depende del cuidador, quien se basa en
-          señales como conducta, contexto y expresiones, las cuales pueden ser ambiguas.
-        </p>
-        <p class="sec-lead" style="margin-bottom:1rem">
-          Los sistemas de Comunicación Aumentativa y Alternativa (CAA) permiten seleccionar pictogramas, pero no ayudan
-          activamente al cuidador a interpretar la intención comunicativa en tiempo real.
-        </p>
-        <p class="sec-lead" style="margin-bottom:0">
-          Esto puede generar confusión, errores de interpretación y frustración durante la interacción.
+          señales como conducta, contexto y expresiones, las cuales pueden ser ambiguas. Los sistemas de Comunicación
+          Aumentativa y Alternativa (CAA) permiten seleccionar pictogramas, pero no ayudan
+          activamente al cuidador a interpretar la intención comunicativa en tiempo real. Esto puede generar confusión,
+          errores de interpretación y frustración durante la interacción.
         </p>
       </div>
 
-      <!-- PREGUNTA DE INVESTIGACIÓN -->
-      <div class="hypothesis-block" style="margin-top:0;margin-bottom:2rem">
-        <div class="hyp-label">Pregunta de investigación — marco exploratorio descriptivo</div>
-        <div class="hyp-text">¿En qué medida la presentación de clasificaciones de expresión facial sincronizadas con la
-          selección de pictogramas enriquece la información disponible para el cuidador durante la interacción
-          comunicativa con un usuario no verbal?</div>
-        <div style="margin-top:.85rem;font-size:12px;color:var(--blue);opacity:.75;line-height:1.6">
-          <strong
-            style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:3px;opacity:.7">Alineación
-            metodológica</strong>
-          La pregunta es consistente con el objetivo descriptivo y el diseño de caso único. No pregunta "cuánto mejora"
-          (escala causal), sino "qué se observa" (descripción de patrones). Esto elimina la exigencia de inferencia
-          estadística sin perder valor académico.
-        </div>
-      </div>
-
-      <!-- OBJETIVO GENERAL -->
-      <div style="margin-bottom:2rem">
-        <div class="sec-eye">Objetivo general</div>
-        <p class="sec-lead" style="margin-bottom:0">
-          Describir y analizar el comportamiento del sistema y su interacción con el cuidador en un entorno controlado,
-          identificando patrones de uso y posibles aportes al proceso de comunicación.
-        </p>
-      </div>
 
       <!-- PREGUNTA EXPLORATORIA -->
       <div id="hipotesis" class="hypothesis-block" style="margin-top:0;margin-bottom:2.5rem">
@@ -1449,133 +1414,18 @@
         <div class="hyp-text">¿Qué patrones observables emergen en las asociaciones entre características faciales
           observables y selecciones de pictogramas durante las sesiones, y de qué manera el cuidador utiliza esa
           información para orientar su interpretación?</div>
-        <div class="hyp-vars">
-          <div class="hyp-var">
-            <div class="hyp-var-label">Enfoque metodológico</div>
-            <div class="hyp-var-val">Estudio exploratorio descriptivo · caso único · sin inferencia causal</div>
-          </div>
-          <div class="hyp-var">
-            <div class="hyp-var-label">Resultado esperado</div>
-            <div class="hyp-var-val">Observaciones preliminares sobre patrones de uso y valoración cualitativa del
-              cuidador · no generalizables</div>
-          </div>
-        </div>
-        <div style="margin-top:.85rem;font-size:12px;color:var(--blue);opacity:.75;line-height:1.6">
-          <strong
-            style="font-size:9px;text-transform:uppercase;letter-spacing:.1em;display:block;margin-bottom:3px;opacity:.7">Tabla
-            de alineación completa</strong>
-          Pregunta → exploratoria · Objetivo → descriptivo · Resultados → observacionales · Métricas → no inferenciales.
-          La consistencia entre estos cuatro niveles es la condición mínima para una defensa sólida ante comité.
-        </div>
+
       </div>
 
-      <!-- INSIGHT CLAVE -->
-      <div class="callout"
-        style="background:#fdf4ff;border-color:#a855f7;color:#6b21a8;max-width:700px;margin-bottom:2rem">
-        <strong>Principio rector del sistema</strong>
-        El sistema no busca interpretar estados internos del usuario. Su objetivo es reducir la incertidumbre del
-        cuidador mediante la integración de múltiples señales observables: contexto del entorno, comportamiento del
-        usuario y características faciales visibles. La interpretación final siempre recae en el cuidador.
-      </div>
-
-      <!-- DEFINICIÓN DEL SISTEMA -->
-      <div class="obs-box" style="max-width:700px;margin-bottom:2rem">
-        <strong>Definición del sistema</strong>
-        El sistema no determina automáticamente lo que el usuario quiere comunicar. Actúa como una herramienta de apoyo
-        que integra tres tipos de señales observables — contexto, comportamiento y características faciales — para
-        sugerir opciones probables y facilitar la interpretación del cuidador.
-      </div>
-
-      <div style="margin-bottom:2rem">
-        <div class="sec-eye">Sobre las características faciales observables</div>
-        <p class="sec-lead" style="margin-bottom:1rem">
-          El sistema incorpora el análisis de características faciales observables como señal auxiliar dentro del estado
-          del usuario: apertura de boca, tensión facial estimada por distancia entre cejas, y dirección de mirada. Estas
-          características no se interpretan como emociones — son patrones visuales que aportan contexto para la
-          priorización de opciones de comunicación.
+      <!-- OBJETIVO GENERAL -->
+      <div class="warn-box">
+        <div class="sec-eye">Objetivo general</div>
+        <p class="sec-lead" style="margin-bottom:0">
+          Describir y analizar el comportamiento del sistema y su interacción con el cuidador en un entorno controlado,
+          identificando patrones de uso y posibles aportes al proceso de comunicación.
         </p>
-        <div class="warn-box" style="max-width:700px">
-          <strong>Aclaración crítica — no detección de emociones</strong>
-          Los perfiles derivados no representan estados emocionales internos ni tienen valor diagnóstico. Son
-          descriptores geométricos observables. Al usar heurísticas explícitas sobre landmarks (distancia entre cejas,
-          apertura de boca, posición de comisuras) en lugar de modelos entrenados con adultos, se evita el sesgo
-          sistemático documentado en la literatura para niños con TEA.
-        </div>
       </div>
 
-      <!-- CÓMO SE EVALUARÁ -->
-      <div>
-        <div class="sec-eye">Cómo se evaluará el sistema</div>
-        <p class="sec-lead" style="margin-bottom:1rem">
-          La evaluación es descriptiva, no estadística. Se documentará cualitativamente cómo el cuidador utiliza las
-          sugerencias del sistema para orientar su interpretación. Las dos condiciones tienen propósitos analíticos
-          distintos.
-        </p>
-
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;max-width:700px;margin-bottom:1.25rem">
-          <div class="obs-box" style="margin-top:0">
-            <strong>Condición A — Sin adaptación</strong>
-            Cuadrícula fija, sin heurística activa. Permite registrar la interpretación del cuidador sin influencia del
-            sistema. La métrica de coincidencia se aplica <em>exclusivamente aquí</em> para obtener una medición más
-            limpia.
-          </div>
-          <div class="obs-box" style="margin-top:0">
-            <strong>Condición B — Con adaptación</strong>
-            Cuadrícula dinámica con Módulo C activo. Se observa el comportamiento del sistema y cómo el cuidador
-            interactúa con las sugerencias. No se usa para validar "precisión" — sería circular.
-          </div>
-        </div>
-
-        <div class="formula-box" style="max-width:560px">
-          <span class="cm">// Métrica descriptiva secundaria — solo Condición A</span><br>
-          <span class="kw">Coincidencia</span> (%) = (<span class="vl">Aciertos cuidador</span> / <span
-            class="nm">Intentos</span>) × 100<br><br>
-          <span class="cm">// Esta métrica es una aproximación exploratoria.</span><br>
-          <span class="cm">// En Condición B la selección del niño puede estar</span><br>
-          <span class="cm">// influenciada por el reordenamiento → circularidad.</span><br>
-          <span class="cm">// No se interpreta como medida objetiva de precisión.</span>
-        </div>
-
-        <div class="study-grid" style="margin-top:1.5rem;grid-template-columns:repeat(5,1fr)">
-          <div class="study-card" style="border-color:#fbbf24;background:#fffbeb">
-            <div class="study-num" style="color:#92400e;font-size:22px">S0</div>
-            <div class="study-lbl">Calibración</div>
-            <div class="study-desc">Observador externo etiqueta manualmente vs. salida del sistema para cuantificar
-              discrepancia en <em>este participante</em> antes de interpretar cualquier señal</div>
-          </div>
-          <div class="study-card">
-            <div class="study-num" style="color:var(--blue)">1</div>
-            <div class="study-lbl">Participante</div>
-            <div class="study-desc">Niño preescolar no verbal · 3 años · diagnóstico TEA</div>
-          </div>
-          <div class="study-card">
-            <div class="study-num" style="color:var(--blue)">3</div>
-            <div class="study-lbl">Sesiones</div>
-            <div class="study-desc">Exploratorio de caso único · ~10 min c/u · posteriores a la sesión de calibración
-            </div>
-          </div>
-          <div class="study-card">
-            <div class="study-num" style="color:var(--blue)">2</div>
-            <div class="study-lbl">Condiciones</div>
-            <div class="study-desc">Condición A: grilla fija · Condición B: grilla adaptativa — con propósitos
-              analíticos distintos</div>
-          </div>
-          <div class="study-card">
-            <div class="study-num" style="color:var(--ink3)">∅</div>
-            <div class="study-lbl">Generalización</div>
-            <div class="study-desc">Los resultados no son generalizables a otras poblaciones ni participantes</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- VALOR DEL PROYECTO -->
-      <div class="callout"
-        style="background:var(--green-l);border-color:var(--green-m);color:var(--green);max-width:700px;margin-top:2rem">
-        <strong>Valor del proyecto</strong>
-        El sistema se propone reducir la incertidumbre en la interpretación de lo que el usuario desea comunicar,
-        mediante la integración de señales visuales observables como apoyo al cuidador. No se busca reemplazar el
-        criterio del cuidador, sino enriquecer la información disponible para su toma de decisiones.
-      </div>
     </div>
   </section>
 
@@ -2063,158 +1913,6 @@
     </div>
   </section>
 
-  <!-- ÉTICA -->
-  <section class="section" id="etica">
-    <div class="container">
-      <div class="sec-eye">Consideraciones éticas</div>
-      <h2 class="sec-title">Protocolo ético del estudio piloto</h2>
-      <p class="sec-lead">El uso de tecnología de detección facial con un menor de edad con TEA requiere un
-        protocolo ético explícito. Estos son los compromisos declarados del proyecto.</p>
-      <div class="ethics-grid">
-        <div class="ethics-item">
-          <div class="ethics-icon">📋</div>
-          <div class="ethics-text"><strong>Consentimiento informado</strong>Se requerirá consentimiento informado
-            escrito de los padres o tutores legales antes de cualquier sesión. Se explicará claramente el propósito
-            exploratorio del estudio.</div>
-        </div>
-        <div class="ethics-item">
-          <div class="ethics-icon">🔒</div>
-          <div class="ethics-text"><strong>Sin grabación permanente de video</strong>La cámara procesa los frames en
-            tiempo real para extraer landmarks geométricos. No se almacena ningún video ni imagen del participante. Solo
-            se guardan los perfiles de activación derivados y los datos de sesión.</div>
-        </div>
-        <div class="ethics-item">
-          <div class="ethics-icon">💻</div>
-          <div class="ethics-text"><strong>Datos locales y anónimos</strong>Todos los datos de sesión se almacenan
-            localmente en el dispositivo. No se envía información a servidores externos. Los datos se anonimizan antes
-            de cualquier análisis.</div>
-        </div>
-        <div class="ethics-item">
-          <div class="ethics-icon">🚫</div>
-          <div class="ethics-text"><strong>Sin uso diagnóstico</strong>Se informará explícitamente a los padres y
-            cuidadores que el sistema no realiza diagnóstico emocional ni psicológico. Los resultados son observaciones
-            exploratorias de un sistema experimental.</div>
-        </div>
-        <div class="ethics-item">
-          <div class="ethics-icon">⏹</div>
-          <div class="ethics-text"><strong>Derecho a detener la sesión</strong>El participante o su tutor puede detener
-            cualquier sesión en cualquier momento sin consecuencias. No se forzará al participante a completar ninguna
-            interacción.</div>
-        </div>
-        <div class="ethics-item">
-          <div class="ethics-icon">🏛</div>
-          <div class="ethics-text"><strong>Revisión por comité de ética</strong>El protocolo del estudio será sometido a
-            revisión del comité de ética institucional de la UNA antes de iniciar las sesiones con el participante.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ALCANCE -->
-  <section class="section alt" id="alcance">
-    <div class="container">
-      <div class="sec-eye">Alcance y limitaciones</div>
-      <h2 class="sec-title">Definición explícita del alcance.<br>Honestidad metodológica.</h2>
-      <p class="sec-lead">Prototipo funcional de laboratorio evaluado mediante un estudio exploratorio de caso único. No
-        es un dispositivo clínico. La viabilidad en 12 meses con un desarrollador requiere límites explícitos.</p>
-      <div class="scope-grid">
-        <div class="scope-col">
-          <div class="scope-hdr inc">Incluye esta propuesta</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Comunicador táctil por
-            pictogramas funcional e independiente</div>
-
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Detección de perfil de
-            activación facial mediante heurísticas geométricas sobre landmarks MediaPipe (sin modelo de clasificación
-            emocional)</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Módulo A: registro y
-            distribución de perfiles de activación por pictograma</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Módulo B: score escalar de
-            distribución geométrica en ventana temporal de segundos</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Módulo C: reordenamiento
-            heurístico experimental por perfil negativo sostenido ≥3s</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Estudio exploratorio ·
-            caso único · 3 sesiones · 10 min c/u · 1 participante TEA</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Protocolo ético con
-            consentimiento informado · sin grabación de video</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--green)">✓</span>Funcionamiento offline ·
-            hardware convencional · sin costo adicional</div>
-        </div>
-        <div class="scope-col">
-          <div class="scope-hdr exc">Excluye explícitamente</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Inferencia de estados
-            emocionales internos</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Validación clínica formal
-          </div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Precisión de clasificación
-            garantizada en TEA</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Generalización de resultados
-            a otras poblaciones o participantes</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Interpretación psicológica
-            de las asociaciones detectadas</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Síntesis de voz o salida de
-            audio compleja</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Panel en dispositivo
-            secundario del cuidador</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Entrenamiento de modelos de
-            visión por computadora desde cero</div>
-          <div class="scope-item"><span class="scope-icon" style="color:var(--red)">✗</span>Perfiles múltiples
-            persistentes</div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STACK -->
-  <section class="section dark">
-    <div class="container">
-      <div class="sec-eye">Stack tecnológico</div>
-      <h2 class="sec-title" style="color:#fff">Herramientas de código abierto.<br>Sin GPU. Sin conexión a internet.</h2>
-      <p class="sec-lead">Todo el sistema opera localmente. Sin envío de datos a servidores. Sin costo adicional de
-        infraestructura.</p>
-      <div class="tech-grid">
-        <div class="tech-card">
-          <div class="tech-cat">Detección facial</div>
-          <div class="tech-name">MediaPipe Face Mesh</div>
-          <div class="tech-why">468 landmarks faciales en tiempo real sobre CPU. Base para detección de presencia y
-            cálculo de métricas geométricas (distancia entre cejas, apertura de boca, posición de comisuras).</div>
-        </div>
-        <div class="tech-card">
-          <div class="tech-cat">Perfil de activación facial</div>
-          <div class="tech-name">Heurísticas geométricas propias</div>
-          <div class="tech-why">Reglas sobre landmarks MediaPipe: sin modelo de clasificación emocional externo.
-            Transparente, replicable y sin sesgo de entrenamiento con adultos. Score escalar derivado de métricas
-            geométricas observables.</div>
-        </div>
-        <div class="tech-card">
-          <div class="tech-cat">Backend</div>
-          <div class="tech-name">Python 3.11 + FastAPI</div>
-          <div class="tech-why">Lógica de los tres módulos, registro de sesión y comunicación con interfaz vía WebSocket
-            asíncrono.</div>
-        </div>
-        <div class="tech-card">
-          <div class="tech-cat">Interfaz</div>
-          <div class="tech-name">React + Electron</div>
-          <div class="tech-why">Interfaz multiplataforma empaquetada como ejecutable nativo. Funciona offline sin
-            dependencia de navegador.</div>
-        </div>
-        <div class="tech-card">
-          <div class="tech-cat">Pictogramas</div>
-          <div class="tech-name">ARASAAC</div>
-          <div class="tech-why">Banco CAA en español, licencia Creative Commons. Estándar de referencia en habla
-            hispana.</div>
-        </div>
-        <div class="tech-card">
-          <div class="tech-cat">Hardware mínimo</div>
-          <div class="tech-name">Tablet o PC estándar</div>
-          <div class="tech-why">CPU 4 núcleos · 8 GB RAM · Cámara frontal 720p · Sin GPU · Windows 10+ o Ubuntu 22.04+.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <footer>
     <strong>Anthony Steven Cerdas Chacón · 4-0241-0478</strong>
     Licenciatura en Informática · Énfasis en Desarrollo Web · Universidad Nacional de Costa Rica<br>
@@ -2222,8 +1920,7 @@
     SAEC — <em>Sistema Adaptativo de Expresión y Comunicación</em> · Propuesta de Anteproyecto · 2026<br><br>
     <em style="font-size:11px">Este proyecto evalúa la viabilidad de integrar características faciales observables
       derivadas de landmarks geométricos en un sistema de comunicación aumentativa, mediante un estudio exploratorio de
-      caso único. Los resultados serán tratados como observaciones preliminares no generalizables. Pregunta exploratoria
-      · Objetivo descriptivo · Resultados observacionales · Métricas no inferenciales.</em>
+      caso único.
   </footer>
 
   <script>
