@@ -1372,12 +1372,15 @@
   <!-- HERO -->
   <header class="hero">
     <div class="hero-pre">Universidad Nacional de Costa Rica · Escuela de Informática · TFG Licenciatura 2026</div>
-    <h1 class="hero-title">Sistema <em>Adaptativo</em><br>de Expresión y Comunicación — ¿Qué se observa<br>mientras lo
-      <em>pide</em>?
+    <h1 class="hero-title">
+      Sistema de Comunicación Aumentativa y Alternativa para el registro y análisis de características faciales
+      observables en la interacción comunicativa de usuarios no verbales
+      <br><br>
+      ¿Qué <em>siente</em> mientras lo <em>pide</em>?
     </h1>
     <p class="hero-sub">Propuesta de prototipo funcional de Comunicación Aumentativa y Alternativa que integra selección
-      táctil por pictogramas con señales de contexto observable y características faciales geométricas, con el fin de
-      reducir la incertidumbre del cuidador en la interpretación de lo que el usuario desea comunicar.</p>
+      táctil por pictogramas con características faciales observables, con el fin de reducir la incertidumbre del
+      cuidador en la interpretación de lo que el usuario desea comunicar.</p>
 
     <div class="method-block">
       <div class="method-item"><span class="dot"></span>Estudio exploratorio</div>
@@ -1447,32 +1450,6 @@
               "Jugar" con perfil positivo, esta asociación puede ser de valor orientativo para el cuidador — aunque su
               interpretación siempre requiere validación observacional directa y no implica inferencia sobre el estado
               emocional interno.</p>
-
-            <div class="warn-box">
-              <strong>Límite inferencial del índice de asociación</strong>
-              Con ~10 minutos de sesión y 4 pictogramas, el número de selecciones por pictograma puede ser tan pequeño
-              (3–8) que cualquier asociación observada tiene valor puramente ilustrativo. <strong>El índice de
-                asociación solo se reporta para pictogramas con un mínimo de 5 selecciones registradas.</strong> Por
-              debajo de ese umbral, los datos se presentan como descriptivos sin ningún valor inferencial. Esto debe
-              declararse explícitamente en el análisis.
-            </div>
-
-            <div class="callout" style="background:var(--purple-l);border-color:#8b5cf6;color:var(--purple)">
-              <strong>Contribución propuesta</strong>
-              Módulo de registro estructurado (JSON con timestamps y distribución de características faciales
-              observables por pictograma) y visualización de asociaciones observacionales. El índice de asociación es
-              una métrica original presentada como aproximación ilustrativa, no como medida inferencial. Publicable como
-              artículo exploratorio en CLEI 2026.
-            </div>
-
-            <div class="obs-box">
-              <strong>Clarificación metodológica</strong>
-              Este módulo registra asociaciones entre pictogramas y <em>características faciales observables derivadas
-                de métricas geométricas sobre landmarks de MediaPipe</em>. Estas asociaciones no implican interpretación
-              psicológica, no tienen valor diagnóstico y no permiten inferir el estado emocional interno del
-              participante. Al usar heurísticas geométricas explícitas (distancia entre cejas, apertura de boca,
-              posición de comisuras) en lugar de un modelo de clasificación, el sistema es transparente y replicable.
-            </div>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
               <div class="ctrl-lbl">Simulación — elegí un perfil facial y tocá un pictograma</div>
@@ -1579,24 +1556,6 @@
               distribución observable de métricas geométricas, no infiere un "estado emocional promedio". Si el 70% de
               los frames previos mostraron perfil negativo (cejas fruncidas, comisuras hacia abajo), eso es un dato
               descriptivo del clasificador geométrico, no una afirmación sobre el estado interno del niño.</p>
-
-            <div class="callout" style="background:var(--blue-l);border-color:var(--blue-m);color:var(--blue)">
-              <strong>Contribución propuesta</strong>
-              Mecanismo de captura de distribución de características faciales observables (landmarks MediaPipe)
-              sincronizado con el evento de selección táctil, usando ventana temporal de segundos. El score escalar es
-              un resumen compacto de la distribución geométrica. Evaluación propuesta: comparación con etiquetas
-              manuales del observador externo en la sesión de calibración (S0).
-            </div>
-
-            <div class="error-box">
-              <strong>Limitación crítica — validación observacional previa obligatoria</strong>
-              Las heurísticas geométricas pueden no capturar correctamente la expresividad en niños con TEA, cuya
-              expresividad puede ser reducida o atípica. <strong>Por eso se incluye la Sesión 0 de calibración:</strong>
-              un observador externo etiqueta manualmente las características faciales observables del participante en
-              paralelo con la salida del sistema, para cuantificar el nivel de discrepancia en <em>este caso
-                específico</em> antes de interpretar cualquier score como señal orientativa. Esto no valida el modelo,
-              pero contextualiza su margen de error real.
-            </div>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
               <div class="ctrl-lbl">Simulación de perfil facial — esperá unos segundos antes de tocar</div>
@@ -1705,23 +1664,6 @@
               tiempo de selección en el participante. El participante siempre mantiene el control completo — el
               reordenamiento es una sugerencia de la interfaz. Si elige otro pictograma, ese dato se registra y puede
               ser más informativo que la sugerencia aceptada.</p>
-
-            <div class="callout" style="background:var(--red-l);border-color:var(--red-m);color:var(--red)">
-              <strong>Contribución propuesta</strong>
-              Algoritmo de reordenamiento heurístico experimental con umbral temporal de característica facial sostenida
-              y decay gradual. Evaluación propuesta: comparación descriptiva del tiempo de selección en Condición A
-              (grilla fija) vs. Condición B (grilla adaptativa). La Condición B no mide "precisión del cuidador" — eso
-              sería circular — sino el comportamiento de la interacción con las sugerencias.
-            </div>
-
-            <div class="warn-box">
-              <strong>Limitación declarada — módulo heurístico experimental</strong>
-              Este reordenamiento es una heurística, no una inferencia emocional. Puede no coincidir con la intención
-              real del participante. Si la clasificación facial es incorrecta, la grilla puede reordenarse de forma
-              inadecuada. Esto no es un fallo del sistema — es una limitación documentada que se analizará como parte
-              del estudio. La Condición B no se usa para medir acierto del cuidador precisamente para evitar
-              circularidad metodológica.
-            </div>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
               <div class="ctrl-lbl">Simulación — mantené un perfil facial para activar la heurística (umbral: 3s)
