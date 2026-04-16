@@ -185,7 +185,7 @@
 
     .section.alt {
       background: #f1efe9;
-      width: "100";
+      width: 100%;
     }
 
     .section.dark {
@@ -1371,19 +1371,20 @@
   <header class="hero">
     <div class="hero-pre">Universidad Nacional de Costa Rica · Escuela de Informática · TFG Licenciatura 2026</div>
     <h1 class="hero-title">
-      Sistema de Comunicación Aumentativa y Alternativa para el registro y análisis de características faciales
-      observables en la interacción comunicativa de usuarios no verbales
+      Sistema de Comunicación Aumentativa y Alternativa basado en el
+      <em>análisis automatizado de expresiones faciales</em>
+      mediante inteligencia artificial para individuos no verbales
     </h1>
-    <p class="hero-sub">Propuesta de prototipo funcional de Comunicación Aumentativa y Alternativa que integra la
-      selección táctil por pictogramas con el registro de características faciales observables durante la interacción,
-      con el fin de explorar cómo esta información puede ser utilizada por el cuidador en su proceso de interpretación.
+    <p class="hero-sub">Desarrollo de un sistema CAA que permite a individuos no verbales expresar necesidades,
+      emociones e intenciones mediante la interacción humano-computador, utilizando visión por computadora y
+      aprendizaje automático para el análisis de expresiones faciales en tiempo real.
     </p>
 
     <div class="method-block">
-      <div class="method-item"><span class="dot"></span>Estudio exploratorio</div>
-      <div class="method-item"><span class="dot"></span>Caso único · 1 participante</div>
-      <div class="method-item"><span class="dot"></span>Niño · 3 años</div>
-      <div class="method-item"><span class="dot"></span>Sin validación clínica</div>
+      <div class="method-item"><span class="dot"></span>Estudio aplicado · prototipo funcional</div>
+      <div class="method-item"><span class="dot"></span>Visión por computadora · OpenCV / MediaPipe</div>
+      <div class="method-item"><span class="dot"></span>Aprendizaje automático · clasificación facial</div>
+      <div class="method-item"><span class="dot"></span>Evaluación: precisión · usabilidad · efectividad</div>
     </div>
 
   </header>
@@ -1399,58 +1400,70 @@
       <div style="margin-bottom:2.5rem">
         <div class="sec-eye" style="margin-top:2rem">Descripción y alcance</div>
         <p class="sec-lead" style="margin-bottom:1rem">
-          El presente Trabajo Final de Graduación se orienta al desarrollo de un prototipo de Sistema de Comunicación
-          Aumentativa y Alternativa (CAA) dirigido a usuarios no verbales en edad preescolar. El sistema se basa en la
-          selección táctil de pictogramas como medio de interacción y contempla el registro de <strong>características
-            faciales observables</strong> durante su uso, entendidas como cambios visibles en el rostro asociados a la
-          interacción comunicativa.
+          El presente Trabajo Final de Graduación se orienta al desarrollo de un <strong>Sistema de Comunicación
+            Aumentativa y Alternativa (CAA)</strong> para individuos no verbales, que integra técnicas de
+          <strong>inteligencia artificial</strong> para el análisis automatizado de expresiones faciales. El sistema
+          permite expresar necesidades, emociones e intenciones mediante la interacción humano-computador, combinando
+          la selección táctil de pictogramas con la inferencia automática de estados comunicativos a partir del
+          análisis del rostro del usuario.
         </p>
         <p class="sec-lead" style="margin-bottom:1rem">
-          A partir de estas características, se plantea la generación de registros estructurados de cada interacción,
-          la observación de su comportamiento en los instantes previos a la selección y la exploración de su posible
-          uso en la organización de la interfaz. Esta información se presenta como apoyo al cuidador en su proceso de
-          interpretación de lo que observa durante la interacción comunicativa.
+          El sistema se compone de tres módulos técnicos interoperables: un módulo de <strong>captura y
+            preprocesamiento de imagen facial</strong> basado en visión por computadora, un módulo de
+          <strong>clasificación de expresiones mediante aprendizaje automático</strong> que asocia gestos faciales
+          con etiquetas emocionales o intenciones comunicativas, y un módulo de <strong>interfaz CAA adaptativa</strong>
+          que integra la salida del clasificador con la selección de pictogramas y el registro estructurado de sesiones.
         </p>
         <p class="sec-lead" style="margin-bottom:0">
-          El estudio se desarrollará bajo un enfoque exploratorio descriptivo de caso único en un entorno controlado,
-          centrado en la observación de patrones de uso y en la descripción del comportamiento del sistema, así como
-          en la forma en que el cuidador interpreta la información generada durante la interacción.
+          La evaluación del sistema considerará criterios de <strong>precisión del clasificador</strong>,
+          <strong>usabilidad de la interfaz</strong> y <strong>efectividad comunicativa</strong>, con pruebas de
+          funcionamiento en condiciones controladas.
         </p>
       </div>
 
       <!-- DEFINICIÓN DEL SISTEMA -->
       <div class="obs-box" style="margin-bottom:2.5rem">
-        <strong>Definición del sistema</strong>
-        El sistema no determina automáticamente lo que el usuario quiere comunicar. Actúa como una herramienta que
-        registra y presenta características faciales observables asociadas a la interacción, con el propósito de
-        aportar información que el cuidador puede considerar durante su proceso de interpretación.
+        <strong>Definición técnica del sistema</strong>
+        El sistema procesa en tiempo real la imagen facial del usuario mediante técnicas de visión por computadora
+        (detección de rostro, extracción de landmarks y cálculo de Action Units). Un modelo de aprendizaje automático
+        entrenado clasifica los patrones faciales en categorías emocionales o intencionales, cuya salida condiciona
+        el reordenamiento de pictogramas y el registro de cada interacción.
         <br><br>
-        <strong style="font-size:11px;display:inline-block;margin-top:.25rem">⚠ Principio rector —</strong>
-        La interpretación de la información generada por el sistema recae exclusivamente en el cuidador.
+        <strong style="font-size:11px;display:inline-block;margin-top:.25rem">⚠ Principio de diseño —</strong>
+        El clasificador opera como asistente de la interfaz. El usuario siempre retiene el control completo de la
+        selección de pictogramas.
       </div>
 
       <!-- PROBLEMA -->
       <div style="margin-bottom:2.5rem">
         <div class="sec-eye" style="margin-top:0">Planteamiento del problema</div>
         <p class="sec-lead" style="margin-bottom:1rem">
-          En la interacción con usuarios no verbales, el cuidador suele interpretar lo que el niño desea comunicar a
-          partir de señales visibles que acompañan el momento de la solicitud, como gestos o cambios en el rostro. Sin
-          embargo, estas señales no siempre resultan claras o suficientes para comprender cómo se está viviendo esa
-          interacción en ese momento.
+          Los individuos no verbales enfrentan barreras significativas para expresar necesidades, emociones e
+          intenciones comunicativas. Los sistemas CAA tradicionales basados en pictogramas facilitan la expresión,
+          pero operan de forma estática: no incorporan información contextual sobre el estado del usuario durante
+          la interacción, lo que limita su capacidad de adaptación y la riqueza del proceso comunicativo.
 
-          Los sistemas de Comunicación Aumentativa y Alternativa (CAA) facilitan la expresión mediante pictogramas, pero
-          generalmente se centran en la selección del mensaje, sin considerar de forma integrada otras señales que
-          podrían aportar contexto a la interpretación. En este sentido, el proceso de comprender no solo lo que el niño
-          pide, sino también cómo podría estar experimentando ese momento, puede presentar dificultades durante la
-          interacción.
+          La integración de técnicas de análisis automatizado de expresiones faciales mediante inteligencia artificial
+          representa una oportunidad para ampliar las capacidades de estos sistemas, permitiendo asociar gestos
+          faciales con intenciones comunicativas de forma automática y en tiempo real.
         </p>
       </div>
-
-      <!-- PREGUNTA EXPLORATORIA -->
+      <!-- PREGUNTA DE INVESTIGACIÓN -->
       <div id="hipotesis" class="hypothesis-block" style="margin-top:0;margin-bottom:2.5rem">
-        <div class="hyp-label">Pregunta exploratoria</div>
-        <div class="hyp-text">¿Cuáles patrones se observan entre las expresiones faciales y los pictogramas que se
-          eligen, y cómo usa el cuidador esa información para interpretar la comunicación?
+        <div class="hyp-label">Pregunta de investigación</div>
+        <div class="hyp-text">¿En qué medida un sistema CAA que incorpora análisis automatizado de expresiones
+          faciales mediante inteligencia artificial mejora la capacidad de individuos no verbales para expresar
+          necesidades, emociones e intenciones comunicativas?
+        </div>
+        <div class="hyp-vars">
+          <div class="hyp-var">
+            <div class="hyp-var-label">Variable independiente</div>
+            <div class="hyp-var-val">Integración del módulo de análisis facial con IA</div>
+          </div>
+          <div class="hyp-var">
+            <div class="hyp-var-label">Variable dependiente</div>
+            <div class="hyp-var-val">Efectividad, precisión y usabilidad del sistema CAA</div>
+          </div>
         </div>
       </div>
 
@@ -1458,9 +1471,9 @@
       <div class="warn-box" style="margin-bottom:2rem">
         <div class="sec-eye">Objetivo general</div>
         <p class="sec-lead" style="margin-bottom:0">
-          Desarrollar un prototipo de Sistema de Comunicación Aumentativa y Alternativa que integre la selección de
-          pictogramas y el registro de características faciales observables, con el fin de describir y analizar el
-          comportamiento del sistema y la interpretación del cuidador durante la interacción en un entorno controlado.
+          Desarrollar un sistema de Comunicación Aumentativa y Alternativa (CAA) que permita a individuos no verbales
+          expresar necesidades, emociones e intenciones mediante la interacción humano-computador, utilizando el
+          análisis automatizado de expresiones faciales basado en técnicas de inteligencia artificial.
         </p>
       </div>
 
@@ -1472,37 +1485,36 @@
             style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span
               style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">1</span>
-            <span>Analizar el estado del arte de los sistemas de Comunicación Aumentativa y Alternativa y el uso de
-              características faciales observables en contextos de interacción con usuarios no verbales.</span>
+            <span>Analizar los requerimientos funcionales y no funcionales de un sistema de Comunicación Aumentativa
+              y Alternativa (CAA) orientado a individuos no verbales.</span>
           </div>
           <div
             style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span
               style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">2</span>
-            <span>Definir el conjunto de pictogramas y las características faciales observables a considerar en el
-              sistema.</span>
+            <span>Diseñar la arquitectura del sistema, definiendo los componentes necesarios para la captura,
+              procesamiento y almacenamiento de expresiones faciales.</span>
           </div>
           <div
             style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span
               style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">3</span>
-            <span>Diseñar la estructura del sistema, incluyendo la interfaz de selección de pictogramas y los mecanismos
-              de registro de características faciales observables durante la interacción.</span>
+            <span>Implementar un módulo de detección y análisis de expresiones faciales utilizando técnicas de
+              visión por computadora.</span>
           </div>
           <div
             style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span
               style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">4</span>
-            <span>Implementar un prototipo funcional que permita la selección de pictogramas y el registro de
-              características faciales observables durante su uso.</span>
+            <span>Desarrollar un modelo de interpretación de expresiones basado en aprendizaje automático para
+              asociar gestos faciales con emociones o intenciones comunicativas.</span>
           </div>
           <div
             style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span
               style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">5</span>
-            <span>Describir los patrones de interacción entre las características faciales observables y la selección de
-              pictogramas, y analizar cómo el cuidador interpreta la información generada durante la interacción en un
-              entorno controlado.</span>
+            <span>Evaluar el sistema desarrollado mediante pruebas de funcionamiento, considerando criterios de
+              precisión, usabilidad y efectividad en la comunicación.</span>
           </div>
         </div>
       </div>
@@ -1516,22 +1528,39 @@
       <div class="mod-wrap">
         <div class="mod-grid">
           <div>
-            <div class="mod-tag" style="background:var(--purple-l);color:var(--purple)">Módulo A</div>
+            <div class="mod-tag" style="background:var(--purple-l);color:var(--purple)">Módulo A · OE3</div>
             <div class="mod-letter" style="color:var(--purple)">A</div>
-            <h3 class="mod-title">Registro de asociaciones entre pictogramas y características faciales observables</h3>
-            <p class="mod-desc">Cada selección táctil queda registrada en un log estructurado con timestamp,
-              pictograma elegido y el perfil de características faciales observables registrado en los
-              segundos previos — entendidas como cambios visibles en el rostro asociados a la interacción comunicativa.
-              A lo largo de una sesión, este registro construye un conjunto de observaciones descriptivas.</p>
-            <p class="mod-desc">A lo largo de una sesión, este registro construye un conjunto de observaciones que
-              puede sugerir asociaciones observacionales entre pictogramas y configuraciones faciales, las cuales son
-              presentadas como información descriptiva para su interpretación por parte del cuidador. Si "Baño"
-              aparece reiteradamente con perfil negativo y "Jugar" con perfil positivo, esa asociación no implica
-              inferencia sobre el estado emocional interno — es un dato descriptivo que el cuidador puede considerar.
+            <h3 class="mod-title">Captura y detección de expresiones faciales mediante visión por computadora</h3>
+            <p class="mod-desc">Este módulo implementa el pipeline de visión por computadora para la adquisición y
+              análisis de la imagen facial en tiempo real. La cámara captura frames continuos que son procesados por
+              un detector de rostro (Haar Cascades / MediaPipe Face Mesh). Sobre el rostro detectado se extraen
+              <strong>landmarks faciales</strong> (68–478 puntos clave) y se calculan métricas geométricas
+              como distancias y ángulos entre puntos de referencia, de las cuales se derivan vectores de características
+              para alimentar el clasificador del Módulo B.
             </p>
+            <p class="mod-desc">El módulo opera a una frecuencia configurable (≥3 fps) y mantiene un buffer
+              temporal de frames para permitir el análisis de la distribución de expresiones en una ventana de tiempo
+              (últimos N segundos previos a la selección táctil). Cada frame procesado genera un vector de
+              características que incluye métricas de apertura de ojos, curvatura labial, posición de cejas y
+              asimetría facial — insumos directos para el modelo de clasificación.</p>
+
+            <div class="formula-box" style="margin-top:1rem">
+              <span class="cm">// Pipeline de procesamiento — Módulo A</span><br>
+              <span class="kw">frame</span> → detect_face() → extract_landmarks(<span class="nm">478pts</span>) →<br>
+              &nbsp;&nbsp;compute_AUs() → <span class="kw">feature_vector</span>[<span class="nm">n</span>] →<br>
+              &nbsp;&nbsp;buffer.append(feature_vector) → Módulo B<br>
+              <span class="cm">// Frecuencia: ≥3 fps · latencia objetivo: &lt;100ms</span>
+            </div>
+
+            <div class="callout"
+              style="background:var(--purple-l);border-color:var(--purple);color:var(--purple);margin-top:.85rem">
+              <strong>Tecnologías — OE3</strong>
+              OpenCV (captura y detección) · MediaPipe Face Mesh (landmarks) · NumPy (vectores de características) ·
+              Python 3.x como entorno de ejecución del backend.
+            </div>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
-              <div class="ctrl-lbl">Simulación — elegí un perfil facial y tocá un pictograma</div>
+              <div class="ctrl-lbl">Simulación — perfil facial detectado por el Módulo A (demo interactiva)</div>
               <div class="emo-btns" id="bA-ebg">
                 <button class="emo-btn" onclick="bA_setEmo('feliz')"><span class="ef">😊</span><span
                     style="font-size:11px">Feliz</span></button>
@@ -1543,7 +1572,7 @@
                     style="font-size:11px">Angustia</span></button>
               </div>
               <div style="margin-top:1rem">
-                <div class="ctrl-lbl">Historial de sesión + perfil facial registrado</div>
+                <div class="ctrl-lbl">Log de sesión — selección + expresión facial clasificada (Módulo B)</div>
                 <div class="hist-list" id="bA-hist">
                   <div style="font-size:12px;color:#aaa;text-align:center;padding:8px">Tocá pictogramas para construir
                     el historial</div>
@@ -1932,7 +1961,7 @@
   <footer>
     Licenciatura en Informática · Énfasis en Desarrollo Web · Universidad Nacional de Costa Rica<br>
     Tutor: Johnny Villalobos Murillo · Asesor: Johnny Flores Araya · Asesor: Dayanna Vindas<br>
-    <em style="font-size:11px">
+    <em style="font-size:11px">Anteproyecto de Licenciatura · 2026</em>
   </footer>
 
   <script>
