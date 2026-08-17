@@ -1357,12 +1357,14 @@
   <nav>
     <div class="nav-logo">TFG 2026</div>
     <div class="nav-links">
+      <a href="#idea">La idea</a>
       <a href="#propuesta">Propuesta</a>
       <a href="#hipotesis">Pregunta</a>
       <a href="#modA">Módulo A</a>
       <a href="#modB">Módulo B</a>
       <a href="#modC">Módulo C</a>
       <a href="#demo">Demo</a>
+      <a href="#diferencia">Diferencia</a>
     </div>
     <div class="nav-badge">Anteproyecto · UNA</div>
   </nav>
@@ -1371,23 +1373,111 @@
   <header class="hero">
     <div class="hero-pre">Universidad Nacional de Costa Rica · Escuela de Informática · TFG Licenciatura 2026</div>
     <h1 class="hero-title">
-      Sistema de Comunicación Aumentativa y Alternativa basado en el
+      Aplicación móvil de Comunicación Aumentativa y Alternativa basada en el
       <em>análisis automatizado de expresiones faciales</em>
-      mediante inteligencia artificial para individuos no verbales
+      mediante visión por computadora, para un niño no verbal en edad preescolar
     </h1>
-    <p class="hero-sub">Desarrollo de un sistema CAA que permite a individuos no verbales expresar necesidades,
-      emociones e intenciones mediante la interacción humano-computador, utilizando visión por computadora y
-      aprendizaje automático para el análisis de expresiones faciales en tiempo real.
+    <p class="hero-sub">Prueba de concepto evaluada mediante un estudio de caso único con un participante
+      no verbal. La aplicación combina un tablero de pictogramas con el registro automatizado de cuatro
+      perfiles faciales observables, y se ejecuta íntegramente en la tablet Android: el video nunca sale del
+      dispositivo.
     </p>
 
     <div class="method-block">
-      <div class="method-item"><span class="dot"></span>Estudio aplicado · prototipo funcional</div>
-      <div class="method-item"><span class="dot"></span>Visión por computadora · OpenCV / MediaPipe</div>
-      <div class="method-item"><span class="dot"></span>Aprendizaje automático · clasificación facial</div>
-      <div class="method-item"><span class="dot"></span>Evaluación: precisión · usabilidad · efectividad</div>
+      <div class="method-item"><span class="dot"></span>Prueba de concepto · caso único (N = 1)</div>
+      <div class="method-item"><span class="dot"></span>App nativa Android · procesamiento en el dispositivo</div>
+      <div class="method-item"><span class="dot"></span>Flutter · ML Kit Face Mesh · reglas geométricas</div>
+      <div class="method-item"><span class="dot"></span>Cuatro perfiles observables, no emociones</div>
     </div>
-
   </header>
+
+  <!-- LA IDEA EN SIMPLE -->
+  <section class="section" id="idea">
+    <div class="container">
+      <div class="sec-eye">Antes de los detalles</div>
+      <h2 class="sec-title">La idea, en simple</h2>
+
+      <p class="sec-lead" style="margin-bottom:1rem">
+        Un niño no verbal usa un tablero de pictogramas para pedir agua, comida o ayuda. El tablero registra
+        <strong>qué tocó</strong>, pero no registra nada de lo que ocurrió <strong>antes</strong> de que lo tocara.
+        Esa información —cómo estaba su rostro en los segundos previos— la persona cuidadora sí la usa de forma
+        intuitiva para interpretar el mensaje, pero el sistema la descarta.
+      </p>
+      <p class="sec-lead" style="margin-bottom:2rem">
+        Esta propuesta agrega una cámara que <strong>describe en términos medibles</strong> cómo estaba el rostro
+        en esos segundos, y guarda esa descripción junto al pictograma elegido. Nada más. El niño sigue eligiendo.
+      </p>
+
+      <div class="sec-eye" style="margin-bottom:.75rem">Cómo funciona, en cuatro pasos</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.75rem;margin-bottom:2.5rem">
+        <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6;flex-direction:column;gap:.5rem">
+          <div style="display:flex;align-items:center;gap:.6rem">
+            <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center;color:var(--purple)">1</span>
+            <strong style="font-size:13px;color:var(--ink)">Captura</strong>
+          </div>
+          <span>La cámara frontal de la tablet toma fotogramas mientras el niño usa el tablero.</span>
+        </div>
+        <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6;flex-direction:column;gap:.5rem">
+          <div style="display:flex;align-items:center;gap:.6rem">
+            <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center;color:var(--purple)">2</span>
+            <strong style="font-size:13px;color:var(--ink)">Medidas</strong>
+          </div>
+          <span>Se extraen puntos del rostro y se calculan distancias y ángulos, comparados contra una línea
+            base tomada al inicio de la sesión.</span>
+        </div>
+        <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6;flex-direction:column;gap:.5rem">
+          <div style="display:flex;align-items:center;gap:.6rem">
+            <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center;color:var(--purple)">3</span>
+            <strong style="font-size:13px;color:var(--ink)">Perfil</strong>
+          </div>
+          <span>Un modelo asigna uno de cuatro perfiles: positivo, neutro, negativo leve o negativo intenso.</span>
+        </div>
+        <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6;flex-direction:column;gap:.5rem">
+          <div style="display:flex;align-items:center;gap:.6rem">
+            <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center;color:var(--purple)">4</span>
+            <strong style="font-size:13px;color:var(--ink)">Registro</strong>
+          </div>
+          <span>Al tocar un pictograma se guarda qué perfiles predominaron en los segundos previos.</span>
+        </div>
+      </div>
+
+      <div class="sec-eye" style="margin-bottom:.75rem">Qué es y qué no es</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;margin-bottom:2.5rem">
+        <div style="background:var(--green-l);border:1px solid #bbf7d0;border-radius:12px;padding:1.1rem 1.25rem">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin-bottom:.6rem">Sí es</div>
+          <ul style="margin:0;padding-left:1.1rem;font-size:13px;color:var(--ink2);line-height:1.75">
+            <li>Una prueba de concepto académica</li>
+            <li>Un descriptor de rasgos faciales medibles</li>
+            <li>Un tablero de pictogramas que sigue funcionando aunque la cámara falle</li>
+            <li>Una aplicación que corre en la tablet, sin enviar video a ningún servidor</li>
+            <li>Un registro acumulado que muestra qué perfil facial acompaña a cada pictograma, sesión tras sesión</li>
+          </ul>
+        </div>
+        <div style="background:var(--red-l);border:1px solid #fecaca;border-radius:12px;padding:1.1rem 1.25rem">
+          <div style="font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--red);margin-bottom:.6rem">No es</div>
+          <ul style="margin:0;padding-left:1.1rem;font-size:13px;color:var(--ink2);line-height:1.75">
+            <li>Un producto clínico ni un dispositivo médico</li>
+            <li>Un lector de emociones ni de pensamientos</li>
+            <li>Un sistema que elija por el niño</li>
+            <li>Una herramienta de diagnóstico</li>
+            <li>Un servicio que requiera internet o cuenta de usuario</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="obs-box">
+        <strong>Por qué no decimos «emociones»</strong>
+        Decir que el sistema detecta la emoción de una persona implica afirmar algo sobre su estado interno.
+        Este trabajo no está en condiciones de sostener esa afirmación, y menos tratándose de un único
+        participante infantil no verbal.
+        <br><br>
+        Lo que sí se puede sostener es esto: durante los ocho segundos previos a la selección, el 70 % de los
+        fotogramas presentó comisuras descendidas y cejas aproximadas. Eso es una medida verificable de lo que
+        el clasificador registró, no una interpretación de lo que el niño sentía. Por eso el sistema clasifica
+        <strong>perfiles de características faciales observables</strong> y no emociones.
+      </div>
+    </div>
+  </section>
 
 
   <!-- PROPUESTA ACADÉMICA -->
@@ -1400,34 +1490,38 @@
       <div style="margin-bottom:2.5rem">
         <div class="sec-eye" style="margin-top:2rem">Descripción y alcance</div>
         <p class="sec-lead" style="margin-bottom:1rem">
-          El presente Trabajo Final de Graduación se orienta al desarrollo de un <strong>Sistema de Comunicación
-            Aumentativa y Alternativa (CAA)</strong> para individuos no verbales, que integra técnicas de
-          <strong>inteligencia artificial</strong> para el análisis automatizado de expresiones faciales. El sistema
-          permite expresar necesidades, emociones e intenciones mediante la interacción humano-computador, combinando
-          la selección táctil de pictogramas con la inferencia automática de estados comunicativos a partir del
-          análisis del rostro del usuario.
+          El presente Trabajo Final de Graduación se orienta al desarrollo de una <strong>aplicación móvil
+            nativa de Comunicación Aumentativa y Alternativa</strong>, desarrollada con Flutter para tablet Android,
+          que integra el tablero de pictogramas con la <strong>clasificación automatizada de características
+            faciales observables</strong> mediante análisis geométrico. La totalidad del procesamiento se
+          ejecuta en el dispositivo: no se transmite video ni imágenes a servidores externos.
         </p>
         <p class="sec-lead" style="margin-bottom:1rem">
-          El sistema se compone de tres módulos técnicos interoperables: un módulo de <strong>captura y
-            preprocesamiento de imagen facial</strong> basado en visión por computadora, un módulo de
-          <strong>clasificación de expresiones mediante aprendizaje automático</strong> que asocia gestos faciales
-          con etiquetas emocionales o intenciones comunicativas, y un módulo de <strong>interfaz CAA adaptativa</strong>
-          que integra la salida del clasificador con la selección de pictogramas y el registro estructurado de sesiones.
+          El sistema se compone de tres módulos interoperables: el <strong>Módulo A</strong>, de captura y
+          detección facial, que extrae los puntos de referencia del rostro y establece una línea base por sesión;
+          el <strong>Módulo B</strong>, que registra la distribución de perfiles observables en los segundos
+          previos a cada selección; y el <strong>Módulo C</strong>, que reordena heurísticamente la interfaz
+          cuando un perfil se sostiene por encima de un umbral. Los tres operan como capas sobre un comunicador
+          táctil que funciona de forma autónoma.
         </p>
         <p class="sec-lead" style="margin-bottom:0">
-          La evaluación del sistema considerará criterios de <strong>precisión del clasificador</strong>,
-          <strong>usabilidad de la interfaz</strong> y <strong>efectividad comunicativa</strong>, con pruebas de
-          funcionamiento en condiciones controladas.
+          La evaluación se realiza mediante un <strong>estudio de caso único</strong> con un participante no
+          verbal en edad preescolar, y considera la <strong>tasa de detección facial</strong>, la
+          <strong>latencia de procesamiento</strong>, el <strong>índice de asociación entre cada pictograma y
+            el perfil facial que lo precede</strong> a lo largo de la serie de sesiones, y la
+          <strong>usabilidad</strong> valorada por personas cuidadoras y profesionales en terapia del lenguaje.
         </p>
       </div>
 
       <!-- DEFINICIÓN DEL SISTEMA -->
       <div class="obs-box" style="margin-bottom:2.5rem">
         <strong>Definición técnica del sistema</strong>
-        El sistema procesa en tiempo real la imagen facial del usuario mediante técnicas de visión por computadora
-        (detección de rostro, extracción de landmarks y cálculo de Action Units). Un modelo de aprendizaje automático
-        entrenado clasifica los patrones faciales en categorías emocionales o intencionales, cuya salida condiciona
-        el reordenamiento de pictogramas y el registro de cada interacción.
+        La aplicación procesa en tiempo real el flujo de la cámara frontal mediante ML Kit Face Mesh Detection,
+        que detecta el rostro y extrae los 468 puntos de su malla facial. A partir de ellos se calculan distancias y
+        ángulos que conforman un vector de características, normalizado contra la línea base de la sesión. Un
+        conjunto de reglas de umbral asigna uno de los cuatro perfiles
+        observables, cuya distribución temporal condiciona el reordenamiento de pictogramas y queda adjunta al
+        registro de cada interacción.
         <br><br>
         <strong style="font-size:11px;display:inline-block;margin-top:.25rem">⚠ Principio de diseño —</strong>
         El clasificador opera como asistente de la interfaz. El usuario siempre retiene el control completo de la
@@ -1438,31 +1532,32 @@
       <div style="margin-bottom:2.5rem">
         <div class="sec-eye" style="margin-top:0">Planteamiento del problema</div>
         <p class="sec-lead" style="margin-bottom:1rem">
-          Los individuos no verbales enfrentan barreras significativas para expresar necesidades, emociones e
-          intenciones comunicativas. Los sistemas CAA tradicionales basados en pictogramas facilitan la expresión,
-          pero operan de forma estática: no incorporan información contextual sobre el estado del usuario durante
-          la interacción, lo que limita su capacidad de adaptación y la riqueza del proceso comunicativo.
+          Los sistemas CAA basados en pictogramas apoyan la comunicación de personas no verbales, pero su
+          funcionamiento se basa exclusivamente en la selección activa de elementos dentro de la interfaz. Un
+          aspecto que ha recibido menor atención es el uso de las características faciales observables como
+          fuente complementaria de información dentro del proceso comunicativo.
 
-          La integración de técnicas de análisis automatizado de expresiones faciales mediante inteligencia artificial
-          representa una oportunidad para ampliar las capacidades de estos sistemas, permitiendo asociar gestos
-          faciales con intenciones comunicativas de forma automática y en tiempo real.
+          Los avances en visión por computadora permiten detectar y describir estas características de manera
+          automatizada y en tiempo real. Sin embargo, en la revisión realizada no se identificaron propuestas que
+          integren de forma directa este tipo de análisis dentro de sistemas CAA.
         </p>
       </div>
       <!-- PREGUNTA DE INVESTIGACIÓN -->
       <div id="hipotesis" class="hypothesis-block" style="margin-top:0;margin-bottom:2.5rem">
         <div class="hyp-label">Pregunta de investigación</div>
-        <div class="hyp-text">¿En qué medida un sistema CAA que incorpora análisis automatizado de expresiones
-          faciales mediante inteligencia artificial mejora la capacidad de individuos no verbales para expresar
-          necesidades, emociones e intenciones comunicativas?
+        <div class="hyp-text">¿Es técnicamente viable integrar la clasificación automatizada de características
+          faciales observables en una aplicación móvil nativa de CAA basada en pictogramas, ejecutada en una
+          tablet Android y en tiempo real, y qué relación se observa entre los perfiles faciales registrados y las
+          selecciones de pictogramas de un participante no verbal?
         </div>
         <div class="hyp-vars">
           <div class="hyp-var">
             <div class="hyp-var-label">Variable independiente</div>
-            <div class="hyp-var-val">Integración del módulo de análisis facial con IA</div>
+            <div class="hyp-var-val">Características faciales observables (medidas geométricas del rostro)</div>
           </div>
           <div class="hyp-var">
             <div class="hyp-var-label">Variable dependiente</div>
-            <div class="hyp-var-val">Efectividad, precisión y usabilidad del sistema CAA</div>
+            <div class="hyp-var-val">Registro de la selección de pictogramas asistida por el perfil facial</div>
           </div>
         </div>
       </div>
@@ -1471,9 +1566,11 @@
       <div class="warn-box" style="margin-bottom:2rem">
         <div class="sec-eye">Objetivo general</div>
         <p class="sec-lead" style="margin-bottom:0">
-          Desarrollar un sistema de Comunicación Aumentativa y Alternativa (CAA) que permita a individuos no verbales
-          expresar necesidades, emociones e intenciones mediante la interacción humano-computador, utilizando el
-          análisis automatizado de expresiones faciales basado en técnicas de inteligencia artificial.
+          Crear una aplicación móvil nativa de Comunicación Aumentativa y Alternativa que registre y clasifique
+          cuatro perfiles de características faciales observables —positivo, neutro, negativo leve y negativo
+          intenso— mediante análisis geométrico de puntos de referencia faciales, como apoyo a la selección de
+          pictogramas y al registro de asociaciones para un participante no verbal, en el marco de una prueba
+          de concepto evaluada mediante un estudio de caso único.
         </p>
       </div>
 
@@ -1481,40 +1578,25 @@
       <div>
         <div class="sec-eye" style="margin-bottom:.75rem">Objetivos específicos</div>
         <div style="display:flex;flex-direction:column;gap:.5rem">
-          <div
-            style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
-            <span
-              style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">1</span>
-            <span>Analizar los requerimientos funcionales y no funcionales de un sistema de Comunicación Aumentativa
-              y Alternativa (CAA) orientado a individuos no verbales.</span>
+          <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
+            <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">1</span>
+            <span>Analizar el estado del arte de los sistemas de Comunicación Aumentativa y Alternativa que incorporan análisis automatizado de características faciales, contrastando sus objetivos, tecnologías, resultados y limitaciones.</span>
           </div>
-          <div
-            style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
-            <span
-              style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">2</span>
-            <span>Diseñar la arquitectura del sistema, definiendo los componentes necesarios para la captura,
-              procesamiento y almacenamiento de expresiones faciales.</span>
+          <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
+            <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">2</span>
+            <span>Especificar los requerimientos funcionales y no funcionales de la aplicación y los módulos que la integran: captura y detección facial, registro de la distribución de características faciales previa a la selección, y reordenamiento heurístico de la interfaz.</span>
           </div>
-          <div
-            style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
-            <span
-              style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">3</span>
-            <span>Implementar un módulo de detección y análisis de expresiones faciales utilizando técnicas de
-              visión por computadora.</span>
+          <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
+            <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">3</span>
+            <span>Diseñar la arquitectura de la aplicación móvil nativa, definiendo sus componentes, el flujo de datos, el modelo de almacenamiento local y la estrategia de ejecución en el dispositivo.</span>
           </div>
-          <div
-            style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
-            <span
-              style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">4</span>
-            <span>Desarrollar un modelo de interpretación de expresiones basado en aprendizaje automático para
-              asociar gestos faciales con emociones o intenciones comunicativas.</span>
+          <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
+            <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">4</span>
+            <span>Desarrollar el módulo de clasificación de los cuatro perfiles de características faciales observables mediante reglas geométricas sobre los 468 puntos de la malla facial extraídos con ML Kit Face Mesh Detection, normalizadas respecto de una línea base por sesión.</span>
           </div>
-          <div
-            style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
-            <span
-              style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">5</span>
-            <span>Evaluar el sistema desarrollado mediante pruebas de funcionamiento, considerando criterios de
-              precisión, usabilidad y efectividad en la comunicación.</span>
+          <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
+            <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">5</span>
+            <span>Evaluar la prueba de concepto mediante un estudio de caso único con un participante no verbal, considerando la tasa de detección facial, la latencia de procesamiento, el índice de asociación entre cada pictograma y el perfil facial que lo precede a lo largo de la serie de sesiones, y la usabilidad valorada por personas cuidadoras y profesionales en terapia del lenguaje.</span>
           </div>
         </div>
       </div>
@@ -1530,13 +1612,13 @@
           <div>
             <div class="mod-tag" style="background:var(--purple-l);color:var(--purple)">Módulo A · OE3</div>
             <div class="mod-letter" style="color:var(--purple)">A</div>
-            <h3 class="mod-title">Captura y detección de expresiones faciales mediante visión por computadora</h3>
+            <h3 class="mod-title">Captura y detección de características faciales mediante visión por computadora</h3>
             <p class="mod-desc">Este módulo implementa el pipeline de visión por computadora para la adquisición y
-              análisis de la imagen facial en tiempo real. La cámara captura frames continuos que son procesados por
-              un detector de rostro (Haar Cascades / MediaPipe Face Mesh). Sobre el rostro detectado se extraen
-              <strong>landmarks faciales</strong> (68–478 puntos clave) y se calculan métricas geométricas
-              como distancias y ángulos entre puntos de referencia, de las cuales se derivan vectores de características
-              para alimentar el clasificador del Módulo B.
+              análisis de la imagen facial en tiempo real. El paquete <code>camera</code> de Flutter entrega el flujo
+              continuo de fotogramas, que son procesados por <strong>ML Kit Face Mesh Detection</strong>. Sobre el
+              rostro detectado se extrae la <strong>malla facial de 468 puntos</strong> y se calculan métricas
+              geométricas como distancias y ángulos entre puntos, de las cuales se derivan los vectores de
+              características que alimentan el clasificador del Módulo B.
             </p>
             <p class="mod-desc">El módulo opera a una frecuencia configurable (≥3 fps) y mantiene un buffer
               temporal de frames para permitir el análisis de la distribución de expresiones en una ventana de tiempo
@@ -1555,21 +1637,23 @@
             <div class="callout"
               style="background:var(--purple-l);border-color:var(--purple);color:var(--purple);margin-top:.85rem">
               <strong>Tecnologías — OE3</strong>
-              OpenCV (captura y detección) · MediaPipe Face Mesh (landmarks) · NumPy (vectores de características) ·
-              Python 3.x como entorno de ejecución del backend.
+              Flutter/Dart (marco de trabajo) · ML Kit Face Mesh Detection (malla de 468 puntos) ·
+              reglas geométricas en Dart (clasificación) · paquete camera (captura de fotogramas) ·
+              sqflite (persistencia) · flutter_tts (voz). Plataforma objetivo: tablet Android.
+              Sin componente de servidor: todo el procesamiento ocurre en el dispositivo.
             </div>
 
             <div class="ctrl-area" style="margin-top:1.25rem">
               <div class="ctrl-lbl">Simulación — perfil facial detectado por el Módulo A (demo interactiva)</div>
               <div class="emo-btns" id="bA-ebg">
-                <button class="emo-btn" onclick="bA_setEmo('feliz')"><span class="ef">😊</span><span
-                    style="font-size:11px">Feliz</span></button>
-                <button class="emo-btn" onclick="bA_setEmo('neutro')" style="background:#f4f4f5"><span
+                <button class="emo-btn" onclick="bA_setEmo('pos')"><span class="ef">😊</span><span
+                    style="font-size:11px">Positivo</span></button>
+                <button class="emo-btn" onclick="bA_setEmo('neu')" style="background:#f4f4f5"><span
                     class="ef">😐</span><span style="font-size:11px">Neutro</span></button>
-                <button class="emo-btn" onclick="bA_setEmo('triste')"><span class="ef">😢</span><span
-                    style="font-size:11px">Triste</span></button>
-                <button class="emo-btn" onclick="bA_setEmo('angustia')"><span class="ef">😣</span><span
-                    style="font-size:11px">Angustia</span></button>
+                <button class="emo-btn" onclick="bA_setEmo('negL')"><span class="ef">😢</span><span
+                    style="font-size:11px">Negativo leve</span></button>
+                <button class="emo-btn" onclick="bA_setEmo('negI')"><span class="ef">😣</span><span
+                    style="font-size:11px">Negativo intenso</span></button>
               </div>
               <div style="margin-top:1rem">
                 <div class="ctrl-lbl">Log de sesión — selección + expresión facial clasificada (Módulo B)</div>
@@ -1668,16 +1752,14 @@
             <div class="ctrl-area" style="margin-top:1.25rem">
               <div class="ctrl-lbl">Simulación de perfil facial — esperá unos segundos antes de tocar</div>
               <div class="emo-btns" id="bB-ebg">
-                <button class="emo-btn" onclick="bB_setEmo('feliz')"><span class="ef">😊</span><span
-                    class="ev">+1.0</span><span style="font-size:11px">Feliz</span></button>
-                <button class="emo-btn" onclick="bB_setEmo('neutro')" style="background:#f4f4f5"><span
+                <button class="emo-btn" onclick="bB_setEmo('pos')"><span class="ef">😊</span><span
+                    class="ev">+1.0</span><span style="font-size:11px">Positivo</span></button>
+                <button class="emo-btn" onclick="bB_setEmo('neu')" style="background:#f4f4f5"><span
                     class="ef">😐</span><span class="ev">0.0</span><span style="font-size:11px">Neutro</span></button>
-                <button class="emo-btn" onclick="bB_setEmo('triste')"><span class="ef">😢</span><span
-                    class="ev">−0.6</span><span style="font-size:11px">Triste</span></button>
-                <button class="emo-btn" onclick="bB_setEmo('frustrado')"><span class="ef">😤</span><span
-                    class="ev">−0.8</span><span style="font-size:11px">Frustrado</span></button>
-                <button class="emo-btn wide" onclick="bB_setEmo('angustia')"><span class="ef">😣</span><span
-                    class="ev">−1.0</span><span style="font-size:11px">Angustia</span></button>
+                <button class="emo-btn" onclick="bB_setEmo('negL')"><span class="ef">😢</span><span
+                    class="ev">−0.6</span><span style="font-size:11px">Negativo leve</span></button>
+                <button class="emo-btn wide" onclick="bB_setEmo('negI')"><span class="ef">😣</span><span
+                    class="ev">−1.0</span><span style="font-size:11px">Negativo intenso</span></button>
               </div>
               <div class="live-val" style="margin-top:.85rem">
                 <div class="ctrl-lbl">Score de distribución facial — últimos segundos (resumen escalar)</div>
@@ -1778,16 +1860,14 @@
               <div class="ctrl-lbl">Simulación — mantené un perfil facial para activar la heurística (umbral: 3s)
               </div>
               <div class="emo-btns" id="bC-ebg">
-                <button class="emo-btn" onclick="bC_setEmo('feliz')"><span class="ef">😊</span><span
-                    style="font-size:11px">Feliz → Jugar</span></button>
-                <button class="emo-btn" onclick="bC_setEmo('neutro')" style="background:#f4f4f5"><span
+                <button class="emo-btn" onclick="bC_setEmo('pos')"><span class="ef">😊</span><span
+                    style="font-size:11px">Positivo → Jugar</span></button>
+                <button class="emo-btn" onclick="bC_setEmo('neu')" style="background:#f4f4f5"><span
                     class="ef">😐</span><span style="font-size:11px">Neutro → sin cambio</span></button>
-                <button class="emo-btn" onclick="bC_setEmo('triste')"><span class="ef">😢</span><span
-                    style="font-size:11px">Triste → Ayuda</span></button>
-                <button class="emo-btn" onclick="bC_setEmo('frustrado')"><span class="ef">😤</span><span
-                    style="font-size:11px">Frustrado → Dolor</span></button>
-                <button class="emo-btn wide" onclick="bC_setEmo('angustia')"><span class="ef">😣</span><span
-                    style="font-size:11px">Angustia → Dolor</span></button>
+                <button class="emo-btn" onclick="bC_setEmo('negL')"><span class="ef">😢</span><span
+                    style="font-size:11px">Negativo leve → Ayuda</span></button>
+                <button class="emo-btn wide" onclick="bC_setEmo('negI')"><span class="ef">😣</span><span
+                    style="font-size:11px">Negativo intenso → Dolor</span></button>
               </div>
               <div style="margin-top:.85rem">
                 <div class="ctrl-lbl">Progreso del umbral heurístico por etiqueta</div>
@@ -1891,16 +1971,14 @@
             <div class="card-hdr">Simulación de perfil facial</div>
             <div class="card-body">
               <div class="emo-btns" id="comb-ebg">
-                <button class="emo-btn" onclick="comb_setEmo('feliz')"><span class="ef">😊</span><span
-                    style="font-size:11px">Feliz</span></button>
-                <button class="emo-btn" onclick="comb_setEmo('neutro')" style="background:#f4f4f5"><span
+                <button class="emo-btn" onclick="comb_setEmo('pos')"><span class="ef">😊</span><span
+                    style="font-size:11px">Positivo</span></button>
+                <button class="emo-btn" onclick="comb_setEmo('neu')" style="background:#f4f4f5"><span
                     class="ef">😐</span><span style="font-size:11px">Neutro</span></button>
-                <button class="emo-btn" onclick="comb_setEmo('triste')"><span class="ef">😢</span><span
-                    style="font-size:11px">Triste</span></button>
-                <button class="emo-btn" onclick="comb_setEmo('frustrado')"><span class="ef">😤</span><span
-                    style="font-size:11px">Frustrado</span></button>
-                <button class="emo-btn wide" onclick="comb_setEmo('angustia')"><span class="ef">😣</span><span
-                    style="font-size:11px">Angustia / Dolor</span></button>
+                <button class="emo-btn" onclick="comb_setEmo('negL')"><span class="ef">😢</span><span
+                    style="font-size:11px">Negativo leve</span></button>
+                <button class="emo-btn wide" onclick="comb_setEmo('negI')"><span class="ef">😣</span><span
+                    style="font-size:11px">Negativo intenso</span></button>
               </div>
               <div class="live-val" style="margin-top:.75rem">
                 <div class="ctrl-lbl">Score de distribución facial — últimos 8s</div>
@@ -1957,17 +2035,63 @@
       </div>
     </div>
   </section>
+  <!-- QUÉ LO DIFERENCIA -->
+  <section class="section" id="diferencia">
+    <div class="container">
+      <div class="sec-eye">Estado del arte</div>
+      <h2 class="sec-title">Qué lo diferencia de lo que ya existe</h2>
+      <p class="sec-lead" style="margin-bottom:1.5rem">
+        Las herramientas de CAA en uso operan mediante selección explícita —táctil, por barrido o por seguimiento
+        ocular— y ninguna de las revisadas incorpora las características faciales expresivas como información
+        registrada. Conviene distinguir aquí el seguimiento ocular, que utiliza la mirada como mecanismo de
+        puntero: es una modalidad de entrada, no una fuente complementaria de información sobre la persona usuaria.
+      </p>
 
-  <footer>
+      <div style="overflow-x:auto;margin-bottom:1.5rem">
+        <table style="width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--rule);border-radius:12px">
+          <thead>
+            <tr>
+              <th style="text-align:left;padding:.6rem .8rem;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--rule)">Producto</th><th style="text-align:left;padding:.6rem .8rem;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--rule)">Tipo</th><th style="text-align:left;padding:.6rem .8rem;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--rule)">Entrada</th>
+              <th style="text-align:left;padding:.6rem .8rem;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--rule)">Señal facial</th><th style="text-align:left;padding:.6rem .8rem;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--ink3);border-bottom:1px solid var(--rule)">Ejecución</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top;font-weight:600;color:var(--ink)">Proloquo2Go</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">Comercial</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">Táctil</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">No</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">App nativa</td></tr>
+            <tr><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top;font-weight:600;color:var(--ink)">TD Snap / Grid 3</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">Comercial</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">Táctil, barrido, mirada</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">La mirada es puntero, no señal expresiva</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">App nativa</td></tr>
+            <tr><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top;font-weight:600;color:var(--ink)">LetMeTalk</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">Gratuito</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">Táctil</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">No</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">App nativa</td></tr>
+            <tr><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top;font-weight:600;color:var(--ink)">CoughDrop</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">Comercial / web</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">Táctil, barrido</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">No</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">Web y nativa</td></tr>
+            <tr style="background:var(--purple-l)"><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top;font-weight:600;color:var(--ink)">Esta propuesta</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">Prototipo académico</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">Táctil + registro facial</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">Sí, como dato descriptivo</td><td style="padding:.7rem .8rem;font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--rule);vertical-align:top">App nativa Android</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="sec-lead" style="margin-bottom:1.5rem">
+        Por su parte, la investigación en análisis facial alcanza niveles de desempeño elevados pero permanece
+        mayoritariamente en entornos experimentales y no se ha trasladado al dominio de la CAA. La brecha, en
+        consecuencia, no está en la ausencia de tecnología sino en la ausencia de integración entre ambos campos.
+      </p>
+
+      <div class="warn-box">
+        <div class="sec-eye">Cuatro diferencias concretas</div>
+        <ul style="margin:.5rem 0 0;padding-left:1.1rem;font-size:13px;color:var(--ink2);line-height:1.8">
+          <li>Registra características faciales observables <strong>sin inferir estados emocionales internos</strong>.</li>
+          <li>Asocia esa información al <strong>momento previo a cada selección</strong>, no de forma aislada.</li>
+          <li>Se ejecuta <strong>íntegramente en el dispositivo</strong>, sin transmisión de video.</li>
+          <li>Conserva la funcionalidad del comunicador <strong>con independencia del desempeño del clasificador</strong>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+\n  <footer>
     Licenciatura en Informática · Énfasis en Desarrollo Web · Universidad Nacional de Costa Rica<br>
     Tutor: Johnny Villalobos Murillo · Asesor: Johnny Flores Araya · Asesor: Dayanna Vindas<br>
     <em style="font-size:11px">Anteproyecto de Licenciatura · 2026</em>
   </footer>
 
   <script>
-    const EMO = { feliz: { face: '😊', val: 1.0, bg: '#dcfce7', c: '#15803d' }, neutro: { face: '😐', val: 0.0, bg: '#f4f4f5', c: '#52525b' }, triste: { face: '😢', val: -0.6, bg: '#dbeafe', c: '#1d4ed8' }, frustrado: { face: '😤', val: -0.8, bg: '#fee2e2', c: '#991b1b' }, angustia: { face: '😣', val: -1.0, bg: '#fee2e2', c: '#991b1b' } };
-    const EMO_COL = { feliz: '#22c55e', neutro: '#a0a0a0', triste: '#3b82f6', frustrado: '#ef4444', angustia: '#ef4444' };
-    const PROMO_RULES = [{ emo: 'angustia', pic: { e: '😣', l: 'Dolor', k: 'dolor', m: 'Siente dolor', pg: 1 }, col: '#ef4444', cls: 'pa', tag: 'heurística: dolor' }, { emo: 'frustrado', pic: { e: '😣', l: 'Dolor', k: 'dolor', m: 'Siente dolor', pg: 1 }, col: '#ef4444', cls: 'pfr', tag: 'heurística: dolor' }, { emo: 'triste', pic: { e: '🤝', l: 'Ayuda', k: 'ayuda', m: 'Necesita ayuda', pg: 0 }, col: '#3b82f6', cls: 'pt', tag: 'heurística: ayuda' }, { emo: 'feliz', pic: { e: '🎮', l: 'Jugar', k: 'jugar', m: 'Quiere jugar', pg: 1 }, col: '#22c55e', cls: 'pf', tag: 'heurística: jugar' }];
+    const EMO = { pos: { face: '😊', label: 'positivo', val: 1.0, bg: '#dcfce7', c: '#15803d' }, neu: { face: '😐', label: 'neutro', val: 0.0, bg: '#f4f4f5', c: '#52525b' }, negL: { face: '😢', label: 'negativo leve', val: -0.6, bg: '#dbeafe', c: '#1d4ed8' }, negI: { face: '😣', label: 'negativo intenso', val: -1.0, bg: '#fee2e2', c: '#991b1b' } };
+    const EMO_COL = { pos: '#22c55e', neu: '#a0a0a0', negL: '#3b82f6', negI: '#ef4444' };
+    const PROMO_RULES = [{ emo: 'negI', pic: { e: '😣', l: 'Dolor', k: 'dolor', m: 'Siente dolor', pg: 1 }, col: '#ef4444', cls: 'pa', tag: 'heurística: dolor' }, { emo: 'negL', pic: { e: '🤝', l: 'Ayuda', k: 'ayuda', m: 'Necesita ayuda', pg: 0 }, col: '#3b82f6', cls: 'pt', tag: 'heurística: ayuda' }, { emo: 'pos', pic: { e: '🎮', l: 'Jugar', k: 'jugar', m: 'Quiere jugar', pg: 1 }, col: '#22c55e', cls: 'pf', tag: 'heurística: jugar' }];
     const PAGES = [[{ e: '💧', l: 'Agua', k: 'agua', m: 'Quiere agua' }, { e: '🍎', l: 'Comer', k: 'comer', m: 'Quiere comer' }, { e: '🚽', l: 'Baño', k: 'baño', m: 'Necesita el baño' }, { e: '🤝', l: 'Ayuda', k: 'ayuda', m: 'Necesita ayuda' }], [{ e: '😣', l: 'Dolor', k: 'dolor', m: 'Siente dolor' }, { e: '🎮', l: 'Jugar', k: 'jugar', m: 'Quiere jugar' }, { e: '😴', l: 'Dormir', k: 'dormir', m: 'Quiere dormir' }, { e: '🚫', l: 'No', k: 'no', m: 'No quiere' }]];
     const THRESH = 3000;
 
@@ -1988,14 +2112,14 @@
       document.getElementById(nId).style.color = v < 0 ? '#ef4444' : v > 0 ? '#15803d' : '#52525b';
       if (iId) { const i = interpVal(v); const el = document.getElementById(iId); el.textContent = i.txt; el.style.background = i.bg; el.style.color = i.c; }
     }
-    function setBadge(id, emo) { const m = EMO[emo], el = document.getElementById(id); el.textContent = m.face + ' ' + emo; el.style.background = m.bg; el.style.color = m.c; }
+    function setBadge(id, emo) { const m = EMO[emo], el = document.getElementById(id); el.textContent = m.face + ' ' + m.label; el.style.background = m.bg; el.style.color = m.c; }
     function setEmoBtn(gId, emo) {
       document.querySelectorAll('#' + gId + ' .emo-btn').forEach(b => { b.style.background = ''; b.style.borderColor = ''; b.style.color = ''; });
       const m = EMO[emo];
       document.querySelectorAll('#' + gId + ' .emo-btn').forEach(b => { if (b.querySelector('.ef') && b.querySelector('.ef').textContent === m.face) { b.style.background = m.bg; b.style.borderColor = m.c; b.style.color = m.c; } });
     }
     function computeVal(log) { if (!log.length) return 0; const s = log.slice(-Math.ceil(8 * 30)); return Math.round(s.reduce((a, e) => a + (EMO[e]?.val || 0), 0) / s.length * 100) / 100; }
-    function domEmo(log) { const s = log.slice(-Math.ceil(8 * 30)); const c = {}; s.forEach(e => c[e] = (c[e] || 0) + 1); return Object.entries(c).sort((a, b) => b[1] - a[1])[0]?.[0] || 'neutro'; }
+    function domEmo(log) { const s = log.slice(-Math.ceil(8 * 30)); const c = {}; s.forEach(e => c[e] = (c[e] || 0) + 1); return Object.entries(c).sort((a, b) => b[1] - a[1])[0]?.[0] || 'neu'; }
     function ts() { const n = new Date(); return n.getHours().toString().padStart(2, '0') + ':' + n.getMinutes().toString().padStart(2, '0') + ':' + n.getSeconds().toString().padStart(2, '0'); }
 
     function buildGrid(gId, page, active, onSel) {
@@ -2037,7 +2161,7 @@
       PROMO_RULES.forEach(r => {
         const t = timers[r.emo] || 0; const pct = Math.min(100, Math.round(t / THRESH * 100)); const isA = active === r.emo;
         const row = document.createElement('div'); row.className = 'promo-row'; if (isA) row.style.background = r.col + '11';
-        row.innerHTML = `<span class="pr-emo">${EMO[r.emo].face} ${r.emo}</span><span class="pr-pic">→ ${r.pic.e} ${r.pic.l}</span><div class="pr-bwrap"><div class="pr-bfill" style="width:${pct}%;background:${r.col}"></div></div><span class="pr-badge" style="background:${isA ? r.col + '22' : '#f0f0f0'};color:${isA ? r.col : '#888'}">${isA ? 'ACTIVO' : pct + '%'}</span>`;
+        row.innerHTML = `<span class="pr-emo">${EMO[r.emo].face} ${EMO[r.emo].label}</span><span class="pr-pic">→ ${r.pic.e} ${r.pic.l}</span><div class="pr-bwrap"><div class="pr-bfill" style="width:${pct}%;background:${r.col}"></div></div><span class="pr-badge" style="background:${isA ? r.col + '22' : '#f0f0f0'};color:${isA ? r.col : '#888'}">${isA ? 'ACTIVO' : pct + '%'}</span>`;
         el.appendChild(row);
       });
     }
@@ -2052,7 +2176,7 @@
     }
 
     /* ── MÓDULO A ── */
-    let bA_emo = 'neutro', bA_log = [], bA_hist = [], bA_pat = {}, bA_lk = false;
+    let bA_emo = 'neu', bA_log = [], bA_hist = [], bA_pat = {}, bA_lk = false;
     function bA_setEmo(e) { bA_emo = e; setBadge('bA-badge', e); setEmoBtn('bA-ebg', e); }
     function bA_select(emoji, msg, key) {
       if (bA_lk) return; bA_lk = true;
@@ -2069,10 +2193,10 @@
     }
     function bA_reset() { bA_lk = false; document.getElementById('bA-grid').style.display = 'grid'; document.getElementById('bA-result').style.display = 'none'; }
     function bA_loop() { bA_log.push(bA_emo); if (bA_log.length > 8 * 30 * 2) bA_log.shift(); requestAnimationFrame(bA_loop); }
-    bA_setEmo('neutro'); requestAnimationFrame(bA_loop);
+    bA_setEmo('neu'); requestAnimationFrame(bA_loop);
 
     /* ── MÓDULO B ── */
-    let bB_emo = 'neutro', bB_log = [], bB_lk = false, bB_last = null;
+    let bB_emo = 'neu', bB_log = [], bB_lk = false, bB_last = null;
     function bB_setEmo(e) { bB_emo = e; setBadge('bB-badge', e); setEmoBtn('bB-ebg', e); }
     function bB_select(emoji, msg) {
       if (bB_lk) return; bB_lk = true;
@@ -2088,10 +2212,10 @@
       if (!bB_lk) { updateLV('bB-ln', 'bB-lp', 'bB-lv', computeVal(bB_log)); }
       requestAnimationFrame(bB_loop);
     }
-    bB_setEmo('neutro'); requestAnimationFrame(bB_loop);
+    bB_setEmo('neu'); requestAnimationFrame(bB_loop);
 
     /* ── MÓDULO C ── */
-    let bC_emo = 'neutro', bC_timers = {}, bC_active = null, bC_lk = false, bC_last = null;
+    let bC_emo = 'neu', bC_timers = {}, bC_active = null, bC_lk = false, bC_last = null;
     Object.keys(EMO).forEach(k => bC_timers[k] = 0);
     function bC_setEmo(e) { bC_emo = e; setBadge('bC-badge', e); setEmoBtn('bC-ebg', e); }
     function bC_buildGrid() {
@@ -2106,14 +2230,14 @@
     function bC_loop(now) {
       if (!bC_last) bC_last = now; const dt = now - bC_last; bC_last = now;
       Object.keys(bC_timers).forEach(k => { if (k === bC_emo && !bC_lk) bC_timers[k] = Math.min(THRESH, bC_timers[k] + dt); else bC_timers[k] = Math.max(0, bC_timers[k] - dt * 1.5); });
-      const newA = Object.entries(bC_timers).find(([k, v]) => v >= THRESH && k !== 'neutro')?.[0] || null;
+      const newA = Object.entries(bC_timers).find(([k, v]) => v >= THRESH && k !== 'neu')?.[0] || null;
       if (newA !== bC_active) { bC_active = newA; const rule = newA ? PROMO_RULES.find(r => r.emo === newA) : null; const tag = document.getElementById('bC-ptag'); if (rule) { tag.textContent = rule.tag; tag.style.display = 'inline'; tag.style.background = rule.col + '22'; tag.style.color = rule.col; } else tag.style.display = 'none'; if (!bC_lk) bC_buildGrid(); }
       renderPromo('bC-promo', bC_timers, bC_active); requestAnimationFrame(bC_loop);
     }
-    bC_setEmo('neutro'); bC_buildGrid(); requestAnimationFrame(bC_loop);
+    bC_setEmo('neu'); bC_buildGrid(); requestAnimationFrame(bC_loop);
 
     /* ── DEMO COMBINADA ── */
-    let comb_emo = 'neutro', comb_log = [], comb_timers = {}, comb_active = null, comb_lk = false, comb_last = null, comb_page = 0, comb_hist = [], comb_pat = {};
+    let comb_emo = 'neu', comb_log = [], comb_timers = {}, comb_active = null, comb_lk = false, comb_last = null, comb_page = 0, comb_hist = [], comb_pat = {};
     Object.keys(EMO).forEach(k => comb_timers[k] = 0);
     function comb_setEmo(e) { comb_emo = e; setBadge('comb-badge', e); setEmoBtn('comb-ebg', e); }
     function comb_setPage(p) { comb_page = p; document.getElementById('comb-p0').className = 'd-nav-b' + (p === 0 ? ' cur' : ''); document.getElementById('comb-p1').className = 'd-nav-b' + (p === 1 ? ' cur' : ''); comb_buildGrid(); }
@@ -2136,12 +2260,12 @@
       if (!comb_last) comb_last = now; const dt = now - comb_last; comb_last = now;
       comb_log.push(comb_emo); if (comb_log.length > 8 * 30 * 2) comb_log.shift();
       Object.keys(comb_timers).forEach(k => { if (k === comb_emo && !comb_lk) comb_timers[k] = Math.min(THRESH, comb_timers[k] + dt); else comb_timers[k] = Math.max(0, comb_timers[k] - dt * 1.5); });
-      const newA = Object.entries(comb_timers).find(([k, v]) => v >= THRESH && k !== 'neutro')?.[0] || null;
+      const newA = Object.entries(comb_timers).find(([k, v]) => v >= THRESH && k !== 'neu')?.[0] || null;
       if (newA !== comb_active) { comb_active = newA; const rule = newA ? PROMO_RULES.find(r => r.emo === newA) : null; const tag = document.getElementById('comb-ptag'); if (rule) { tag.textContent = rule.tag; tag.style.display = 'inline'; tag.style.background = rule.col + '22'; tag.style.color = rule.col; } else tag.style.display = 'none'; if (!comb_lk) comb_buildGrid(); }
       if (!comb_lk) { updateLV('comb-ln', 'comb-lp', 'comb-lv', computeVal(comb_log)); }
       renderPromo('comb-promo', comb_timers, comb_active); requestAnimationFrame(comb_loop);
     }
-    comb_setEmo('neutro'); comb_buildGrid(); requestAnimationFrame(comb_loop);
+    comb_setEmo('neu'); comb_buildGrid(); requestAnimationFrame(comb_loop);
   </script>
 </body>
 
