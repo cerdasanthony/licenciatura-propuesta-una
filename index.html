@@ -1377,17 +1377,16 @@
       <em>análisis automatizado de expresiones faciales</em>
       mediante visión por computadora, para un niño no verbal en edad preescolar
     </h1>
-    <p class="hero-sub">Prueba de concepto evaluada mediante un estudio de caso único con un participante
-      no verbal. La aplicación combina un tablero de pictogramas con el registro automatizado de cuatro
-      perfiles faciales observables, y se ejecuta íntegramente en la tablet Android: el video nunca sale del
-      dispositivo.
+    <p class="hero-sub">Aplicación móvil que combina un tablero de pictogramas con el análisis automatizado
+      de expresiones faciales, para apoyar la comunicación de un niño no verbal en edad preescolar. Todo el
+      procesamiento se ejecuta en la tablet: el video nunca sale del dispositivo.
     </p>
 
     <div class="method-block">
-      <div class="method-item"><span class="dot"></span>Prueba de concepto · caso único (N = 1)</div>
+      <div class="method-item"><span class="dot"></span>Prototipo funcional · prueba de concepto</div>
       <div class="method-item"><span class="dot"></span>App nativa Android · procesamiento en el dispositivo</div>
       <div class="method-item"><span class="dot"></span>Flutter · ML Kit Face Mesh · reglas geométricas</div>
-      <div class="method-item"><span class="dot"></span>Cuatro perfiles observables, no emociones</div>
+      <div class="method-item"><span class="dot"></span>Cuatro estados faciales · positivo a negativo</div>
     </div>
   </header>
 
@@ -1430,7 +1429,7 @@
             <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center;color:var(--purple)">3</span>
             <strong style="font-size:13px;color:var(--ink)">Perfil</strong>
           </div>
-          <span>Un modelo asigna uno de cuatro perfiles: positivo, neutro, negativo leve o negativo intenso.</span>
+          <span>Se asigna uno de cuatro estados faciales: positivo, neutro, negativo leve o negativo intenso.</span>
         </div>
         <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6;flex-direction:column;gap:.5rem">
           <div style="display:flex;align-items:center;gap:.6rem">
@@ -1466,15 +1465,14 @@
       </div>
 
       <div class="obs-box">
-        <strong>Por qué no decimos «emociones»</strong>
-        Decir que el sistema detecta la emoción de una persona implica afirmar algo sobre su estado interno.
-        Este trabajo no está en condiciones de sostener esa afirmación, y menos tratándose de un único
-        participante infantil no verbal.
+        <strong>Qué mide el sistema, con precisión</strong>
+        El sistema clasifica <strong>estados faciales</strong> a partir de medidas geométricas del rostro:
+        apertura ocular, curvatura de la boca, altura y separación de las cejas. No infiere lo que el usuario
+        siente.
         <br><br>
-        Lo que sí se puede sostener es esto: durante los ocho segundos previos a la selección, el 70 % de los
-        fotogramas presentó comisuras descendidas y cejas aproximadas. Eso es una medida verificable de lo que
-        el clasificador registró, no una interpretación de lo que el niño sentía. Por eso el sistema clasifica
-        <strong>perfiles de características faciales observables</strong> y no emociones.
+        Un ejemplo de lo que sí registra: durante los ocho segundos previos a la selección, el 70 % de los
+        fotogramas presentó comisuras descendidas y cejas aproximadas. Es una medida verificable del análisis
+        facial, y es la persona cuidadora quien la interpreta dentro del contexto de la interacción.
       </div>
     </div>
   </section>
@@ -1491,25 +1489,24 @@
         <div class="sec-eye" style="margin-top:2rem">Descripción y alcance</div>
         <p class="sec-lead" style="margin-bottom:1rem">
           El presente Trabajo Final de Graduación se orienta al desarrollo de una <strong>aplicación móvil
-            nativa de Comunicación Aumentativa y Alternativa</strong>, desarrollada con Flutter para tablet Android,
-          que integra el tablero de pictogramas con la <strong>clasificación automatizada de características
-            faciales observables</strong> mediante análisis geométrico. La totalidad del procesamiento se
-          ejecuta en el dispositivo: no se transmite video ni imágenes a servidores externos.
+            de Comunicación Aumentativa y Alternativa</strong> para tablet, orientada a un niño no verbal en edad
+          preescolar, que integra el tablero de pictogramas con el <strong>análisis automatizado de expresiones
+            faciales</strong> mediante visión por computadora. La totalidad del procesamiento se ejecuta en el
+          dispositivo: no se transmite video ni imágenes a servidores externos.
         </p>
         <p class="sec-lead" style="margin-bottom:1rem">
           El sistema se compone de tres módulos interoperables: el <strong>Módulo A</strong>, de captura y
           detección facial, que extrae los puntos de referencia del rostro y establece una línea base por sesión;
-          el <strong>Módulo B</strong>, que registra la distribución de perfiles observables en los segundos
+          el <strong>Módulo B</strong>, que registra la distribución de estados faciales en los segundos
           previos a cada selección; y el <strong>Módulo C</strong>, que reordena heurísticamente la interfaz
           cuando un perfil se sostiene por encima de un umbral. Los tres operan como capas sobre un comunicador
           táctil que funciona de forma autónoma.
         </p>
         <p class="sec-lead" style="margin-bottom:0">
-          La evaluación se realiza mediante un <strong>estudio de caso único</strong> con un participante no
-          verbal en edad preescolar, y considera la <strong>tasa de detección facial</strong>, la
-          <strong>latencia de procesamiento</strong>, el <strong>índice de asociación entre cada pictograma y
-            el perfil facial que lo precede</strong> a lo largo de la serie de sesiones, y la
-          <strong>usabilidad</strong> valorada por personas cuidadoras y profesionales en terapia del lenguaje.
+          La evaluación se realiza mediante <strong>pruebas de funcionamiento</strong> y considera la
+          <strong>tasa de detección facial</strong>, la <strong>exactitud por estado</strong>, la
+          <strong>latencia de procesamiento</strong> y la <strong>usabilidad de la interfaz</strong>, valorada
+          por personas cuidadoras y profesionales en terapia del lenguaje.
         </p>
       </div>
 
@@ -1519,7 +1516,7 @@
         La aplicación procesa en tiempo real el flujo de la cámara frontal mediante ML Kit Face Mesh Detection,
         que detecta el rostro y extrae los 468 puntos de su malla facial. A partir de ellos se calculan distancias y
         ángulos que conforman un vector de características, normalizado contra la línea base de la sesión. Un
-        conjunto de reglas de umbral asigna uno de los cuatro perfiles
+        conjunto de reglas de umbral asigna uno de los cuatro estados faciales
         observables, cuya distribución temporal condiciona el reordenamiento de pictogramas y queda adjunta al
         registro de cada interacción.
         <br><br>
@@ -1534,7 +1531,7 @@
         <p class="sec-lead" style="margin-bottom:1rem">
           Los sistemas CAA basados en pictogramas apoyan la comunicación de personas no verbales, pero su
           funcionamiento se basa exclusivamente en la selección activa de elementos dentro de la interfaz. Un
-          aspecto que ha recibido menor atención es el uso de las características faciales observables como
+          aspecto que ha recibido menor atención es el uso de las expresiones faciales del usuario como
           fuente complementaria de información dentro del proceso comunicativo.
 
           Los avances en visión por computadora permiten detectar y describir estas características de manera
@@ -1545,19 +1542,18 @@
       <!-- PREGUNTA DE INVESTIGACIÓN -->
       <div id="hipotesis" class="hypothesis-block" style="margin-top:0;margin-bottom:2.5rem">
         <div class="hyp-label">Pregunta de investigación</div>
-        <div class="hyp-text">¿Es técnicamente viable integrar la clasificación automatizada de características
-          faciales observables en una aplicación móvil nativa de CAA basada en pictogramas, ejecutada en una
-          tablet Android y en tiempo real, y qué relación se observa entre los perfiles faciales registrados y las
-          selecciones de pictogramas de un participante no verbal?
+        <div class="hyp-text">¿En qué medida un sistema CAA que incorpora análisis automatizado de expresiones
+          faciales mediante visión por computadora mejora la capacidad de un niño no verbal en edad preescolar
+          para expresar necesidades, emociones e intenciones comunicativas?
         </div>
         <div class="hyp-vars">
           <div class="hyp-var">
             <div class="hyp-var-label">Variable independiente</div>
-            <div class="hyp-var-val">Características faciales observables (medidas geométricas del rostro)</div>
+            <div class="hyp-var-val">Integración del módulo de análisis facial</div>
           </div>
           <div class="hyp-var">
             <div class="hyp-var-label">Variable dependiente</div>
-            <div class="hyp-var-val">Registro de la selección de pictogramas asistida por el perfil facial</div>
+            <div class="hyp-var-val">Efectividad, precisión y usabilidad del sistema CAA</div>
           </div>
         </div>
       </div>
@@ -1566,11 +1562,10 @@
       <div class="warn-box" style="margin-bottom:2rem">
         <div class="sec-eye">Objetivo general</div>
         <p class="sec-lead" style="margin-bottom:0">
-          Crear una aplicación móvil nativa de Comunicación Aumentativa y Alternativa que registre y clasifique
-          cuatro perfiles de características faciales observables —positivo, neutro, negativo leve y negativo
-          intenso— mediante análisis geométrico de puntos de referencia faciales, como apoyo a la selección de
-          pictogramas y al registro de asociaciones para un participante no verbal, en el marco de una prueba
-          de concepto evaluada mediante un estudio de caso único.
+          Crear una aplicación móvil de Comunicación Aumentativa y Alternativa que permita a un niño no verbal
+          en edad preescolar expresar cuatro estados faciales —positivo, neutro, negativo leve y negativo
+          intenso— mediante la interacción humano-computador, utilizando el análisis automatizado de
+          expresiones faciales basado en visión por computadora.
         </p>
       </div>
 
@@ -1580,23 +1575,23 @@
         <div style="display:flex;flex-direction:column;gap:.5rem">
           <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">1</span>
-            <span>Analizar el estado del arte de los sistemas de Comunicación Aumentativa y Alternativa que incorporan análisis automatizado de características faciales, contrastando sus objetivos, tecnologías, resultados y limitaciones.</span>
+            <span>Analizar el estado del arte de los sistemas de Comunicación Aumentativa y Alternativa que incorporan análisis automatizado de expresiones faciales, contrastando sus objetivos, tecnologías, resultados y limitaciones.</span>
           </div>
           <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">2</span>
-            <span>Especificar los requerimientos funcionales y no funcionales de la aplicación y los módulos que la integran: captura y detección facial, registro de la distribución de características faciales previa a la selección, y reordenamiento heurístico de la interfaz.</span>
+            <span>Analizar los requerimientos funcionales y no funcionales de la aplicación móvil de Comunicación Aumentativa y Alternativa, definiendo los módulos que la integran.</span>
           </div>
           <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">3</span>
-            <span>Diseñar la arquitectura de la aplicación móvil nativa, definiendo sus componentes, el flujo de datos, el modelo de almacenamiento local y la estrategia de ejecución en el dispositivo.</span>
+            <span>Diseñar la arquitectura de la aplicación, definiendo los componentes necesarios para la captura, el procesamiento y el almacenamiento de las expresiones faciales.</span>
           </div>
           <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">4</span>
-            <span>Desarrollar el módulo de clasificación de los cuatro perfiles de características faciales observables mediante reglas geométricas sobre los 468 puntos de la malla facial extraídos con ML Kit Face Mesh Detection, normalizadas respecto de una línea base por sesión.</span>
+            <span>Desarrollar el módulo de detección y clasificación de expresiones faciales mediante el análisis geométrico de los puntos de referencia faciales extraídos con ML Kit Face Mesh Detection.</span>
           </div>
           <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">5</span>
-            <span>Evaluar la prueba de concepto mediante un estudio de caso único con un participante no verbal, considerando la tasa de detección facial, la latencia de procesamiento, el índice de asociación entre cada pictograma y el perfil facial que lo precede a lo largo de la serie de sesiones, y la usabilidad valorada por personas cuidadoras y profesionales en terapia del lenguaje.</span>
+            <span>Evaluar la aplicación desarrollada mediante pruebas de funcionamiento, considerando la tasa de detección facial, la exactitud por estado, la latencia de procesamiento y la usabilidad de la interfaz.</span>
           </div>
         </div>
       </div>
@@ -1738,13 +1733,13 @@
           <div>
             <div class="mod-tag" style="background:var(--blue-l);color:var(--blue)">Módulo B</div>
             <div class="mod-letter" style="color:var(--blue)">B</div>
-            <h3 class="mod-title">Distribución de características faciales observables previas a la selección táctil
+            <h3 class="mod-title">Distribución de estados faciales previos a la selección táctil
             </h3>
             <p class="mod-desc">Cuando el participante toca un pictograma, el sistema no registra únicamente el perfil
-              del instante exacto. Calcula la <strong>distribución de características faciales observables en los
+              del instante exacto. Calcula la <strong>distribución de estados faciales en los
                 últimos segundos</strong> — qué proporción de frames presentaron perfil negativo, neutro o positivo — y
               la adjunta al registro de sesión.</p>
-            <p class="mod-desc">Este enfoque describe la distribución de características faciales observables en los
+            <p class="mod-desc">Este enfoque describe la distribución de estados faciales en los
               instantes previos a la selección, sin implicar la existencia de un estado emocional interno. Si el 70%
               de los frames previos mostraron perfil negativo (cejas fruncidas, comisuras hacia abajo), eso es un dato
               descriptivo del clasificador geométrico — no una afirmación sobre el estado interno del niño.</p>
@@ -1846,7 +1841,7 @@
             <div class="mod-tag" style="background:var(--red-l);color:var(--red)">Módulo C</div>
             <div class="mod-letter" style="color:var(--red)">C</div>
             <h3 class="mod-title">Reordenamiento heurístico experimental por característica facial sostenida</h3>
-            <p class="mod-desc">Si las características faciales observables registradas se mantienen
+            <p class="mod-desc">Si los estados faciales registrados se mantienen
               en rango negativo de forma sostenida por más de 3 segundos, la interfaz puede reordenarse heurísticamente
               según patrones observados, colocando en primer plano un pictograma asociado al patrón detectado. Este
               reordenamiento es experimental y se basa en una heurística geométrica — no en una inferencia emocional.
@@ -1917,10 +1912,10 @@
         <strong>Aviso — simulación de interfaz, no demo técnica funcional</strong>
         La demo a continuación simula la interfaz del sistema mediante botones manuales para seleccionar perfiles
         faciales. <strong>No representa la ejecución en tiempo real de los módulos de visión por computadora.</strong>
-        En el prototipo real, los perfiles son derivados automáticamente de características faciales observables vía
+        En el prototipo real, los estados son derivados automáticamente del análisis geométrico del rostro vía
         análisis de imagen facial. Esta simulación existe exclusivamente para ilustrar el comportamiento de la interfaz
         ante
-        distintos perfiles de características faciales observables.
+        distintos estados faciales.
       </div>
 
       <div class="obs-box" style="max-width:700px;margin-bottom:1.5rem">
@@ -2074,7 +2069,7 @@
       <div class="warn-box">
         <div class="sec-eye">Cuatro diferencias concretas</div>
         <ul style="margin:.5rem 0 0;padding-left:1.1rem;font-size:13px;color:var(--ink2);line-height:1.8">
-          <li>Registra características faciales observables <strong>sin inferir estados emocionales internos</strong>.</li>
+          <li>Registra medidas geométricas del rostro <strong>sin inferir estados internos del usuario</strong>.</li>
           <li>Asocia esa información al <strong>momento previo a cada selección</strong>, no de forma aislada.</li>
           <li>Se ejecuta <strong>íntegramente en el dispositivo</strong>, sin transmisión de video.</li>
           <li>Conserva la funcionalidad del comunicador <strong>con independencia del desempeño del clasificador</strong>.</li>
