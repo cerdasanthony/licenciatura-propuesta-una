@@ -1385,7 +1385,7 @@
     <div class="method-block">
       <div class="method-item"><span class="dot"></span>Prototipo funcional · prueba de concepto</div>
       <div class="method-item"><span class="dot"></span>App nativa Android · procesamiento en el dispositivo</div>
-      <div class="method-item"><span class="dot"></span>Flutter · ML Kit Face Mesh · reglas geométricas</div>
+      <div class="method-item"><span class="dot"></span>Flutter · MediaPipe Face Landmarker · blendshapes</div>
       <div class="method-item"><span class="dot"></span>Cuatro estados faciales · positivo a negativo</div>
     </div>
   </header>
@@ -1513,8 +1513,9 @@
       <!-- DEFINICIÓN DEL SISTEMA -->
       <div class="obs-box" style="margin-bottom:2.5rem">
         <strong>Definición técnica del sistema</strong>
-        La aplicación procesa en tiempo real el flujo de la cámara frontal mediante ML Kit Face Mesh Detection,
-        que detecta el rostro y extrae los 468 puntos de su malla facial. A partir de ellos se calculan distancias y
+        La aplicación procesa en tiempo real el flujo de la cámara frontal mediante MediaPipe Face Landmarker,
+        que detecta el rostro y extrae sus puntos de referencia en tres dimensiones junto con un conjunto de
+        blendshapes. A partir de ellos se calculan distancias y
         ángulos que conforman un vector de características, normalizado contra la línea base de la sesión. Un
         conjunto de reglas de umbral asigna uno de los cuatro estados faciales
         observables, cuya distribución temporal condiciona el reordenamiento de pictogramas y queda adjunta al
@@ -1587,7 +1588,7 @@
           </div>
           <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">4</span>
-            <span>Desarrollar el módulo de detección y clasificación de expresiones faciales mediante el análisis geométrico de los puntos de referencia faciales extraídos con ML Kit Face Mesh Detection.</span>
+            <span>Desarrollar el módulo de detección y clasificación de expresiones faciales mediante el análisis geométrico de los puntos de referencia faciales y los blendshapes extraídos con MediaPipe Face Landmarker.</span>
           </div>
           <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">5</span>
@@ -1610,10 +1611,11 @@
             <h3 class="mod-title">Captura y detección de características faciales mediante visión por computadora</h3>
             <p class="mod-desc">Este módulo implementa el pipeline de visión por computadora para la adquisición y
               análisis de la imagen facial en tiempo real. El paquete <code>camera</code> de Flutter entrega el flujo
-              continuo de fotogramas, que son procesados por <strong>ML Kit Face Mesh Detection</strong>. Sobre el
-              rostro detectado se extrae la <strong>malla facial de 468 puntos</strong> y se calculan métricas
-              geométricas como distancias y ángulos entre puntos, de las cuales se derivan los vectores de
-              características que alimentan el clasificador del Módulo B.
+              continuo de fotogramas, que son procesados por <strong>MediaPipe Face Landmarker</strong>. Sobre el
+              rostro detectado se extraen los <strong>puntos de referencia faciales en tres dimensiones</strong>
+              y un conjunto de <strong>blendshapes</strong>, coeficientes que describen configuraciones faciales
+              concretas. De ambos se derivan los vectores de características que alimentan el clasificador del
+              Módulo B.
             </p>
             <p class="mod-desc">El módulo opera a una frecuencia configurable (≥3 fps) y mantiene un buffer
               temporal de frames para permitir el análisis de la distribución de expresiones en una ventana de tiempo
@@ -1632,7 +1634,7 @@
             <div class="callout"
               style="background:var(--purple-l);border-color:var(--purple);color:var(--purple);margin-top:.85rem">
               <strong>Tecnologías — OE3</strong>
-              Flutter/Dart (marco de trabajo) · ML Kit Face Mesh Detection (malla de 468 puntos) ·
+              Flutter/Dart (marco de trabajo) · MediaPipe Face Landmarker (puntos de referencia 3D y blendshapes) ·
               reglas geométricas en Dart (clasificación) · paquete camera (captura de fotogramas) ·
               sqflite (persistencia) · flutter_tts (voz). Plataforma objetivo: tablet Android.
               Sin componente de servidor: todo el procesamiento ocurre en el dispositivo.
