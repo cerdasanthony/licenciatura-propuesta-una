@@ -1373,7 +1373,7 @@
   <header class="hero">
     <div class="hero-pre">Universidad Nacional de Costa Rica · Escuela de Informática · TFG Licenciatura 2026</div>
     <h1 class="hero-title">
-      Aplicación móvil de Comunicación Aumentativa y Alternativa basada en el
+      Aplicación web progresiva de Comunicación Aumentativa y Alternativa basada en el
       <em>análisis automatizado de expresiones faciales</em>
       mediante visión por computadora, para un niño no verbal en edad preescolar
     </h1>
@@ -1384,8 +1384,8 @@
 
     <div class="method-block">
       <div class="method-item"><span class="dot"></span>Prototipo funcional · prueba de concepto</div>
-      <div class="method-item"><span class="dot"></span>App nativa Android · procesamiento en el dispositivo</div>
-      <div class="method-item"><span class="dot"></span>Flutter · MediaPipe Face Landmarker · blendshapes</div>
+      <div class="method-item"><span class="dot"></span>PWA instalable · procesamiento en el dispositivo</div>
+      <div class="method-item"><span class="dot"></span>MediaPipe Tasks · landmarks 3D y blendshapes</div>
       <div class="method-item"><span class="dot"></span>Cuatro estados faciales · positivo a negativo</div>
     </div>
   </header>
@@ -1488,8 +1488,8 @@
       <div style="margin-bottom:2.5rem">
         <div class="sec-eye" style="margin-top:2rem">Descripción y alcance</div>
         <p class="sec-lead" style="margin-bottom:1rem">
-          El presente Trabajo Final de Graduación se orienta al desarrollo de una <strong>aplicación móvil
-            de Comunicación Aumentativa y Alternativa</strong> para tablet, orientada a un niño no verbal en edad
+          El presente Trabajo Final de Graduación se orienta al desarrollo de una <strong>aplicación web
+            progresiva de Comunicación Aumentativa y Alternativa</strong> para tablet, orientada a un niño no verbal en edad
           preescolar, que integra el tablero de pictogramas con el <strong>análisis automatizado de expresiones
             faciales</strong> mediante visión por computadora. La totalidad del procesamiento se ejecuta en el
           dispositivo: no se transmite video ni imágenes a servidores externos.
@@ -1563,7 +1563,7 @@
       <div class="warn-box" style="margin-bottom:2rem">
         <div class="sec-eye">Objetivo general</div>
         <p class="sec-lead" style="margin-bottom:0">
-          Crear una aplicación móvil de Comunicación Aumentativa y Alternativa que permita a un niño no verbal
+          Crear una aplicación web progresiva de Comunicación Aumentativa y Alternativa que permita a un niño no verbal
           en edad preescolar expresar cuatro estados faciales —positivo, neutro, negativo leve y negativo
           intenso— mediante la interacción humano-computador, utilizando el análisis automatizado de
           expresiones faciales basado en visión por computadora.
@@ -1580,7 +1580,7 @@
           </div>
           <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">2</span>
-            <span>Analizar los requerimientos funcionales y no funcionales de la aplicación móvil de Comunicación Aumentativa y Alternativa, definiendo los módulos que la integran.</span>
+            <span>Analizar los requerimientos funcionales y no funcionales de la aplicación web progresiva de Comunicación Aumentativa y Alternativa, definiendo los módulos que la integran.</span>
           </div>
           <div style="display:flex;gap:.85rem;align-items:flex-start;padding:.75rem 1rem;background:#fff;border:1px solid var(--rule);border-radius:10px;font-size:13px;color:var(--ink2);line-height:1.6">
             <span style="font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--ink3);line-height:1;flex-shrink:0;width:22px;text-align:center">3</span>
@@ -1610,7 +1610,7 @@
             <div class="mod-letter" style="color:var(--purple)">A</div>
             <h3 class="mod-title">Captura y detección de características faciales mediante visión por computadora</h3>
             <p class="mod-desc">Este módulo implementa el pipeline de visión por computadora para la adquisición y
-              análisis de la imagen facial en tiempo real. El paquete <code>camera</code> de Flutter entrega el flujo
+              análisis de la imagen facial en tiempo real. La interfaz <code>MediaDevices</code> del navegador entrega el flujo
               continuo de fotogramas, que son procesados por <strong>MediaPipe Face Landmarker</strong>. Sobre el
               rostro detectado se extraen los <strong>puntos de referencia faciales en tres dimensiones</strong>
               y un conjunto de <strong>blendshapes</strong>, coeficientes que describen configuraciones faciales
@@ -1634,9 +1634,9 @@
             <div class="callout"
               style="background:var(--purple-l);border-color:var(--purple);color:var(--purple);margin-top:.85rem">
               <strong>Tecnologías — OE3</strong>
-              Flutter/Dart (marco de trabajo) · MediaPipe Face Landmarker (puntos de referencia 3D y blendshapes) ·
-              reglas geométricas en Dart (clasificación) · paquete camera (captura de fotogramas) ·
-              sqflite (persistencia) · flutter_tts (voz). Plataforma objetivo: tablet Android.
+              MediaPipe Tasks para JavaScript (puntos de referencia 3D y blendshapes) · reglas geométricas
+              (clasificación) · API MediaDevices (captura de fotogramas) · IndexedDB (persistencia) ·
+              Web Speech API (voz). Aplicación web progresiva instalable. Navegador objetivo: Chrome sobre tablet.
               Sin componente de servidor: todo el procesamiento ocurre en el dispositivo.
             </div>
 
